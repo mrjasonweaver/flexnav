@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0;">	
+<title>Flexible, Device Agnostic Navigation</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" / >
+<script type="text/javascript" src="js/modernizr.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+// global variables 
+var compareWidth, //previous width used for comparison
+	detector, //the element used to compare changes
+	smallScreen; // Size of maximum width of single column media query
+jQuery(document).ready(function(){
+
+    //set the initial values
+    detector = jQuery('.js');
+    compareWidth = detector.width();
+	smallScreen = '820'; 
+
+	if ($(window).width() < smallScreen) {
+		$("body").addClass("one-column");		
+	}
+	else {
+		$("body").addClass("two-column");	
+	}
+
+	// Toggle for nav menu
+	$('.js .menu-button').click(function() {
+		$('[role="navigation"]').slideToggle('fast', function() {});			
+	});	
+	// Toggle click for sub-menus on touch and or small screens
+	$('.touch .item-with-ul, .one-column .item-with-ul').click(function() {
+		$(this).find('.sub-menu').slideToggle('fast', function() {});
+	});	
+	// Credit: http://webdeveloper2.com/2011/06/trigger-javascript-on-css3-media-query-change/
+    jQuery(window).resize(function(){
+        //compare everytime the window resize event fires
+        if(detector.width()!=compareWidth){
+
+            //a change has occurred so update the comparison variable
+            compareWidth = detector.width();
+			
+			if (compareWidth < smallScreen) {
+				$("body").removeClass("two-column").addClass("one-column");				
+			}
+			else {
+				$("body").removeClass("one-column").addClass("two-column");	
+			}
+			if (compareWidth >= smallScreen) {
+				$('[role="navigation"]').show();
+			}
+        }
+
+    });	
+	
+ });	
+</script>
+</head>
+  <body>		
+	<div class="container">		
+		<h1 class="page-title">FlexNav</h1>
+		<div class='menu-button'>Menu</div>	
+		<nav>
+			<ul id="nav" role="navigation">
+				<li class="top-level item-with-ul"><a href="" class="link-with-ul">Item #1</a>
+					<ul class="sub-menu">
+						<li><a href="">Sub 1 Item #1</a></li>
+						<li><a href="">Sub 1 Item #2</a></li>
+						<li><a href="">Sub 1 Item #3</a></li>
+						<li><a href="">Sub 1 Item #4</a></li>
+					</ul>
+				</li>
+
+				<li class="top-level item-with-ul"><a href="" class="link-with-ul">Item #2</a>
+					<ul class="sub-menu">
+						<li><a href="">Sub 1 Item #1</a></li>
+						<li><a href="">Sub 1 Item #2</a></li>
+						<li><a href="">Sub 1 Item #3</a></li>
+					</ul>
+				</li>
+
+				<li class="top-level"><a href="">Item #3</a>
+				</li>
+				<li class="top-level item-with-ul"><a href="" class="link-with-ul">Item #4</a>
+					<ul class="sub-menu">
+						<li><a href="">Sub 1 Item #1</a></li>
+						<li><a href="">Sub 1 Item #1</a></li>
+						<li><a href="">Sub 1 Item #1</a></li>
+					</ul>
+				</li>
+
+				<li class="top-level"><a href="">Item #5</a>
+				</li>			
+			</ul>											
+		</nav>
+		
+		<section role="main">
+			<h1>A Device Agnostic Approach to Complex Site Navigation</h1>
+			<h2>The Details</h2>
+			<p>The (ugly as sin) mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.</p>
+			
+			<h2>Caveats</h2>
+			<p>Right now you have to refresh after resizing through the media query (currently only one at 820px). This is the case in order to see the sub menu of each top level menu item. I'd like to be able to have a seamless interaction when resizing the browser but I believe web designers are the only users that are testing for responsiveness. I'm also pulling in <a href="http://www.modernizr.com/">Modernizr</a> and the latest jQuery. More details to come as I keep testing.</p>
+
+		</section>
+    <footer class="site-footer" role="contentinfo">
+	<ul>
+		<li>Code by <a href="http://jasonweaver.name">Jason Weaver</a></li>
+		<li><a href="mailto:indyplanets@gmail.com">Contact Me</a></li>				
+	</ul>	
+    </footer>		
+	</div>
+	
+	<script>
+	window._gaq = [['_setAccount','UA-22138578-1'],['_trackPageview'],['_trackPageLoadTime']];
+	Modernizr.load({
+	  load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+	});
+	</script>
+		
+</body>

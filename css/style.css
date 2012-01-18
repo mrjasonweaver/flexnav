@@ -1,0 +1,193 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: clean, sans-serif;
+}
+/* Globals */
+a {text-decoration: none; color: #ff6b31; }
+a:hover {text-decoration: underline;}
+h1,h2 {font-family: georgia, serif;}
+h1 {font-size: 24px;margin-bottom: 5%;}
+h2 {font-size: 18px;margin-bottom: 10px;}
+p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
+.page-title {font-size: 26px;text-align: center;}
+.container {margin: 5% auto;width: 90%;}
+
+[role='main'] {
+	margin: 5% auto;
+}
+[role='navigation'] {
+	margin: 0 auto;
+	width: 100%;
+	background-color: #333;
+}
+.js [role='navigation'] {
+	display: none;	
+}
+.menu-button {
+	display: block;
+	padding: 1em;
+	background: #000;
+	color: #fff;
+	background-image: url('../images/arrow-down.png');
+	background-repeat: no-repeat;
+	background-position: 93% 18px;
+}
+[role='navigation']:after { /* clearfix */
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+[role='navigation'] li {
+	position: relative;
+	list-style: none;
+	display: block;	
+	background-color: #333;	
+	width: 100%;		
+}
+
+[role='navigation'] li.item-with-ul {	
+	background-color: #222;			
+}
+
+[role='navigation'] li a {
+	margin-right: 20%;
+	display: block;
+	color: #ddd;
+	border-bottom: 1px solid #111;			
+}
+
+[role='navigation'] li a.link-with-ul {
+	border-right: 1px solid #222;		
+}
+
+[role='navigation'] .top-level a {
+	position: relative;
+	display: block;
+	background-color: #333;
+	padding: 1em;
+	z-index: 2;
+}
+[role='navigation'] li ul {
+	width: 100%;			
+}
+[role='navigation'] li ul li {
+	float: none;
+	width: 100%;			
+}
+
+[role='navigation'] li ul li a {
+	display: block;
+	background-color: #333;
+			
+}
+
+[role='navigation'] li ul {
+	position: relative;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;	 				
+}
+
+[role='navigation'] .item-with-ul {
+	background-image: url('../images/arrow-down.png');
+	background-repeat: no-repeat;
+	background-position: 93% 18px;	
+}
+
+.sub-menu {
+	display: none;
+}
+.site-footer {
+	margin: 1em 0;
+	overflow: hidden;
+}
+.site-footer li {
+	list-style: none;
+	margin: 0;
+	display: block;
+	float: left;
+}
+.site-footer li a {
+	padding: .5em .5em .5em 0;
+}
+
+@media all and (min-width: 800px) {
+	p {font-size: 100%; margin-bottom: 1.5em; line-height: 1.25em;}	
+	.js [role='navigation'] {
+		display: block;	
+	}
+	.menu-button {
+		display: none;
+	}
+	[role='navigation'] li {
+		position: relative;
+		list-style: none;
+		float: left;
+		display: block;	
+		background-color: #333;	
+		width: 20%;		
+	}
+	.no-touch .item-with-ul:hover > ul { 
+		opacity: 1;
+		top: 3.1em;	
+		position: absolute;	
+	}	
+	[role='navigation'] li a {
+		border-left: 1px solid #000;
+		border-bottom: none;		
+	}
+	.no-touch [role='navigation'] li ul {
+		position: absolute; 
+		top: auto;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+		height: 1px;
+		z-index: 1;			
+		-webkit-transition: .4s all ease;
+		-moz-transition: .4s all ease;
+		-o-transition: .4s all ease;
+		-ms-transition: .4s all ease;
+		transition: .4s all ease;				
+	}
+	[role='navigation'] li ul li a {
+		border-bottom: none;	
+	}	
+	.touch [role='navigation'] li ul.sub-menu {
+		position: absolute; 
+		top: auto;
+		left: 0;
+		display: none;
+		z-index: 1;					
+	}	
+
+	.no-touch .item-with-ul:hover > ul { 
+		visibility: visible;
+		opacity: 1;
+		height: auto;
+		display: block;	
+		border-right: 1px solid #000;
+		border-bottom: 1px solid #000;		
+	}			
+}
