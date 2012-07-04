@@ -33,6 +33,7 @@ you can change the defaults too
 		
 ### Todo
 
+* Fix nav staying open after resizing back through media query 
 * Tidy up CSS
 
 ### v.0.2 : July 4th, 2012
