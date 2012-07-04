@@ -7,30 +7,32 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 
 ### Usage
 
-		// Add flexnav.css to the head of your document
+Add flexnav.css to the head of your document
+		
 		<link href="css/flexnav.css" rel="stylesheet" type="text/css" / >
 		
-		// Add jQuery and jquery.flexnav.js to the head of your document
+Add jQuery and jquery.flexnav.js to the head of your document
+
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.flexnav.js"></script>
 		
-		// Initialize FlexNav right before your closing body tag
+Initialize FlexNav right before your closing body tag
+
 		<script>
 			$("[role='navigation']").flexNav();
 		</script>		
 
-		// you can change the defaults too
+you can change the defaults too
+	
 		<script>
 			$("[role='navigation']").flexNav({
 				'breakpoint' : '800', // default
 				'animationSpeed' : 'fast' // default			
-			});
-				
+			});			
 		</script>	
 		
 ### Todo
 
-* Make navigation ul element change to display:block on large screens after small screen js makes it display:none.
 * Tidy up CSS
 
 ### v.0.2 : July 4th, 2012
