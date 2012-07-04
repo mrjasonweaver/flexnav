@@ -13,22 +13,22 @@
 
 	$.fn.flexNav = function(options) {
 		var settings = $.extend({
-		    'breakpoint': '800',
-		    'animationSpeed': 'fast'
+	    'breakpoint': '800',
+	    'animationSpeed': 'fast'
 		}, options);
 
 		var $this = $(this);
 
 		var resizer = function() {
-		    if ($(window).width() < settings.breakpoint) {
-		        $("body").removeClass("lg-screen").addClass("sm-screen");
-		    }
-		    else {
-		        $("body").removeClass("sm-screen").addClass("lg-screen");
-		    }
-		    if ($(window).width() >= settings.breakpoint) {
-		        $this.show();
-		    }
+	    if ($(window).width() < settings.breakpoint) {
+	        $("body").removeClass("lg-screen").addClass("sm-screen");
+	    }
+	    else {
+	        $("body").removeClass("sm-screen").addClass("lg-screen");
+	    }
+	    if ($(window).width() >= settings.breakpoint) {
+	        $this.show();
+	    }
 		};
 
 		// Call once to set.
@@ -36,24 +36,24 @@
 
 		// Function for testing touch screens
 		function is_touch_device() {
-		    return !! ('ontouchstart' in window);
+			return !! ('ontouchstart' in window);
 		}
 
 		// Set class on html element for touch/no-touch
 		if (is_touch_device()) {
-		    $('html').addClass('flexNav-touch');
+			$('html').addClass('flexNav-touch');
 		} else {
-		    $('html').addClass('flexNav-no-touch');
+			$('html').addClass('flexNav-no-touch');
 		}
 
 		// Toggle for nav menu
 		$('.menu-button').click(function() {
-		    $this.slideToggle(settings.animationSpeed);
+			$this.slideToggle(settings.animationSpeed);
 		});
 
 		// Toggle click for sub-menus on touch and or small screens
 		$('.item-with-ul').click(function() {
-		    $(this).find('.sub-menu').slideToggle(settings.animationSpeed);
+			$(this).find('.sub-menu').slideToggle(settings.animationSpeed);
 		});
 
 		// Call on resize.

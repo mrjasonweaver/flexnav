@@ -33,7 +33,8 @@ you can change the defaults too
 		
 ### Todo
 
-* Fix nav staying open after resizing back through media query 
+* Fix nav staying open after resizing back through media query on small viewports
+* Fix hover/click submenu conflicts
 * Tidy up CSS
 
 ### v.0.2 : July 4th, 2012
