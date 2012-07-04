@@ -1,49 +1,67 @@
 
-// global variables 
-var compareWidth, //previous width used for comparison
-	detector, //the element used to compare changes
-	smallScreen; // Size of maximum width of single column media query
-jQuery(document).ready(function(){
+/*global jQuery */
+/*!	
+* FlexNav.js 0.2
+*
+* Copyright 2012, Jason Weaver http://jasonweaver.name
+* Released under the WTFPL license 
+* http://sam.zoy.org/wtfpl/
+*
+* Date: Thu July 4 01:12:00 2012 -0600
+*/
 
-    //set the initial values
-    detector = jQuery('.js');
-    compareWidth = detector.width();
-	smallScreen = '820'; 
+(function ( $ ) {
 
-	if ($(window).width() < smallScreen) {
-		$("body").addClass("one-column");		
-	}
-	else {
-		$("body").addClass("two-column");	
-	}
-
-	// Toggle for nav menu
-	$('.js .menu-button').click(function() {
-		$('[role="navigation"]').slideToggle('fast', function() {});			
-	});	
-	// Toggle click for sub-menus on touch and or small screens
-	$('.touch .item-with-ul, .one-column .item-with-ul').click(function() {
-		$(this).find('.sub-menu').slideToggle('fast', function() {});
-	});	
-	// Credit: http://webdeveloper2.com/2011/06/trigger-javascript-on-css3-media-query-change/
-    jQuery(window).resize(function(){
-        //compare everytime the window resize event fires
-        if(detector.width()!=compareWidth){
-
-            //a change has occurred so update the comparison variable
-            compareWidth = detector.width();
-			
-			if (compareWidth < smallScreen) {
-				$("body").removeClass("two-column").addClass("one-column");				
-			}
+	$.fn.flexNav = function( options ) {
+    var settings = $.extend( {
+      'breakpoint' : '800',
+      'animationSpeed' : 'fast'
+    }, options);
+		
+		var $this = $(this);
+		
+		var resizer = function() {
+			if ($(window).width() < settings.breakpoint) {
+				$("body").removeClass("lg-screen").addClass("sm-screen");	
+				$this.hide();	
+			} 
 			else {
-				$("body").removeClass("one-column").addClass("two-column");	
+				$("body").removeClass("sm-screen").addClass("lg-screen");	
 			}
-			if (compareWidth >= smallScreen) {
-				$('[role="navigation"]').show();
+			if ($(window).width() >= settings.breakpoint) {
+				$this.show();
 			}
-        }
+			
+		};
 
-    });	
-	
- });	
+    // Call once to set.
+    resizer();
+
+		// Function for testing touch screens
+		function is_touch_device() {
+		  return !!('ontouchstart' in window);
+		} 
+
+		// Set class on html element for touch/no-touch
+		if (is_touch_device()) { 
+			$('html').addClass('flexNav-touch');
+		} else {
+			$('html').addClass('flexNav-no-touch');
+		}	
+			
+		// Toggle for nav menu
+		$('.menu-button').click(function() {
+			$this.slideToggle(settings.animationSpeed);			
+		});									
+
+		// Toggle click for sub-menus on touch and or small screens
+		$('.item-with-ul').click(function() {
+			$(this).find('.sub-menu').slideToggle(settings.animationSpeed);
+		});	
+				
+		// Call on resize. 
+		$(window).on('resize', resizer);
+
+	};
+		
+})( jQuery );
