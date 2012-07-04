@@ -10,54 +10,54 @@
 */
 
 (function($) {
-
 	$.fn.flexNav = function(options) {
-		var settings = $.extend({
-			'breakpoint': '800',
-			'animationSpeed': 'fast'
-		}, options);
+	    var settings = $.extend({
+	        'breakpoint': '800',
+	        'animationSpeed': 'fast'
+	    },
+	    options);
 
-		var $this = $(this);
+	    var $this = $(this);
 
-		var resizer = function() {
-	    if ($(window).width() < settings.breakpoint) {
-	        $("body").removeClass("lg-screen").addClass("sm-screen");
+	    var resizer = function() {
+	        if ($(window).width() < settings.breakpoint) {
+	            $("body").removeClass("lg-screen").addClass("sm-screen");
+	        }
+	        else {
+	            $("body").removeClass("sm-screen").addClass("lg-screen");
+	        }
+	        if ($(window).width() >= settings.breakpoint) {
+	            $this.show();
+	        }
+	    };
+
+	    // Call once to set.
+	    resizer();
+
+	    // Function for testing touch screens
+	    function is_touch_device() {
+	        return !! ('ontouchstart' in window);
 	    }
-	    else {
-	        $("body").removeClass("sm-screen").addClass("lg-screen");
+
+	    // Set class on html element for touch/no-touch
+	    if (is_touch_device()) {
+	        $('html').addClass('flexNav-touch');
+	    } else {
+	        $('html').addClass('flexNav-no-touch');
 	    }
-	    if ($(window).width() >= settings.breakpoint) {
-	        $this.show();
-	    }
-		};
 
-		// Call once to set.
-		resizer();
+	    // Toggle for nav menu
+	    $('.menu-button').click(function() {
+	        $this.slideToggle(settings.animationSpeed);
+	    });
 
-		// Function for testing touch screens
-		function is_touch_device() {
-			return !! ('ontouchstart' in window);
-		}
+	    // Toggle click for sub-menus on touch and or small screens
+	    $('.item-with-ul').click(function() {
+	        $(this).find('.sub-menu').slideToggle(settings.animationSpeed);
+	    });
 
-		// Set class on html element for touch/no-touch
-		if (is_touch_device()) {
-			$('html').addClass('flexNav-touch');
-		} else {
-			$('html').addClass('flexNav-no-touch');
-		}
-
-		// Toggle for nav menu
-		$('.menu-button').click(function() {
-			$this.slideToggle(settings.animationSpeed);
-		});
-
-		// Toggle click for sub-menus on touch and or small screens
-		$('.item-with-ul').click(function() {
-			$(this).find('.sub-menu').slideToggle(settings.animationSpeed);
-		});
-
-		// Call on resize.
-		$(window).on('resize', resizer);
+	    // Call on resize.
+	    $(window).on('resize', resizer);
 
 	};
 
