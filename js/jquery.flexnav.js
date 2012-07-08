@@ -1,12 +1,12 @@
 /*global jQuery */
 /*!	
-* FlexNav.js 0.2
+* FlexNav.js 0.3
 *
 * Copyright 2012, Jason Weaver http://jasonweaver.name
 * Released under the WTFPL license 
 * http://sam.zoy.org/wtfpl/
 *
-* Date: Thu July 4 01:12:00 2012 -0600
+* Date: Sunday July 8
 */
 
 (function($) {
@@ -50,7 +50,12 @@
 	    $('.menu-button').click(function() {
 	        $this.slideToggle(settings.animationSpeed);
 	    });
-
+	
+	    // Closes nav menu after links clicked/touched
+	    $this.find('a').click(function() {
+	        $this.hide();
+	    });
+	
 	    // Toggle click for sub-menus on touch and or small screens
 	    $('.item-with-ul').click(function() {
 	        $(this).find('.sub-menu').slideToggle(settings.animationSpeed);

@@ -42,4 +42,7 @@ you can change the defaults too
 * Changed to jQuery Plugin
 * No more Modernizr - Uses a simple function to detect touch screens
 
+### v.0.3 : July 8th, 2012
+
+* Close menu after click/touch of menu links (makes sense for single page navigation with anchors)
 
