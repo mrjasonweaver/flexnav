@@ -93,7 +93,10 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 	z-index: 2;
 }
 [role='navigation'] li ul {
-	width: 100%;			
+	width: 100%;
+	position: relative;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
 }
 [role='navigation'] li ul li {
 	float: none;
@@ -104,12 +107,6 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 	display: block;
 	background-color: #333;
 			
-}
-
-[role='navigation'] li ul {
-	position: relative;
-	border-top: 1px solid #333;
-	border-bottom: 1px solid #333;	 				
 }
 
 [role='navigation'] .item-with-ul {
