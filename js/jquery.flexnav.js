@@ -1,12 +1,12 @@
 /*global jQuery */
 /*!	
-* FlexNav.js 0.3
+* FlexNav.js 0.3.1
 *
 * Copyright 2012, Jason Weaver http://jasonweaver.name
 * Released under the WTFPL license 
 * http://sam.zoy.org/wtfpl/
 *
-* Date: Sunday July 8
+* Date: Thursday Jan 16 2013
 */
 
 (function($) {
