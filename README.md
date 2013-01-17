@@ -46,3 +46,7 @@ you can change the defaults too
 
 * Close menu after click/touch of menu links (makes sense for single page navigation with anchors)
 
+### v.0.3.1 : January 16th, 2013
+
+* Got rid of js that closes menu after click/touch of menu links (caused more trouble than it was worth leaving it in)
+* Started support for multi-level sub menus

@@ -51,11 +51,6 @@
 	        $this.slideToggle(settings.animationSpeed);
 	    });
 	
-	    // Closes nav menu after links clicked/touched
-	    $this.find('a').click(function() {
-	        $this.hide();
-	    });
-	
 	    // Toggle click for sub-menus on touch and or small screens
 	    $('.item-with-ul').click(function() {
 	        $(this).find('.sub-menu').slideToggle(settings.animationSpeed);
