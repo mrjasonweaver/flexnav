@@ -33,9 +33,8 @@ you can change the defaults too
 		
 ### Todo
 
-* Fix nav staying open after resizing back through media query on small viewports
-* Fix hover/click submenu conflicts
-* Tidy up CSS
+* Add all class names to markup via js
+* Add in span elements via js for touch targets on touch screens
 
 ### v.0.2 : July 4th, 2012
 
@@ -50,3 +49,7 @@ you can change the defaults too
 
 * Got rid of js that closes menu after click/touch of menu links (caused more trouble than it was worth leaving it in)
 * Started support for multi-level sub menus
+
+### v.0.3.2 : January 17th, 2013
+
+* Started adding class names via js

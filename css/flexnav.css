@@ -81,10 +81,6 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 	border-bottom: 1px solid #111;			
 }
 
-[role='navigation'] li a.link-with-ul {
-	border-right: 1px solid #222;		
-}
-
 [role='navigation'] .top-level a {
 	position: relative;
 	display: block;
