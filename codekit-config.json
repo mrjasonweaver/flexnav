@@ -9,8 +9,8 @@
       "outputPathIsSetByUser" : 1,
       "inputAbbreviatedPath" : "\/coffeescripts\/jquery.flexnav.coffee",
       "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.flexnav.min.js",
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/jquery.flexnav.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
