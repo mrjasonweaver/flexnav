@@ -9,8 +9,8 @@
       "outputPathIsSetByUser" : 1,
       "inputAbbreviatedPath" : "\/coffeescripts\/jquery.flexnav.coffee",
       "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.flexnav.min.js",
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/js\/jquery.flexnav.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -77,7 +77,7 @@
       "fileType" : 64
     },
     "\/sass\/flexnav.scss" : {
-      "ignoreWasSetByUser" : 1,
+      "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
@@ -119,18 +119,6 @@
       "outputAbbreviatedPath" : "\/header.html",
       "fileType" : 512
     },
-    "\/sass\/ie.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/ie.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/ie.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/js\/jquery.flexnav.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -152,18 +140,6 @@
       "compileDebug" : 0,
       "outputAbbreviatedPath" : "\/footer.html",
       "fileType" : 512
-    },
-    "\/sass\/print.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/print.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/print.css",
-      "fileType" : 4,
-      "debugStyle" : 0
     }
   },
   "manualImportLinks" : [

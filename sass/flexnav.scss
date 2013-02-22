@@ -1,8 +1,26 @@
-/* Flexnav Styles */
+/* Flexnav Base Styles */
 
 @import "compass/reset";
+@import "compass/utilities";
 
 /* Globals */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	font: inherit;
+	vertical-align: baseline;
+	font-family: clean, sans-serif;
+}
 a {text-decoration: none; color: #ff6b31; }
 a:hover {text-decoration: underline;}
 h1,h2 {font-family: georgia, serif;}
@@ -16,90 +34,89 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 	margin: 5% auto;
 }
 [role='navigation'] {
+	@include pie-clearfix;
 	margin: 0 auto;
-	width: 100%;
-	background-color: #333;		
+	width: 100%;	
 }
 .flexNav-touch [role='navigation'],
 .flexNav-no-touch [role='navigation'] {	
 	display: none;
 }
 .menu-button {
+	position: relative;
 	display: block;
 	padding: 1em;
-	background: #000;
+	background: #111;
 	color: #fff;
-	background-image: url('../images/arrow-down.png');
-	background-repeat: no-repeat;
-	background-position: 93% 18px;
 	cursor: pointer;
 }
-[role='navigation']:after { /* clearfix */
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
-
 [role='navigation'] li {
 	position: relative;
 	list-style: none;
-	display: block;	
-	background-color: #333;	
-	width: 100%;		
+	display: block;
+	width: 100%;
+	background: #222;	
 }
-
-[role='navigation'] li.item-with-ul {	
-	background-color: #222;	
-			
-}
-
 [role='navigation'] li a {
-	margin-right: 20%;
+	position: relative;
+	overflow: hidden;
 	display: block;
 	color: #ddd;
 	border-bottom: 1px solid #111;			
 }
-
+.touch-button {
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	background: #111;
+	text-align: center;
+	&:hover {
+		cursor: pointer;
+	}
+	.navicon {
+		position: relative;
+		top: 1.4em;
+		font-size: 12px;
+		color: #555;
+	}
+}
+.menu-button .navicon {
+	font-size: 16px;
+	top: 1em;
+}
 [role='navigation'] .top-level a {
 	position: relative;
 	display: block;
-	background-color: #333;
 	padding: 1em;
 	z-index: 2;
 }
 [role='navigation'] li ul {
 	width: 100%;
 	position: relative;
-	border-top: 1px solid #333;
-	border-bottom: 1px solid #333;
 }
 [role='navigation'] li ul li {
 	float: none;
 	width: 100%;			
 }
-
 [role='navigation'] li ul li a {
 	display: block;
-	background-color: #333;
-			
-}
-
-[role='navigation'] .item-with-ul {
-	background-image: url('../images/arrow-down.png');
-	background-repeat: no-repeat;
-	background-position: 93% 18px;	
+	background: #333;			
 }
 .sub-menu {
 	display: none;
 }
-
 .sub-menu.open {
 	display: block;
 }
-
+.second-level.item-with-ul ul li a {
+	background: #444;
+}
+.second-level.item-with-ul ul li ul li a {
+	background: #555;
+}
 #site-footer {
 	margin: 1em 0;
 	overflow: hidden;
@@ -128,7 +145,7 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 		list-style: none;
 		float: left;
 		display: block;	
-		background-color: #333;	
+		background-color: #222;	
 		width: 20%;		
 	}
 	.flexNav-no-touch .item-with-ul:hover > ul { 
@@ -152,25 +169,27 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 	[role='navigation'] li ul li a {
 		border-bottom: none;	
 	}	
-	.flexNav-touch [role='navigation'] li ul.sub-menu {
+	[role='navigation'] li ul.sub-menu {
 		position: absolute; 
 		top: auto;
 		left: 0;
-		display: none;
-		z-index: 1;					
-	}	
-
+		z-index: 1;
+		border-right: 1px solid #111;		
+	}
+	[role='navigation'] li ul li a,
+	.second-level.item-with-ul ul li a,
+	.second-level.item-with-ul ul li ul li a {
+		background: #222;			
+	}
 	.flexNav-no-touch .item-with-ul:hover > ul	 { 
 		visibility: visible;
 		opacity: 1;
 		height: auto;
 		display: block;	
-		border-right: 1px solid #000;
-		border-bottom: 1px solid #000;		
 	}	
 	
-	.flexNav-no-touch .second-level.item-with-ul:hover > ul {
+	.flexNav-no-touch .second-level.item-with-ul:hover ul {
 		margin-left: 100%;
 		top: 0;
-	}		
+	}
 }

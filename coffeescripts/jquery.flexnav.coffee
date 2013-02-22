@@ -18,10 +18,11 @@ $.fn.flexNav = (options) ->
 		resizer = ->
 			if $(window).width() < settings.breakpoint
 				$("body").removeClass("lg-screen").addClass("sm-screen")
-			else $("body").removeClass("sm-screen").addClass("lg-screen")
-				
-			if $(window).width() >= settings.breakpoint
-				$(@).show()
+			else 
+				$("body").removeClass("sm-screen").addClass("lg-screen")
+								
+			$('.lg-screen #nav, .lg-screen #nav ul').fadeIn()
+			$('.sm-screen #nav, .sm-screen #nav ul').hide()
 
 		# Set class on html element for touch/no-touch
 		is_touch_device = ->
@@ -29,7 +30,8 @@ $.fn.flexNav = (options) ->
 
 		if is_touch_device()
 			$('html').addClass('flexNav-touch')
-		else $('html').addClass('flexNav-no-touch')
+		else
+			$('html').addClass('flexNav-no-touch')
 		
 		# Set some classes in the markup
 		$(@).find("li").each ->
@@ -39,11 +41,13 @@ $.fn.flexNav = (options) ->
 		# Toggle for nav menu
 		$('.menu-button').click ->
 			$this.slideToggle(settings.animationSpeed)
-		
-		# Toggle click for sub-menus on touch and or small screens
-		$('.item-with-ul').click ->			
-			$(@).find('.sub-menu').slideToggle(settings.animationSpeed)
+					
+		$('.menu-button, .item-with-ul').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
 			
+		# Toggle click for sub-menus on touch and or small screens
+		$('.touch-button').click ->		
+			$(@).parent('.item-with-ul').find('>.sub-menu').slideToggle(settings.animationSpeed)
+				
 	# Call once to set		
 	resizer()
 	

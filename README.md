@@ -34,7 +34,7 @@ you can change the defaults too
 ### Todo
 
 * Add all class names to markup via js
-* Add in span elements via js for touch targets on touch screens
+* Add support for IE7/8
 
 ### v.0.2 : July 4th, 2012
 
@@ -53,3 +53,9 @@ you can change the defaults too
 ### v.0.3.2 : January 17th, 2013
 
 * Started adding class names via js
+
+### v.0.4 : February 22nd, 2013
+* Added in span elements via js for touch targets on touch screens
+* Aded unicode navicon instead of image
+* Fixed recursive sub-menu bug that didn't allow users to open/close 3rd/4th level sub-menus on small screens
+* Using Sass, Jade and CoffeeScript for preprocessing and compiling
