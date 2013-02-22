@@ -365,3 +365,80 @@ p {
     top: 0;
   }
 }
+/* line 198, ../sass/flexnav.scss */
+.oldie p {
+  font-size: 100%;
+  margin-bottom: 1.5em;
+  line-height: 1.25em;
+}
+/* line 200, ../sass/flexnav.scss */
+.oldie .flexNav-touch #nav,
+.oldie .flexNav-no-touch #nav {
+  display: block;
+  width: 100%;
+}
+/* line 204, ../sass/flexnav.scss */
+.oldie .menu-button {
+  display: none;
+}
+/* line 207, ../sass/flexnav.scss */
+.oldie #nav li {
+  position: relative;
+  list-style: none;
+  float: left;
+  display: block;
+  background-color: #222;
+  width: 20%;
+}
+/* line 215, ../sass/flexnav.scss */
+.oldie .flexNav-no-touch .item-with-ul:hover > ul {
+  opacity: 1;
+  top: 3.1em;
+  position: absolute;
+}
+/* line 220, ../sass/flexnav.scss */
+.oldie #nav li a {
+  border-left: 1px solid black;
+  display: block;
+  border-bottom: none;
+}
+/* line 225, ../sass/flexnav.scss */
+.oldie .flexNav-no-touch #nav li ul {
+  position: absolute;
+  top: auto;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  height: 1px;
+  z-index: 1;
+}
+/* line 234, ../sass/flexnav.scss */
+.oldie #nav li ul li a {
+  border-bottom: none;
+}
+/* line 237, ../sass/flexnav.scss */
+.oldie #nav li ul.sub-menu {
+  position: absolute;
+  top: auto;
+  left: 0;
+  z-index: 1;
+  border-right: 1px solid #111111;
+}
+/* line 246, ../sass/flexnav.scss */
+.oldie #nav li ul li a,
+.oldie .second-level.item-with-ul ul li a,
+.oldie .second-level.item-with-ul ul li ul li a {
+  background: #222;
+}
+/* line 249, ../sass/flexnav.scss */
+.oldie .flexNav-no-touch .item-with-ul:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  display: block;
+}
+/* line 256, ../sass/flexnav.scss */
+.oldie .flexNav-no-touch .second-level.item-with-ul:hover ul {
+  margin-left: 100%;
+  top: 0;
+}
