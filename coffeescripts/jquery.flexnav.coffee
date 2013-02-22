@@ -12,13 +12,14 @@ $.fn.flexNav = (options) ->
 	settings = $.extend
 		'breakpoint': '800'
 		'animationSpeed': 'fast'
-		
+		options
+
 		$this = $(@)
 		
 		resizer = ->
-			if $(window).width() < settings.breakpoint
+			if $(window).width() <= settings.breakpoint
 				$("body").removeClass("lg-screen").addClass("sm-screen")
-			else 
+			else
 				$("body").removeClass("sm-screen").addClass("lg-screen")
 								
 			$('.lg-screen #nav, .lg-screen #nav ul').fadeIn()
@@ -39,14 +40,15 @@ $.fn.flexNav = (options) ->
 				$(@).addClass("item-with-ul")
 		
 		# Toggle for nav menu
-		$('.menu-button').click ->
+		$('.menu-button').on( 'click', ->
 			$this.slideToggle(settings.animationSpeed)
-					
+		)			
 		$('.menu-button, .item-with-ul').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
 			
 		# Toggle click for sub-menus on touch and or small screens
-		$('.touch-button').click ->		
-			$(@).parent('.item-with-ul').find('>.sub-menu').slideToggle(settings.animationSpeed)
+		$('.touch-button').on('click', ->		
+				$(@).parent('.item-with-ul').find('>.sub-menu').slideToggle(settings.animationSpeed)
+		)
 				
 	# Call once to set		
 	resizer()

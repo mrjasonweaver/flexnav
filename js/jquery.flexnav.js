@@ -19,8 +19,8 @@
     settings = $.extend({
       'breakpoint': '800',
       'animationSpeed': 'fast'
-    }, $this = $(this), resizer = function() {
-      if ($(window).width() < settings.breakpoint) {
+    }, options, $this = $(this), resizer = function() {
+      if ($(window).width() <= settings.breakpoint) {
         $("body").removeClass("lg-screen").addClass("sm-screen");
       } else {
         $("body").removeClass("sm-screen").addClass("lg-screen");
@@ -33,9 +33,9 @@
       if ($(this).has("ul").length) {
         return $(this).addClass("item-with-ul");
       }
-    }), $('.menu-button').click(function() {
+    }), $('.menu-button').on('click', function() {
       return $this.slideToggle(settings.animationSpeed);
-    }), $('.menu-button, .item-with-ul').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>'), $('.touch-button').click(function() {
+    }), $('.menu-button, .item-with-ul').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>'), $('.touch-button').on('click', function() {
       return $(this).parent('.item-with-ul').find('>.sub-menu').slideToggle(settings.animationSpeed);
     }));
     resizer();
