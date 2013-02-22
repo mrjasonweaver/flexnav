@@ -1,0 +1,16 @@
+!!!
+html(lang="en")
+	include partials/head
+	- var page = 'home'
+	body(class='#{page}-page')
+		.container
+			include partials/header
+		
+			section#content(role="main")
+				h1 A Device Agnostic Approach to Complex Site Navigation
+				h2 The Details
+				p The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
+											
+				p More details to come as I keep testing.
+					a(href="https://github.com/indyplanets/flexnav")Fork on GitHub.
+			include partials/footer

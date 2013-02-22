@@ -1,91 +1,86 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flexible, Device Agnostic Navigation</title>
-<link href="css/flexnav.css" rel="stylesheet" type="text/css" / >
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.flexnav.js"></script>
-</head>
-  <body>		
-	<div class="container">		
-		<h1 class="page-title">FlexNav</h1>
-		<div class='menu-button'>Menu</div>	
-		<nav>
-			<ul id="nav" role="navigation">
-				<li class="top-level"><a href="">Item #1</a>
-					<ul class="sub-menu">
-						<li><a href="#content">Sub 1 Item #1</a></li>
-						<li><a href="">Sub 1 Item #2</a></li>
-						<li><a href="">Sub 1 Item #3</a></li>
-						<li><a href="">Sub 1 Item #4</a></li>
-					</ul>
-				</li>
-
-				<li class="top-level"><a href="">Item #2</a>
-					<ul class="sub-menu">
-						<li class="second-level"><a href="">Sub 1 Item #1</a>
-							<ul class="sub-menu">
-								<li><a href="">Sub 2 Item #1</a></li>
-								<li><a href="">Sub 2 Item #2</a></li>
-								<li><a href="">Sub 2 Item #3</a></li>
-							</ul>
-						</li>
-						<li class="second-level"><a href="">Sub 1 Item #2</a>
-							<ul class="sub-menu">
-								<li><a href="">Sub 2 Item #1</a></li>
-								<li><a href="">Sub 2 Item #2</a></li>
-								<li><a href="">Sub 2 Item #3</a></li>
-							</ul>
-						</li>
-						<li><a href="">Sub 1 Item #3</a></li>
-					</ul>
-				</li>
-
-				<li class="top-level"><a href="">Item #3</a>
-					<ul class="sub-menu">
-						<li><a href="">Sub 1 Item #1</a></li>
-						<li><a href="">Sub 1 Item #2</a></li>
-						<li><a href="">Sub 1 Item #3</a></li>
-					</ul>
-				</li>
-				<li class="top-level"><a href="">Item #4</a>
-					<ul class="sub-menu">
-						<li><a href="">Sub 1 Item #1</a></li>
-						<li><a href="">Sub 1 Item #2</a></li>
-						<li><a href="">Sub 1 Item #3</a></li>
-					</ul>
-				</li>
-
-				<li class="top-level"><a href="">Item #5</a>
-					<ul class="sub-menu">
-						<li><a href="">Sub 1 Item #1</a></li>
-						<li><a href="">Sub 1 Item #2</a></li>
-						<li><a href="">Sub 1 Item #3</a></li>
-					</ul>
-				</li>			
-			</ul>											
-		</nav>
-		
-		<section role="main" id="content">
-			<h1>A Device Agnostic Approach to Complex Site Navigation</h1>
-			<h2>The Details</h2>
-			<p>The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.</p>
-											
-				<p>More details to come as I keep testing. <a href="https://github.com/indyplanets/flexnav">Fork on GitHub.</a></p>
-
-		</section>
-    <footer class="site-footer" role="contentinfo">
-	<ul>
-		<li>Code by <a href="http://jasonweaver.name">Jason Weaver</a></li>
-		<li><a href="mailto:indyplanets@gmail.com">Contact Me</a></li>				
-	</ul>	
-    </footer>		
-	</div>
-	<script> 
-	$("[role='navigation']").flexNav(); 
-	</script>
-	
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexNav - Flexible, Device Agnostic Navigation</title>
+    <link href="css/flexnav.css" media="screen, projection" rel="stylesheet" type="text/css">
+  </head>
+  <body class="home-page">
+    <div class="container">
+      <header id="site-header">
+        <h1 class="site-title">FlexNav</h1>
+        <div class="menu-button">Menu</div>
+        <nav>
+          <ul id="nav" role="navigation">
+            <li class="top-level"><a href="">Item 1</a>
+              <ul class="sub-menu">
+                <li> <a href="#content">Sub 1 Item 1</a></li>
+                <li><a href="">Sub 1 Item 2</a></li>
+                <li><a href="">Sub 1 Item 3</a></li>
+                <li><a href="">Sub 1 Item 4</a></li>
+              </ul>
+            </li>
+            <li class="top-level"><a href="">Item 2</a>
+              <ul class="sub-menu">
+                <li class="second-level"><a href="">Sub 1 Item 1</a>
+                  <ul class="sub-menu">
+                    <li><a href="">Sub 2 Item 1</a></li>
+                    <li><a href="">Sub 2 Item 2</a></li>
+                    <li><a href="">Sub 2 Item 3</a></li>
+                  </ul>
+                  <li class="second-level"><a href="">Sub 1 Item 2</a>
+                    <ul class="sub-menu">
+                      <li><a href="">Sub 2 Item 1</a></li>
+                      <li><a href="">Sub 2 Item 2</a></li>
+                      <li><a href="">Sub 2 Item 3</a></li>
+                      <li><a href="">Sub 1 Item 3</a></li>
+                    </ul>
+                  </li>
+                </li>
+              </ul>
+            </li>
+            <li class="top-level"><a href="">Item 3</a>
+              <ul class="sub-menu">
+                <li><a href="">Sub 1 Item 1</a></li>
+                <li><a href="">Sub 1 Item 2</a></li>
+                <li><a href="">Sub 1 Item 3</a></li>
+              </ul>
+            </li>
+            <li class="top-level"><a href="">Item 4</a>
+              <ul class="sub-menu">
+                <li><a href="">Sub 1 Item 1</a></li>
+                <li><a href="">Sub 1 Item 2</a></li>
+                <li><a href="">Sub 1 Item 3</a></li>
+              </ul>
+            </li>
+            <li class="top-level"><a href="">Item 5</a>
+              <ul class="sub-menu">
+                <li><a href="">Sub 1 Item 1</a></li>
+                <li><a href="">Sub 1 Item 2</a></li>
+                <li><a href="">Sub 1 Item 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section id="content" role="main">
+        <h1>A Device Agnostic Approach to Complex Site Navigation</h1>
+        <h2>The Details</h2>
+        <p>The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.</p>
+        <p>More details to come as I keep testing.<a href="https://github.com/indyplanets/flexnav"></a>
+          <Fork>on GitHub.</Fork>
+        </p>
+      </section>
+      <footer id="site-footer">
+        <ul>
+          <li>Code by <a href="http://jasonweaver.name">Jason Weaver</a></li>
+          <li><a href="mailto:indyplanets@gmail.com">Contact Me</a></li>
+        </ul>
+      </footer>
+      <script src="http://code.jquery.com/jquery-1.9.0.js" type="text/javascript"></script>
+      <script src="js/jquery.flexnav.min.js" type="text/javascript"></script>
+      <script type="text/javascript">$("[role='navigation']").flexNav();</script>
+    </div>
+  </body>
 </html>
