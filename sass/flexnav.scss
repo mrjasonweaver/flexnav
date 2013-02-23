@@ -2,6 +2,13 @@
 
 @import "compass/reset";
 @import "compass/utilities";
+@import "compass/css3/images";
+
+$nav_text: #222;
+$top_level: #a6a6a2;
+$second_level: #b2b2af;
+$third_level: #bfbfbc;
+$fourth_level: #cbcbc9;
 
 /* Globals */
 html, body, div, span, applet, object, iframe,
@@ -21,19 +28,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	font-family: clean, sans-serif;
 }
-a {text-decoration: none; color: #ff6b31; }
-a:hover {text-decoration: underline;}
-h1,h2 {font-family: georgia, serif;}
-h1 {font-size: 24px;margin-bottom: 5%;}
-h2 {font-size: 18px;margin-bottom: 10px;}
-p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
-.page-title {font-size: 26px;text-align: center;}
-.container {margin: 5% auto;width: 90%;}
-
-[role='main'] {
-	margin: 5% auto;
-}
-[role='navigation'] {
+#nav {
 	@include pie-clearfix;
 	margin: 0 auto;
 	width: 100%;	
@@ -46,20 +41,22 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 	position: relative;
 	display: block;
 	padding: 1em;
-	background: #111;
-	color: #fff;
+	background: $top_level;
+	color: $nav_text;
 	cursor: pointer;
+	border-bottom: 1px solid rgba(0,0,0,.2);
 }
 #nav li {
+	font-size: 100%;
 	position: relative;			
 }
 #nav li a {
 	position: relative;
 	overflow: hidden;
 	display: block;
-	color: #ddd;
-	background: #222;
-	border-bottom: 1px solid #111;			
+	color: $nav_text;
+	background: #a6a6a2;
+	border-bottom: 1px solid rgba(0,0,0,.15);
 }
 .touch-button {
 	position: absolute;
@@ -68,8 +65,9 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 	right: 0;
 	width: 50px;
 	height: 50px;
-	background: #111;
-	background: rgba(0,0,0,.2);
+	display: inline-block;
+	background: #acaca1;
+	background: rgba(0,0,0,.075);
 	text-align: center;
 	&:hover {
 		cursor: pointer;
@@ -78,9 +76,13 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 		position: relative;
 		top: 1.4em;
 		font-size: 12px;
-		color: #555;
+		color: #666;
 	}
 }
+.menu-button .touch-button {
+	background: transparent;
+}
+
 .menu-button .navicon {
 	font-size: 16px;
 	top: 1em;
@@ -100,7 +102,7 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 }
 #nav li ul li a {
 	display: block;
-	background: #333;			
+	background: $second_level;			
 }
 .sub-menu {
 	display: none;
@@ -109,23 +111,10 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 	display: block;
 }
 #nav .second-level.item-with-ul ul li a {
-	background: #444;
+	background: $third_level;
 }
 #nav .second-level.item-with-ul ul li ul li a {
-	background: #555;
-}
-#site-footer {
-	margin: 1em 0;
-	overflow: hidden;
-}
-#site-footer li {
-	list-style: none;
-	margin: 0;
-	display: block;
-	float: left;
-}
-#site-footer li a {
-	padding: .5em .5em .5em 0;
+	background: $fourth_level;
 }
 
 @media all and (min-width: 800px) {
@@ -142,7 +131,7 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 		list-style: none;
 		float: left;
 		display: block;	
-		background-color: #222;	
+		background-color: #a6a6a2;	
 		width: 20%;		
 	}
 	.flexNav-no-touch .item-with-ul:hover > ul { 
@@ -151,7 +140,7 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 		position: absolute;	
 	}	
 	#nav li a {
-		border-left: 1px solid #000;
+		border-left: 1px solid #acaca1;
 		border-bottom: none;		
 	}
 	#nav li > ul.sub-menu {
@@ -196,7 +185,7 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 		list-style: none;
 		float: left;
 		display: block;	
-		background-color: #222;	
+		background-color: #a6a6a2;	
 		width: 20%;		
 	}
 	#nav li ul li {
@@ -208,7 +197,7 @@ p {font-size: 14px;margin-bottom: 16px; line-height: 18px;}
 		position: absolute;	
 	}	
 	#nav li a {
-		border-left: 1px solid #000;
+		border-left: 1px solid #acaca1;
 		border-bottom: none;		
 	}
 	#nav li > ul.sub-menu {

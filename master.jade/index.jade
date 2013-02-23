@@ -14,10 +14,53 @@ html(lang="en")
 			include partials/header
 		
 			section#content(role="main")
-				h1 A Device Agnostic Approach to Complex Site Navigation
-				h2 The Details
-				p The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
-											
-				p More details to come as I keep testing.
-					a(href="https://github.com/indyplanets/flexnav") Fork on GitHub.
-			include partials/footer
+				article
+					.article-wrap
+						.block
+							h2 A Device-Agnostic Approach to Complex Site Navigation
+							p The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
+
+						.block
+							h2 Features
+							ul
+								li Multiple nested sub menus
+								li Tap targets to reveal sub menus for touch screens
+								li Hover reveal for desktop
+
+						.block
+							h2 Browser Support
+							ul
+								li IE7-10
+								li Latest Safari
+								li Latest Chrome
+								li Latest FireFox
+								li Android 2.2 to Latest
+								li Mobile Safari
+
+				article
+					.article-wrap
+						.block
+							h2 Get FlexNav v0.4.2
+							p
+								a(href="https://github.com/indyplanets/flexnav", class="callout") Download on GitHub &rarr;
+						.block
+							h2 Usage
+							p Add flexnav.css to the head of your document
+						
+								pre
+									code &lt;link href="css/flexnav.css" rel="stylesheet" type="text/css" /&gt;
+		
+							p Add jquery.flexnav.min.js before the closing body tag
+
+								pre
+									code &lt;script type="text/javascript" src="js/jquery.flexnav.js"&gt;&lt;/script&gt;
+		
+							p Initialize FlexNav right before your closing body tag
+								pre
+									code $("#nav").flexNav();
+
+							p you can change the defaults too
+								pre
+									code $("#nav").flexNav({ 'breakpoint' : '800', 'animationSpeed' : 'fast' }); // defaults
+
+		include partials/footer
