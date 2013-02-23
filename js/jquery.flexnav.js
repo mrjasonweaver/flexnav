@@ -22,8 +22,19 @@
     }, options, $this = $(this), resizer = function() {
       if ($(window).width() <= settings.breakpoint) {
         $("body").removeClass("lg-screen").addClass("sm-screen");
+        $('.item-with-ul').off;
       } else {
         $("body").removeClass("sm-screen").addClass("lg-screen");
+        $('.item-with-ul').on({
+          mouseenter: function() {
+            $(this).find('>.sub-menu').stop().show();
+            return {
+              mouseleave: function() {
+                return $(this).find('>.sub-menu').stop().hide();
+              }
+            };
+          }
+        });
       }
       $('.lg-screen #nav, .lg-screen #nav ul').fadeIn();
       return $('.sm-screen #nav, .sm-screen #nav ul').hide();
