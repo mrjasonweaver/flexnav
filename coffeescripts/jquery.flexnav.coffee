@@ -18,15 +18,11 @@ $.fn.flexNav = (options) ->
 		
 		resizer = ->
 			if $(window).width() <= settings.breakpoint
-				$("body").removeClass("lg-screen").addClass("sm-screen")
-				$('.item-with-ul').off
+				$("body").removeClass("lg-screen").addClass("sm-screen")			
 			else
 				$("body").removeClass("sm-screen").addClass("lg-screen")
-				$('.item-with-ul').on(
-					mouseenter: ->		
-						$(@).find('>.sub-menu').stop().show()
-						mouseleave: ->		
-							$(@).find('>.sub-menu').stop().hide()					
+				$('.lg-screen .item-with-ul').on('mouseenter', ->		
+					$(@).find('>.sub-menu').stop().show()				
 				)
 								
 			$('.lg-screen #nav, .lg-screen #nav ul').fadeIn()
@@ -56,7 +52,7 @@ $.fn.flexNav = (options) ->
 		$('.touch-button').on('click', ->	
 			$(@).parent('.item-with-ul').find('>.sub-menu').slideToggle(settings.animationSpeed)					
 		)
-					
+				
 	# Call once to set		
 	resizer()
 	
