@@ -68,4 +68,4 @@ you can change the defaults too
 * Using Sass, Jade and CoffeeScript for preprocessing and compiling
 
 ### v.0.4.1 : February 22nd, 2013
-* Added CSS support head markup conditionals for IE7/8
+* Added CSS support and markup conditionals for IE7/8
