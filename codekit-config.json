@@ -25,14 +25,14 @@
       "outputAbbreviatedPath" : "\/index.html",
       "fileType" : 512
     },
-    "\/index.html" : {
+    "\/css\/flexnav.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
+      "inputAbbreviatedPath" : "\/css\/flexnav.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
     },
     "\/master.jade\/partials\/footer-scripts.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -56,6 +56,15 @@
       "outputAbbreviatedPath" : "\/head.html",
       "fileType" : 512
     },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/js\/jquery.flexnav.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -78,15 +87,6 @@
       "outputAbbreviatedPath" : "\/css\/flexnav.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/css\/flexnav.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/flexnav.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/images\/arrow-down.png" : {
       "ignoreWasSetByUser" : 0,

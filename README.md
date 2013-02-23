@@ -69,3 +69,6 @@ you can change the defaults too
 
 ### v.0.4.1 : February 22nd, 2013
 * Added CSS support and markup conditionals for IE7/8
+
+### v.0.4.2 : February 23nd, 2013
+* Fixed bug where nav doesn't open on hover after clicking drop arrow: [Click vs. mouse over](https://github.com/indyplanets/flexnav/issues/16)
