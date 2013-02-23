@@ -27,13 +27,13 @@ Add jQuery and jquery.flexnav.js to the head of your document
 Initialize FlexNav right before your closing body tag
 
 		<script>
-			$("[role='navigation']").flexNav();
+			$("#nav").flexNav();
 		</script>		
 
 you can change the defaults too
 	
 		<script>
-			$("[role='navigation']").flexNav({
+			$("#nav").flexNav({
 				'breakpoint' : '800', // default
 				'animationSpeed' : 'fast' // default			
 			});			
