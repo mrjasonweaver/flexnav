@@ -5,6 +5,14 @@
 ### The Details
 A mobile-first example of using media queries and jQuery to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
 
+### Browser Support
+* IE7-10
+* Latest Safari
+* Latest Chrome
+* Latest FireFox
+* Android 2.2 to Latest
+* Mobile Safari
+
 ### Usage
 
 Add flexnav.css to the head of your document
@@ -34,7 +42,6 @@ you can change the defaults too
 ### Todo
 
 * Add all class names to markup via js
-* Add support for IE7/8
 
 ### v.0.2 : July 4th, 2012
 
@@ -59,3 +66,6 @@ you can change the defaults too
 * Aded unicode navicon instead of image
 * Fixed recursive sub-menu bug that didn't allow users to open/close 3rd/4th level sub-menus on small screens
 * Using Sass, Jade and CoffeeScript for preprocessing and compiling
+
+### v.0.4.1 : February 22nd, 2013
+* Added CSS support head markup conditionals for IE7/8

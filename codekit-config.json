@@ -9,8 +9,8 @@
       "outputPathIsSetByUser" : 1,
       "inputAbbreviatedPath" : "\/coffeescripts\/jquery.flexnav.coffee",
       "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/jquery.flexnav.js",
+      "minifyOutput" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.flexnav.min.js",
       "outputStyle" : 0,
       "fileType" : 32
     },
@@ -56,15 +56,6 @@
       "outputAbbreviatedPath" : "\/head.html",
       "fileType" : 512
     },
-    "\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/js\/jquery.flexnav.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -87,6 +78,15 @@
       "outputAbbreviatedPath" : "\/css\/flexnav.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/arrow-down.png" : {
       "ignoreWasSetByUser" : 0,
