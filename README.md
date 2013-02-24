@@ -48,7 +48,8 @@ you can change the defaults too
 		
 ### Todo
 
-* Add all class names to markup via js
+* Add all class names to markup via js for easier CMS integration
+* Make several demo themes
 
 ### Changelog
 
