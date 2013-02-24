@@ -50,36 +50,38 @@ you can change the defaults too
 
 * Add all class names to markup via js
 
-### v.0.2 : July 4th, 2012
+### Changelog
+
+#### v.0.2 : July 4th, 2012
 
 * Changed to jQuery Plugin
 * No more Modernizr - Uses a simple function to detect touch screens
 
-### v.0.3 : July 8th, 2012
+#### v.0.3 : July 8th, 2012
 
 * Close menu after click/touch of menu links (makes sense for single page navigation with anchors)
 
-### v.0.3.1 : January 16th, 2013
+#### v.0.3.1 : January 16th, 2013
 
 * Got rid of js that closes menu after click/touch of menu links (caused more trouble than it was worth leaving it in)
 * Started support for multi-level sub menus
 
-### v.0.3.2 : January 17th, 2013
+#### v.0.3.2 : January 17th, 2013
 
 * Started adding class names via js
 
-### v.0.4 : February 22nd, 2013
+#### v.0.4 : February 22nd, 2013
 * Added in span elements via js for touch targets on touch screens
 * Aded unicode navicon instead of image
 * Fixed recursive sub-menu bug that didn't allow users to open/close 3rd/4th level sub-menus on small screens
 * Using Sass, Jade and CoffeeScript for preprocessing and compiling
 
-### v.0.4.1 : February 22nd, 2013
+#### v.0.4.1 : February 22nd, 2013
 * Added CSS support and markup conditionals for IE7/8
 
-### v.0.4.2 : February 23nd, 2013
+#### v.0.4.2 : February 23nd, 2013
 * Fixed bug where nav doesn't open on hover after clicking drop arrow: [Click vs. mouse over](https://github.com/indyplanets/flexnav/issues/16)
 
-### v.0.4.3 : February 24nd, 2013
+#### v.0.4.3 : February 24nd, 2013
 * Rethinking using js hover events. Reverted back and now issue regarding [Click vs. mouse over](https://github.com/indyplanets/flexnav/issues/16) is reopened
 * Added Support for keyboard tab input accessibility. Hat tip [alliwagner](https://github.com/alliwagner)  https://github.com/alliwagner/flexnav/blob/852cd7838aebe635df43d6e8c32e4b9cbf4d74d9/index.html
