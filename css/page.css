@@ -118,10 +118,11 @@ p {
 }
 
 /* line 98, ../sass/page.scss */
-pre {
+code {
   overflow: scroll;
   background: rgba(0, 0, 0, 0.1);
   padding: 10px;
+  margin-top: 10px;
   margin-bottom: 2.5em;
   line-height: 1.5;
   display: block;
@@ -131,7 +132,7 @@ pre {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* line 110, ../sass/page.scss */
+/* line 111, ../sass/page.scss */
 #site-footer {
   overflow: hidden;
   clear: both;
@@ -141,12 +142,12 @@ pre {
   box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
   width: 100%;
 }
-/* line 119, ../sass/page.scss */
+/* line 120, ../sass/page.scss */
 #site-footer .container {
   margin-top: 0;
 }
 
-/* line 123, ../sass/page.scss */
+/* line 124, ../sass/page.scss */
 #site-footer li {
   list-style: none;
   margin: 1em 0;
@@ -154,54 +155,54 @@ pre {
   float: left;
 }
 
-/* line 129, ../sass/page.scss */
+/* line 130, ../sass/page.scss */
 #site-footer li a {
   padding: 0 0.5em;
 }
 
 @media all and (min-width: 800px) {
-  /* line 134, ../sass/page.scss */
+  /* line 135, ../sass/page.scss */
   body {
     font-size: 100%;
   }
 
-  /* line 138, ../sass/page.scss */
+  /* line 139, ../sass/page.scss */
   .site-title h1 {
     font-size: 2.75em;
     margin-bottom: 10px;
   }
-  /* line 142, ../sass/page.scss */
+  /* line 143, ../sass/page.scss */
   .site-title h2 {
     font-size: 1.2em;
     margin-bottom: 50px;
   }
 
-  /* line 148, ../sass/page.scss */
+  /* line 149, ../sass/page.scss */
   #content article:first-child {
     width: 56%;
     margin-right: 10%;
   }
-  /* line 152, ../sass/page.scss */
+  /* line 153, ../sass/page.scss */
   #content article:nth-child(2) {
     width: 34%;
     margin-right: 0;
   }
-  /* line 156, ../sass/page.scss */
+  /* line 157, ../sass/page.scss */
   #content p {
     font-size: 1.1em;
   }
-  /* line 159, ../sass/page.scss */
+  /* line 160, ../sass/page.scss */
   #content h2 {
     font-size: 1.6em;
     font-weight: 900;
   }
-  /* line 163, ../sass/page.scss */
+  /* line 164, ../sass/page.scss */
   #content article {
     width: 50%;
     float: left;
     overflow: hidden;
   }
-  /* line 168, ../sass/page.scss */
+  /* line 169, ../sass/page.scss */
   #content li {
     font-size: 1.1em;
   }

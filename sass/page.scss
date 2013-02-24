@@ -95,10 +95,11 @@ p {
 	padding: 0;
 	overflow: hidden;
 }
-pre {
+code {
 	overflow: scroll;
 	background: rgba(0,0,0,.1);
 	padding: 10px;
+	margin-top: 10px;
 	margin-bottom: 2.5em;
 	line-height: 1.5;
 	display: block;
