@@ -19,12 +19,11 @@ Add flexnav.css to the head of your document
 		
 		<link href="css/flexnav.css" rel="stylesheet" type="text/css" / >
 		
-Add jQuery and jquery.flexnav.js to the head of your document
-
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+Add jquery.flexnav.min.js before closing body tag and after jQuery
+		
 		<script type="text/javascript" src="js/jquery.flexnav.js"></script>
 		
-Initialize FlexNav right before your closing body tag
+Initialize
 
 		<script>
 			$("#nav").flexNav();
@@ -42,6 +41,7 @@ you can change the defaults too
 ### Todo
 
 * Add all class names to markup via js
+* Support for keyboard input accessability
 
 ### v.0.2 : July 4th, 2012
 
