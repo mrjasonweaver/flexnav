@@ -34,16 +34,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/master.jade\/partials\/footer-scripts.jade" : {
+    "\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/master.jade\/partials\/footer-scripts.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 0,
-      "outputAbbreviatedPath" : "\/footer-scripts.html",
-      "fileType" : 512
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/master.jade\/partials\/head.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -55,38 +53,6 @@
       "compileDebug" : 0,
       "outputAbbreviatedPath" : "\/head.html",
       "fileType" : 512
-    },
-    "\/css\/page.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/page.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/sass\/flexnav.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/flexnav.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/flexnav.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/js\/jquery.flexnav.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.flexnav.js",
-      "outputStyle" : 0,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.flexnav-ck.js",
-      "fileType" : 64
     },
     "\/sass\/page.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -100,14 +66,39 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/config.rb" : {
+    "\/sass\/flexnav.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/config.rb",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 32768
+      "inputAbbreviatedPath" : "\/sass\/flexnav.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/flexnav.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/master.jade\/partials\/footer-scripts.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/master.jade\/partials\/footer-scripts.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 0,
+      "outputAbbreviatedPath" : "\/footer-scripts.html",
+      "fileType" : 512
+    },
+    "\/images\/arrow-down.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/arrow-down.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/arrow-down.png",
+      "initialSize" : 2928,
+      "fileType" : 8192
     },
     "\/jquery.flexnav.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -120,25 +111,34 @@
       "outputAbbreviatedPath" : "\/jquery.flexnav.min-ck.js",
       "fileType" : 64
     },
-    "\/index.html" : {
+    "\/css\/page.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
+      "inputAbbreviatedPath" : "\/css\/page.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
     },
-    "\/images\/arrow-down.png" : {
+    "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/arrow-down.png",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/images\/arrow-down.png",
-      "initialSize" : 2928,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/config.rb",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 32768
+    },
+    "\/js\/jquery.flexnav.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.flexnav.js",
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.flexnav-ck.js",
+      "fileType" : 64
     },
     "\/master.jade\/partials\/header.jade" : {
       "ignoreWasSetByUser" : 0,
