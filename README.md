@@ -5,6 +5,12 @@
 ### The Details
 A mobile-first example of using media queries and jQuery to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
 
+### Features
+* Multiple nested sub menus
+* Tap targets to reveal sub menus for touch screens
+* Hover reveal for desktop
+* Keyboard tab input accessibility
+
 ### Browser Support
 * IE7-10
 * Latest Safari
