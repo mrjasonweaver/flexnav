@@ -21,30 +21,6 @@ html(lang="en")
 							p The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
 
 						.block
-							h2 Features
-							ul
-								li Multiple nested sub menus
-								li Tap targets to reveal sub menus for touch screens
-								li Hover reveal for desktop
-								li Keyboard tab input accessibility
-
-						.block
-							h2 Browser Support
-							ul
-								li IE7-10
-								li Latest Safari
-								li Latest Chrome
-								li Latest FireFox
-								li Android 2.2 to Latest
-								li Mobile Safari
-
-				article
-					.article-wrap
-						.block
-							h2 Get FlexNav v0.4.3
-							p
-								a(href="https://github.com/indyplanets/flexnav", class="callout") Download on GitHub &rarr;
-						.block
 							h2 Usage
 							p Add flexnav.css to the head of your document
 						
@@ -63,5 +39,30 @@ html(lang="en")
 							p you can change the defaults too
 								pre
 									code $("#nav").flexNav({ 'breakpoint' : '800', 'animationSpeed' : 'fast' }); // defaults
+
+				article
+					.article-wrap
+						.block
+							h2 Get FlexNav v0.4.3
+							p
+								a(href="https://github.com/indyplanets/flexnav", class="callout") Download on GitHub &rarr;
+						
+						.block
+							h2 Features
+							ul
+								li Multiple nested sub menus
+								li Tap targets to reveal sub menus for touch screens
+								li Hover reveal for desktop
+								li Keyboard tab input accessibility
+
+						.block
+							h2 Browser Support
+							ul
+								li IE7-10
+								li Latest Safari
+								li Latest Chrome
+								li Latest FireFox
+								li Android 2.2 to Latest
+								li Mobile Safari
 
 		include partials/footer

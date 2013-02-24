@@ -85,6 +85,29 @@
               <p>The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.</p>
             </div>
             <div class="block">
+              <h2>Usage</h2>
+              <p>Add flexnav.css to the head of your document
+                <pre><code>&lt;link href="css/flexnav.css" rel="stylesheet" type="text/css" /&gt;</code></pre>
+              </p>
+              <p>Add jquery.flexnav.min.js before the closing body tag
+                <pre><code>&lt;script type="text/javascript" src="js/jquery.flexnav.min.js"&gt;&lt;/script&gt;</code></pre>
+              </p>
+              <p>Initialize FlexNav right before your closing body tag
+                <pre><code>$("#nav").flexNav();</code></pre>
+              </p>
+              <p>you can change the defaults too
+                <pre><code>$("#nav").flexNav({ 'breakpoint' : '800', 'animationSpeed' : 'fast' }); // defaults</code></pre>
+              </p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrap">
+            <div class="block">
+              <h2>Get FlexNav v0.4.3</h2>
+              <p><a href="https://github.com/indyplanets/flexnav" class="callout">Download on GitHub &rarr;</a></p>
+            </div>
+            <div class="block">
               <h2>Features</h2>
               <ul>
                 <li>Multiple nested sub menus</li>
@@ -103,29 +126,6 @@
                 <li>Android 2.2 to Latest</li>
                 <li>Mobile Safari</li>
               </ul>
-            </div>
-          </div>
-        </article>
-        <article>
-          <div class="article-wrap">
-            <div class="block">
-              <h2>Get FlexNav v0.4.3</h2>
-              <p><a href="https://github.com/indyplanets/flexnav" class="callout">Download on GitHub &rarr;</a></p>
-            </div>
-            <div class="block">
-              <h2>Usage</h2>
-              <p>Add flexnav.css to the head of your document
-                <pre><code>&lt;link href="css/flexnav.css" rel="stylesheet" type="text/css" /&gt;</code></pre>
-              </p>
-              <p>Add jquery.flexnav.min.js before the closing body tag
-                <pre><code>&lt;script type="text/javascript" src="js/jquery.flexnav.min.js"&gt;&lt;/script&gt;</code></pre>
-              </p>
-              <p>Initialize FlexNav right before your closing body tag
-                <pre><code>$("#nav").flexNav();</code></pre>
-              </p>
-              <p>you can change the defaults too
-                <pre><code>$("#nav").flexNav({ 'breakpoint' : '800', 'animationSpeed' : 'fast' }); // defaults</code></pre>
-              </p>
             </div>
           </div>
         </article>

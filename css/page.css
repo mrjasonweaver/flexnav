@@ -103,7 +103,7 @@ p {
 #content li {
   font-size: 1em;
   margin-bottom: .4em;
-  margin-left: 2em;
+  margin-left: .75em;
 }
 
 /* line 91, ../sass/page.scss */
@@ -113,7 +113,7 @@ p {
 
 /* line 94, ../sass/page.scss */
 .article-wrap {
-  padding: 0 10px 10px 10px;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -177,25 +177,31 @@ pre {
   }
 
   /* line 148, ../sass/page.scss */
-  #content .article-wrap {
-    padding: 0 50px 10px 10px;
+  #content article:first-child {
+    width: 56%;
+    margin-right: 10%;
   }
-  /* line 151, ../sass/page.scss */
+  /* line 152, ../sass/page.scss */
+  #content article:nth-child(2) {
+    width: 34%;
+    margin-right: 0;
+  }
+  /* line 156, ../sass/page.scss */
   #content p {
     font-size: 1.1em;
   }
-  /* line 154, ../sass/page.scss */
+  /* line 159, ../sass/page.scss */
   #content h2 {
     font-size: 1.6em;
     font-weight: 900;
   }
-  /* line 158, ../sass/page.scss */
+  /* line 163, ../sass/page.scss */
   #content article {
     width: 50%;
     float: left;
     overflow: hidden;
   }
-  /* line 163, ../sass/page.scss */
+  /* line 168, ../sass/page.scss */
   #content li {
     font-size: 1.1em;
   }
