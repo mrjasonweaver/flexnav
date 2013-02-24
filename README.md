@@ -41,7 +41,7 @@ you can change the defaults too
 ### Todo
 
 * Add all class names to markup via js
-* Support for keyboard input accessability
+* Support for keyboard input accessibility
 
 ### v.0.2 : July 4th, 2012
 
