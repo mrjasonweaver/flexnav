@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 0.4.1
+	FlexNav.js 0.4.3
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under the WTFPL license
@@ -51,6 +51,15 @@ $.fn.flexNav = (options) ->
 		$('.touch-button').on('click', ->	
 			$(@).parent('.item-with-ul').find('>.sub-menu').slideToggle(settings.animationSpeed)					
 		)
+		
+		# keyboard support: add a class of open to the .top-level parent to trigger style changes and show the dropdown
+
+		# .sub-nav should have a class of 'open' if an element has focus
+		$('.item-with-ul *').focus ->
+			# remove class of open from all elements that are not focused
+			$(@).parent('.item-with-ul').parent().find(".open").not(@).removeClass("open")
+			# add class of open to focused .sub-menu
+			$(@).parent('.item-with-ul').find('>.sub-menu').addClass("open")
 				
 	# Call once to set		
 	resizer()

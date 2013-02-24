@@ -41,7 +41,6 @@ you can change the defaults too
 ### Todo
 
 * Add all class names to markup via js
-* Support for keyboard input accessibility
 
 ### v.0.2 : July 4th, 2012
 
@@ -72,3 +71,7 @@ you can change the defaults too
 
 ### v.0.4.2 : February 23nd, 2013
 * Fixed bug where nav doesn't open on hover after clicking drop arrow: [Click vs. mouse over](https://github.com/indyplanets/flexnav/issues/16)
+
+### v.0.4.3 : February 24nd, 2013
+* Rethinking using js hover events. Reverted back and now issue regarding [Click vs. mouse over](https://github.com/indyplanets/flexnav/issues/16) is reopened
+* Added Support for keyboard tab input accessibility. Hat tip [alliwagner](https://github.com/alliwagner)  https://github.com/alliwagner/flexnav/blob/852cd7838aebe635df43d6e8c32e4b9cbf4d74d9/index.html

@@ -107,9 +107,6 @@ time, mark, audio, video {
 .sub-menu {
 	display: none;
 }
-.sub-menu.open {
-	display: block;
-}
 #nav .second-level.item-with-ul ul li a {
 	background: $third_level;
 }
@@ -157,6 +154,17 @@ time, mark, audio, video {
 	}	
 	#nav li ul li a {
 		border-bottom: none;
+	}	
+	#nav li ul.sub-menu.open {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+		height: auto;
+	
+		.second-level ul.open {
+			margin-left: 100%;
+			top: 0;
+		}
 	}	
 	#nav li.item-with-ul:hover > ul	 { 
 		visibility: visible;
@@ -214,6 +222,17 @@ time, mark, audio, video {
 	}	
 	#nav li ul li a {
 		border-bottom: none;
+	}
+	#nav li.open ul.sub-menu {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+		height: auto;
+	
+		.second-level ul {
+			margin-left: 100%;
+			top: 0;
+		}
 	}	
 	#nav li.item-with-ul:hover > ul	 { 
 		visibility: visible;
@@ -221,7 +240,6 @@ time, mark, audio, video {
 		height: auto;
 		display: block;	
 	}	
-	
 	#nav .second-level.item-with-ul:hover ul {
 		margin-left: 100%;
 		top: 0;
