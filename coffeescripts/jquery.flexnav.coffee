@@ -18,12 +18,9 @@ $.fn.flexNav = (options) ->
 		
 		resizer = ->
 			if $(window).width() <= settings.breakpoint
-				$("body").removeClass("lg-screen").addClass("sm-screen")			
+				$("body").removeClass("lg-screen").addClass("sm-screen")	
 			else
 				$("body").removeClass("sm-screen").addClass("lg-screen")
-				$('.lg-screen .item-with-ul').on('mouseenter', ->		
-					$(@).find('>.sub-menu').stop().show()				
-				)
 								
 			$('.lg-screen #nav, .lg-screen #nav ul').fadeIn()
 			$('.sm-screen #nav, .sm-screen #nav ul').hide()
@@ -45,7 +42,9 @@ $.fn.flexNav = (options) ->
 		# Toggle for nav menu
 		$('.menu-button').on( 'click', ->
 			$this.slideToggle(settings.animationSpeed)
-		)			
+		)
+		
+		# Add in touch buttons	
 		$('.menu-button, .item-with-ul').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
 			
 		# Toggle click for sub-menus on touch and or small screens

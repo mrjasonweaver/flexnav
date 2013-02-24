@@ -24,9 +24,6 @@
         $("body").removeClass("lg-screen").addClass("sm-screen");
       } else {
         $("body").removeClass("sm-screen").addClass("lg-screen");
-        $('.lg-screen .item-with-ul').on('mouseenter', function() {
-          return $(this).find('>.sub-menu').stop().show();
-        });
       }
       $('.lg-screen #nav, .lg-screen #nav ul').fadeIn();
       return $('.sm-screen #nav, .sm-screen #nav ul').hide();
