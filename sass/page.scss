@@ -17,7 +17,7 @@ a:hover {
 	text-decoration: underline;
 }
 p {
-	font-size: 1.2em;
+	font-size: 1em;
 	margin-bottom: 1em; 
 	line-height: 1.5;
 }
@@ -63,7 +63,8 @@ p {
 }
 .container {
 	margin: -1px auto 0;
-	width: 90%;
+	max-width: 1080px;
+	padding: 0 5%;
 }
 #content {
 	margin: 7% auto;
@@ -73,6 +74,7 @@ p {
 		margin-bottom: .5em;
 	}
 	h2 {
+		font-size: 1.2em;
 		font-weight: 900;
 		color: $accent;
 	}
@@ -81,13 +83,17 @@ p {
 		list-style-type: circle;
 	}
 	li {
-		font-size: 1.25em;
+		font-size: 1em;
 		margin-bottom: .4em;
 		margin-left: 2em;
 	}
 }
 .block {
 	margin-bottom: 3em;
+}
+.article-wrap {
+	padding: 0 10px 10px 10px;
+	overflow: hidden;
 }
 pre {
 	overflow: scroll;
@@ -108,6 +114,7 @@ pre {
 	border-top: 1px solid rgba(0,0,0,.1);
 	padding: 1em 0;
 	box-shadow: inset 0 3px 3px rgba(0,0,0,.05);
+	width: 100%;
 	
 	.container {
 		margin-top: 0;
@@ -138,6 +145,12 @@ pre {
 		}
 	}
 	#content {
+		.article-wrap {
+			padding: 0 50px 10px 10px;
+		}
+		p {
+			font-size: 1.1em;
+		}
 		h2 {
 			font-size: 1.6em;
 			font-weight: 900;
@@ -145,9 +158,10 @@ pre {
 		article {
 			width: 50%;
 			float: left;
+			overflow: hidden;
 		}
-		.article-wrap {
-			padding: 0 50px 10px 10px;
+		li {
+			font-size: 1.1em;
 		}
 		
 	}
