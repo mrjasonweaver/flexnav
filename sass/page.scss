@@ -20,6 +20,11 @@ p {
 	font-size: 1em;
 	margin-bottom: 1em; 
 	line-height: 1.5;
+	font-weight: 300;
+}
+.img-devices {
+	max-width: 100%;
+	margin-top: 12px;
 }
 .callout {
 	padding: 10px 30px;
@@ -59,6 +64,7 @@ p {
 	h2 {
 		font-size: 1em;
 		margin-bottom: 5%;
+		font-weight: 100;
 	}
 }
 .container {
@@ -74,8 +80,8 @@ p {
 		margin-bottom: .5em;
 	}
 	h2 {
-		font-size: 1.2em;
-		font-weight: 900;
+		font-size: 1.6em;
+		font-weight: 100;
 		color: $accent;
 	}
 	ul {
@@ -86,6 +92,7 @@ p {
 		font-size: 1em;
 		margin-bottom: .4em;
 		margin-left: .75em;
+		font-weight: 300;
 	}
 }
 .block {
@@ -97,16 +104,16 @@ p {
 }
 code {
 	overflow: scroll;
-	background: rgba(0,0,0,.1);
+	background: rgba(55, 47, 91,.9);
+	border: 1px solid $accent;
 	padding: 10px;
 	margin-top: 10px;
 	margin-bottom: 2.5em;
 	line-height: 1.5;
 	display: block;
-	color: #666;
-	color: rgba(0,0,0,.6);
+	color: #fff;
 	border-radius: 3px;
-	box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+	box-shadow: inset 0 0 10px $accent;
 }
 #site-footer {
 	overflow: hidden;
@@ -137,7 +144,7 @@ code {
 	}
 	.site-title {
 		h1 {
-			font-size: 2.75em;
+			font-size: 2.25em;
 			margin-bottom: 10px;
 		}
 		h2 {
@@ -158,8 +165,7 @@ code {
 			font-size: 1.1em;
 		}
 		h2 {
-			font-size: 1.6em;
-			font-weight: 900;
+			font-size: 1.9em;
 		}	
 		article {
 			width: 50%;
