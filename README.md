@@ -48,7 +48,6 @@ you can change the defaults too
 		
 ### Todo
 
-* Add all class names to markup via js for easier CMS integration
 * Make several demo themes
 
 ### Changelog
@@ -86,3 +85,8 @@ you can change the defaults too
 #### v.0.4.3 : February 24nd, 2013
 * Rethinking using js hover events. Reverted back and now issue regarding [Click vs. mouse over](https://github.com/indyplanets/flexnav/issues/16) is reopened
 * Added Support for keyboard tab input accessibility. Hat tip [alliwagner](https://github.com/alliwagner)  https://github.com/alliwagner/flexnav/blob/852cd7838aebe635df43d6e8c32e4b9cbf4d74d9/index.html
+
+#### v.0.4.4 : February 25nd, 2013
+* Moved adding .sm/.lg-screen from `body` to `#nav` element
+* Moved adding flexNav-touch/-no-touch from `html` to `#nav` element
+* Removed superfluous classes from markup (.first-level, .second-level, .sub-menu)

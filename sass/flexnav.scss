@@ -2,7 +2,6 @@
 
 @import "compass/reset";
 @import "compass/utilities";
-@import "compass/css3/images";
 
 $nav_text: #222;
 $top_level: #a6a6a2;
@@ -26,16 +25,11 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
-	font-family: clean, sans-serif;
 }
 #nav {
 	@include pie-clearfix;
 	margin: 0 auto;
 	width: 100%;	
-}
-.flexNav-touch [role='navigation'],
-.flexNav-no-touch [role='navigation'] {	
-	display: none;
 }
 .menu-button {
 	position: relative;
@@ -87,7 +81,7 @@ time, mark, audio, video {
 	font-size: 16px;
 	top: 1em;
 }
-#nav .top-level a {
+#nav li a {
 	position: relative;
 	display: block;
 	padding: .96em;
@@ -104,22 +98,18 @@ time, mark, audio, video {
 	display: block;
 	background: $second_level;			
 }
-.sub-menu {
+#nav li ul {
 	display: none;
 }
-#nav .second-level.item-with-ul ul li a {
+#nav ul .item-with-ul ul li a {
 	background: $third_level;
 }
-#nav .second-level.item-with-ul ul li ul li a {
+#nav ul .item-with-ul ul li ul li a {
 	background: $fourth_level;
 }
 
 @media all and (min-width: 800px) {
-	p {font-size: 100%; margin-bottom: 1.5em; line-height: 1.25em;}	
-	.flexNav-touch [role='navigation'],
-	.flexNav-no-touch [role='navigation'] {
-		display: block;	
-	}
+	p {font-size: 100%; margin-bottom: 1.5em; line-height: 1.25em;}
 	.menu-button {
 		display: none;
 	}
@@ -140,7 +130,7 @@ time, mark, audio, video {
 		border-left: 1px solid #acaca1;
 		border-bottom: none;		
 	}
-	#nav li > ul.sub-menu {
+	#nav li > ul {
 		position: absolute; 
 		top: auto;
 		left: 0;
@@ -149,19 +139,19 @@ time, mark, audio, video {
 		height: 1px;
 		z-index: 1;			
 	}
-	#nav li ul.sub-menu li ul.sub-menu{ 
+	#nav li ul li ul { 
 		top: 0;		
 	}	
 	#nav li ul li a {
 		border-bottom: none;
 	}	
-	#nav li ul.sub-menu.open {
+	#nav li ul.open {
 		display: block;
 		opacity: 1;
 		visibility: visible;
 		height: auto;
 	
-		.second-level ul.open {
+		ul.open {
 			margin-left: 100%;
 			top: 0;
 		}
@@ -173,18 +163,14 @@ time, mark, audio, video {
 		display: block;	
 	}	
 	
-	.flexNav-no-touch .second-level.item-with-ul:hover ul {
+	.flexNav-no-touch ul .item-with-ul:hover ul {
 		margin-left: 100%;
 		top: 0;
 	}
 }
 
 .oldie {
-	p {font-size: 100%; margin-bottom: 1.5em; line-height: 1.25em;}	
-	.flexNav-touch [role='navigation'],
-	.flexNav-no-touch [role='navigation'] {
-		display: block;	
-	}
+	p {font-size: 100%; margin-bottom: 1.5em; line-height: 1.25em;}
 	.menu-button {
 		display: none;
 	}
@@ -208,7 +194,7 @@ time, mark, audio, video {
 		border-left: 1px solid #acaca1;
 		border-bottom: none;		
 	}
-	#nav li > ul.sub-menu {
+	#nav li > ul {
 		position: absolute; 
 		top: auto;
 		left: 0;
@@ -217,19 +203,19 @@ time, mark, audio, video {
 		height: 1px;
 		z-index: 1;			
 	}
-	#nav li ul.sub-menu li ul.sub-menu{ 
+	#nav li ul li ul { 
 		top: 0;		
 	}	
 	#nav li ul li a {
 		border-bottom: none;
 	}
-	#nav li.open ul.sub-menu {
+	#nav li.open ul {
 		display: block;
 		opacity: 1;
 		visibility: visible;
 		height: auto;
 	
-		.second-level ul {
+		ul.open {
 			margin-left: 100%;
 			top: 0;
 		}
@@ -240,7 +226,7 @@ time, mark, audio, video {
 		height: auto;
 		display: block;	
 	}	
-	#nav .second-level.item-with-ul:hover ul {
+	#nav ul .item-with-ul:hover ul {
 		margin-left: 100%;
 		top: 0;
 	}

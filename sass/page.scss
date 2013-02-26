@@ -20,7 +20,6 @@ a:hover {
 	text-decoration: underline;
 }
 p {
-	font-family: $font-family;
 	font-size: 1em;
 	margin-bottom: 1em; 
 	line-height: 1.5;
@@ -31,7 +30,6 @@ p {
 	margin-top: 12px;
 }
 .callout {
-	font-family: $font-family;
 	padding: 10px 30px;
 	border-radius: 5px;
 	color: #fff;
@@ -62,14 +60,10 @@ p {
 		text-rendering: optimizeLegibility;
 	}
 	h2 {
-		font-family: $font-family;
 		font-size: 1em;
 		margin-bottom: 5%;
 		font-weight: 100;
 	}
-}
-#nav li a {
-	font-family: $font-family;
 }
 .container {
 	margin: -1px auto 0;
@@ -81,7 +75,6 @@ p {
 	overflow: hidden;
 	
 	h1,h2 {
-		font-family: $font-family;
 		margin-bottom: .5em;
 	}
 	h2 {
@@ -93,7 +86,6 @@ p {
 		list-style-type: circle;
 	}
 	li {
-		font-family: $font-family;
 		font-size: 1em;
 		margin-bottom: .4em;
 		margin-left: .75em;
@@ -108,7 +100,6 @@ p {
 	overflow: hidden;
 }
 code {
-	font-family: $font-family;
 	overflow: scroll;
 	background: rgba(55, 47, 91,.9);
 	border: 1px solid $accent;
@@ -136,14 +127,12 @@ code {
 	}
 }
 #site-footer li {
-	font-family: $font-family;
 	list-style: none;
 	margin: 1em 0;
 	display: block;
 	float: left;
 }
 #site-footer li a {
-	font-family: $font-family;
 	padding: 0 .5em;
 }
 

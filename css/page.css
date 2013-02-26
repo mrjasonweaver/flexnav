@@ -26,22 +26,20 @@ a:hover {
 
 /* line 22, ../sass/page.scss */
 p {
-  font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
   font-size: 1em;
   margin-bottom: 1em;
   line-height: 1.5;
   font-weight: 300;
 }
 
-/* line 29, ../sass/page.scss */
+/* line 28, ../sass/page.scss */
 .img-devices {
   max-width: 100%;
   margin-top: 12px;
 }
 
-/* line 33, ../sass/page.scss */
+/* line 32, ../sass/page.scss */
 .callout {
-  font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
   padding: 10px 30px;
   border-radius: 5px;
   color: #fff;
@@ -49,13 +47,13 @@ p {
   margin-top: 5px;
   display: inline-block;
 }
-/* line 42, ../sass/page.scss */
+/* line 40, ../sass/page.scss */
 .callout:hover {
   background: #437285;
   text-decoration: none;
 }
 
-/* line 48, ../sass/page.scss */
+/* line 46, ../sass/page.scss */
 .site-title h1 {
   font-family: "ff-dax-compact-web-pro-1","ff-dax-compact-web-pro-2";
   font-weight: 100;
@@ -72,69 +70,60 @@ p {
   letter-spacing: 2px;
   text-rendering: optimizeLegibility;
 }
-/* line 64, ../sass/page.scss */
+/* line 62, ../sass/page.scss */
 .site-title h2 {
-  font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
   font-size: 1em;
   margin-bottom: 5%;
   font-weight: 100;
 }
 
-/* line 71, ../sass/page.scss */
-#nav li a {
-  font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
-}
-
-/* line 74, ../sass/page.scss */
+/* line 68, ../sass/page.scss */
 .container {
   margin: -1px auto 0;
   max-width: 1080px;
   padding: 0 5%;
 }
 
-/* line 79, ../sass/page.scss */
+/* line 73, ../sass/page.scss */
 #content {
   margin: 7% auto;
   overflow: hidden;
 }
-/* line 83, ../sass/page.scss */
+/* line 77, ../sass/page.scss */
 #content h1, #content h2 {
-  font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
   margin-bottom: .5em;
 }
-/* line 87, ../sass/page.scss */
+/* line 80, ../sass/page.scss */
 #content h2 {
   font-size: 1.6em;
   color: #3a3261;
 }
-/* line 91, ../sass/page.scss */
+/* line 84, ../sass/page.scss */
 #content ul {
   margin: 1em;
   list-style-type: circle;
 }
-/* line 95, ../sass/page.scss */
+/* line 88, ../sass/page.scss */
 #content li {
-  font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
   font-size: 1em;
   margin-bottom: .4em;
   margin-left: .75em;
   font-weight: 300;
 }
 
-/* line 103, ../sass/page.scss */
+/* line 95, ../sass/page.scss */
 .block {
   margin-bottom: 3em;
 }
 
-/* line 106, ../sass/page.scss */
+/* line 98, ../sass/page.scss */
 .article-wrap {
   padding: 0;
   overflow: hidden;
 }
 
-/* line 110, ../sass/page.scss */
+/* line 102, ../sass/page.scss */
 code {
-  font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
   overflow: scroll;
   background: rgba(55, 47, 91, 0.9);
   border: 1px solid #3a3261;
@@ -149,7 +138,7 @@ code {
   box-shadow: inset 0 0 10px #3a3261;
 }
 
-/* line 125, ../sass/page.scss */
+/* line 116, ../sass/page.scss */
 #site-footer {
   overflow: hidden;
   clear: both;
@@ -159,73 +148,71 @@ code {
   box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
   width: 100%;
 }
-/* line 134, ../sass/page.scss */
+/* line 125, ../sass/page.scss */
 #site-footer .container {
   margin-top: 0;
 }
 
-/* line 138, ../sass/page.scss */
+/* line 129, ../sass/page.scss */
 #site-footer li {
-  font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
   list-style: none;
   margin: 1em 0;
   display: block;
   float: left;
 }
 
-/* line 145, ../sass/page.scss */
+/* line 135, ../sass/page.scss */
 #site-footer li a {
-  font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
   padding: 0 0.5em;
 }
 
 @media all and (min-width: 800px) {
-  /* line 151, ../sass/page.scss */
+  /* line 140, ../sass/page.scss */
   body {
     font-size: 100%;
   }
 
-  /* line 155, ../sass/page.scss */
+  /* line 144, ../sass/page.scss */
   .site-title h1 {
     font-size: 2.25em;
     margin-bottom: 10px;
   }
-  /* line 159, ../sass/page.scss */
+  /* line 148, ../sass/page.scss */
   .site-title h2 {
     font-size: 1.2em;
     margin-bottom: 50px;
   }
 
-  /* line 164, ../sass/page.scss */
+  /* line 153, ../sass/page.scss */
   #site-header {
     background: url("http://jasonweaver.name/img/look.png") no-repeat 90% 30px;
   }
 
-  /* line 168, ../sass/page.scss */
+  /* line 157, ../sass/page.scss */
   #content article:first-child {
     width: 56%;
     margin-right: 10%;
   }
-  /* line 172, ../sass/page.scss */
+  /* line 161, ../sass/page.scss */
   #content article:nth-child(2) {
     width: 34%;
     margin-right: 0;
   }
-  /* line 176, ../sass/page.scss */
+  /* line 165, ../sass/page.scss */
   #content p {
     font-size: 1.1em;
   }
-  /* line 179, ../sass/page.scss */
+  /* line 168, ../sass/page.scss */
   #content h2 {
     font-size: 1.9em;
   }
-  /* line 182, ../sass/page.scss */
+  /* line 171, ../sass/page.scss */
   #content article {
     width: 50%;
     float: left;
     overflow: hidden;
   }
-  /* line 187, ../sass/page.scss */
+  /* line 176, ../sass/page.scss */
   #content li {
     font-size: 1.1em;
   }

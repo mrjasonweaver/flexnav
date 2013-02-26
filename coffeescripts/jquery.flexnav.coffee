@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 0.4.3
+	FlexNav.js 0.4.4
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under the WTFPL license
@@ -14,25 +14,25 @@ $.fn.flexNav = (options) ->
 		'animationSpeed': 'fast'
 		options
 
-		$this = $(@)
+		$nav = $(@)
 		
 		resizer = ->
 			if $(window).width() <= settings.breakpoint
-				$("body").removeClass("lg-screen").addClass("sm-screen")	
+				$nav.removeClass("lg-screen").addClass("sm-screen")	
 			else
-				$("body").removeClass("sm-screen").addClass("lg-screen")
+				$nav.removeClass("sm-screen").addClass("lg-screen")
 								
-			$('.lg-screen #nav, .lg-screen #nav ul').fadeIn()
-			$('.sm-screen #nav, .sm-screen #nav ul').hide()
+			$('#nav.lg-screen, #nav.lg-screen ul').fadeIn()
+			$('#nav.sm-screen, #nav.sm-screen ul').hide()
 
-		# Set class on html element for touch/no-touch
+		# Set class on $nav for touch/no-touch
 		is_touch_device = ->
 			!!('ontouchstart' in window)
 
 		if is_touch_device()
-			$('html').addClass('flexNav-touch')
+			$nav.addClass('flexNav-touch')
 		else
-			$('html').addClass('flexNav-no-touch')
+			$nav.addClass('flexNav-no-touch')
 		
 		# Set some classes in the markup
 		$(@).find("li").each ->
@@ -41,7 +41,7 @@ $.fn.flexNav = (options) ->
 		
 		# Toggle for nav menu
 		$('.menu-button').on( 'click', ->
-			$this.slideToggle(settings.animationSpeed)
+			$nav.slideToggle(settings.animationSpeed)
 		)
 		
 		# Add in touch buttons	
@@ -49,17 +49,15 @@ $.fn.flexNav = (options) ->
 			
 		# Toggle click for sub-menus on touch and or small screens
 		$('.touch-button').on('click', ->	
-			$(@).parent('.item-with-ul').find('>.sub-menu').slideToggle(settings.animationSpeed)					
+			$(@).parent('.item-with-ul').find('>ul').slideToggle(settings.animationSpeed)					
 		)
 		
-		# keyboard support: add a class of open to the .top-level parent to trigger style changes and show the dropdown
-
-		# .sub-nav should have a class of 'open' if an element has focus
+		# Sub ul's should have a class of 'open' if an element has focus
 		$('.item-with-ul *').focus ->
 			# remove class of open from all elements that are not focused
 			$(@).parent('.item-with-ul').parent().find(".open").not(@).removeClass("open")
-			# add class of open to focused .sub-menu
-			$(@).parent('.item-with-ul').find('>.sub-menu').addClass("open")
+			# add class of open to focused ul
+			$(@).parent('.item-with-ul').find('>ul').addClass("open")
 				
 	# Call once to set		
 	resizer()
