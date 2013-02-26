@@ -133,7 +133,8 @@ time, mark, audio, video {
 			top: 3.1em;	
 			position: absolute;	
 		}
-		&.lg-screen li:hover > ul {
+		&.lg-screen li:hover > ul,
+		&.sm-screen li:hover > ul {
 			display: none;
 		}
 		li a {
@@ -195,7 +196,8 @@ time, mark, audio, video {
 			top: 3.1em;	
 			position: absolute;	
 		}
-		&.lg-screen li:hover > ul {
+		&.lg-screen li:hover > ul,
+		&.sm-screen li:hover > ul {
 			display: none;
 		}
 		li a {
