@@ -5,7 +5,7 @@
 ### The Details
 [View Demo](http://jasonweaver.name/lab/flexiblenavigation/)
 
-A mobile-first example of using media queries and jQuery to make a decent site menu with drop downs. Special attention is paid to touch screens using click events. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
+A mobile-first example of using media queries and jQuery to make a decent site menu with drop downs. Special attention is paid to touch screens using click events for tap targets. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
 
 ### Features
 * Multiple nested sub menus
