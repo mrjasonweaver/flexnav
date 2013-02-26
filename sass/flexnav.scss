@@ -126,9 +126,15 @@ time, mark, audio, video {
 			width: 20%;
 		}
 		li:hover > ul { 
+			visibility: visible;
 			opacity: 1;
+			height: auto;
+			display: block;
 			top: 3.1em;	
 			position: absolute;	
+		}
+		&.lg-screen li:hover > ul {
+			display: none;
 		}
 		li a {
 			border-left: 1px solid #acaca1;
@@ -160,12 +166,6 @@ time, mark, audio, video {
 				top: 0;
 			}
 		}
-		li:hover > ul	 { 
-			visibility: visible;
-			opacity: 1;
-			height: auto;
-			display: block;	
-		}	
 		ul li:hover ul {
 			margin-left: 100%;
 			top: 0;
@@ -188,9 +188,15 @@ time, mark, audio, video {
 			width: 20%;
 		}
 		li:hover > ul { 
+			visibility: visible;
 			opacity: 1;
+			height: auto;
+			display: block;
 			top: 3.1em;	
 			position: absolute;	
+		}
+		&.lg-screen li:hover > ul {
+			display: none;
 		}
 		li a {
 			border-left: 1px solid #acaca1;
@@ -222,12 +228,6 @@ time, mark, audio, video {
 				top: 0;
 			}
 		}
-		li:hover > ul	 { 
-			visibility: visible;
-			opacity: 1;
-			height: auto;
-			display: block;	
-		}	
 		ul li:hover ul {
 			margin-left: 100%;
 			top: 0;
@@ -236,4 +236,5 @@ time, mark, audio, video {
 	.menu-button {
 		display: none;
 	}
+
 }

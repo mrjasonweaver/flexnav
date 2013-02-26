@@ -92,3 +92,7 @@ you can change the defaults too
 * Removed superfluous classes from markup (`.first-level`, `.second-level`, `.sub-menu`)
 * Cleaned up sass/css
 * Using class name instead of id for example (`#nav` changed to `.flexnav`)
+
+#### v.0.4.5 : February 26nd, 2013
+* Adding support for js mousenter/mouseleave
+* Falls back to :hover with no js

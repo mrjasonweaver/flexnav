@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 0.4.4
+	FlexNav.js 0.4.5
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under the WTFPL license
@@ -20,9 +20,16 @@ $.fn.flexNav = (options) ->
 			if $(window).width() <= settings.breakpoint
 				$nav.removeClass("lg-screen").addClass("sm-screen")
 				$nav.hide()
+				$('.item-with-ul').off()
 			else
 				$nav.removeClass("sm-screen").addClass("lg-screen")		
 				$nav.fadeIn()
+				$('.item-with-ul').on(
+					mouseenter: ->	
+						$(@).find('>ul').slideDown(settings.animationSpeed)
+					mouseleave: ->
+						$(@).find('>ul').slideUp(settings.animationSpeed)				
+				)	
 
 
 		# Set class on $nav for touch/no-touch
@@ -57,7 +64,7 @@ $.fn.flexNav = (options) ->
 			# remove class of open from all elements that are not focused
 			$(@).parent('.item-with-ul').parent().find(".open").not(@).removeClass("open")
 			# add class of open to focused ul
-			$(@).parent('.item-with-ul').find('>ul').addClass("open")
+			$(@).parent('.item-with-ul').find('>ul').addClass("open")	
 				
 	# Call once to set		
 	resizer()
