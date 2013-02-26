@@ -1,9 +1,12 @@
 $accent: #3a3261;
 $link: #548fa7;
+$font-family: "dejarip-1","dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
 body {
-	background: #f1f2eb;
+	background: #eaebe7;
 	border-top: 5px solid $accent;
 	color: #333;
+	font-family: $font-family;
+	background: url('http://jasonweaver.name/img/textured-background2.png') -10% -16px;
 }
 ::selection {
 	color: #fff;
@@ -17,6 +20,7 @@ a:hover {
 	text-decoration: underline;
 }
 p {
+	font-family: $font-family;
 	font-size: 1em;
 	margin-bottom: 1em; 
 	line-height: 1.5;
@@ -27,6 +31,7 @@ p {
 	margin-top: 12px;
 }
 .callout {
+	font-family: $font-family;
 	padding: 10px 30px;
 	border-radius: 5px;
 	color: #fff;
@@ -41,31 +46,30 @@ p {
 }
 .site-title {
 	h1 {
-		font-family: 'helvetica neue', arial, clean, sans-serif;
+		font-family: "ff-dax-compact-web-pro-1","ff-dax-compact-web-pro-2";
+		font-weight: 100;
 		font-size: 1.3em;
-		margin-top: -2px;
+		margin-top: -1px;
 		margin-bottom: 5px;
-		padding: 3px 20px;
+		padding: 5px 20px;
 		background: $accent;
 		display: inline-block;
 		border-radius: 3px;
 		color: #f1f2eb;
-		font-weight: 100;
+		color: rgba(255,255,255,.5);
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		text-rendering: optimizeLegibility;
-
-		span.last {
-			color: #e6e8dc;
-			margin: 0;
-			padding: 0;
-		}
 	}
 	h2 {
+		font-family: $font-family;
 		font-size: 1em;
 		margin-bottom: 5%;
 		font-weight: 100;
 	}
+}
+#nav li a {
+	font-family: $font-family;
 }
 .container {
 	margin: -1px auto 0;
@@ -77,11 +81,11 @@ p {
 	overflow: hidden;
 	
 	h1,h2 {
+		font-family: $font-family;
 		margin-bottom: .5em;
 	}
 	h2 {
 		font-size: 1.6em;
-		font-weight: 100;
 		color: $accent;
 	}
 	ul {
@@ -89,6 +93,7 @@ p {
 		list-style-type: circle;
 	}
 	li {
+		font-family: $font-family;
 		font-size: 1em;
 		margin-bottom: .4em;
 		margin-left: .75em;
@@ -103,6 +108,7 @@ p {
 	overflow: hidden;
 }
 code {
+	font-family: $font-family;
 	overflow: scroll;
 	background: rgba(55, 47, 91,.9);
 	border: 1px solid $accent;
@@ -110,6 +116,7 @@ code {
 	margin-top: 10px;
 	margin-bottom: 2.5em;
 	line-height: 1.5;
+	font-size: 16px;
 	display: block;
 	color: #fff;
 	border-radius: 3px;
@@ -129,12 +136,14 @@ code {
 	}
 }
 #site-footer li {
+	font-family: $font-family;
 	list-style: none;
 	margin: 1em 0;
 	display: block;
 	float: left;
 }
 #site-footer li a {
+	font-family: $font-family;
 	padding: 0 .5em;
 }
 
@@ -151,6 +160,9 @@ code {
 			font-size: 1.2em;
 			margin-bottom: 50px;
 		}
+	}
+	#site-header {
+		background: url('http://jasonweaver.name/img/look.png') no-repeat 90% 30px;
 	}
 	#content {
 		article:first-child {

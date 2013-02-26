@@ -170,7 +170,7 @@ time, mark, audio, video {
 #nav .top-level a {
   position: relative;
   display: block;
-  padding: 1em;
+  padding: .96em;
   z-index: 2;
 }
 

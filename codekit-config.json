@@ -56,18 +56,6 @@
       "outputAbbreviatedPath" : "\/head.html",
       "fileType" : 512
     },
-    "\/sass\/page.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/page.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/page.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -117,6 +105,18 @@
       "inputAbbreviatedPath" : "\/config.rb",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
+    },
+    "\/sass\/page.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/page.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/page.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/master.jade\/partials\/header.jade" : {
       "ignoreWasSetByUser" : 0,
