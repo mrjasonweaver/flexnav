@@ -12,6 +12,7 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Tap targets to reveal sub menus for touch screens
 * Hover reveal for desktop
 * Keyboard tab input accessibility
+* No JavaScript fallback
 
 ### Browser Support
 * IE7-10
