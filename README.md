@@ -29,7 +29,7 @@ Add flexnav.css to the head of your document
 		
 Add jquery.flexnav.min.js before closing body tag and after jQuery
 		
-		<script type="text/javascript" src="js/jquery.flexnav.js"></script>
+		<script type="text/javascript" src="js/jquery.flexnav.min.js"></script>
 		
 Initialize
 
