@@ -18,12 +18,12 @@ $.fn.flexNav = (options) ->
 		
 		resizer = ->
 			if $(window).width() <= settings.breakpoint
-				$nav.removeClass("lg-screen").addClass("sm-screen")	
+				$nav.removeClass("lg-screen").addClass("sm-screen")
+				$nav.hide()
 			else
-				$nav.removeClass("sm-screen").addClass("lg-screen")
-								
-			$('#nav.lg-screen, #nav.lg-screen ul').fadeIn()
-			$('#nav.sm-screen, #nav.sm-screen ul').hide()
+				$nav.removeClass("sm-screen").addClass("lg-screen")		
+				$nav.fadeIn()
+
 
 		# Set class on $nav for touch/no-touch
 		is_touch_device = ->

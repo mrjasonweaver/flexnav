@@ -26,10 +26,64 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-#nav {
+.flexnav {
 	@include pie-clearfix;
 	margin: 0 auto;
-	width: 100%;	
+	width: 100%;
+	
+	li {
+		font-size: 100%;
+		position: relative;			
+	}
+	li a {
+		position: relative;
+		display: block;
+		padding: .96em;
+		z-index: 2;
+		overflow: hidden;
+		color: $nav_text;
+		background: #a6a6a2;
+		border-bottom: 1px solid rgba(0,0,0,.15);
+	}
+	li ul {
+		width: 100%;
+		display: none;
+	}
+	li ul li {
+		float: none;
+		width: 100%;			
+	}
+	li ul li a {
+		display: block;
+		background: $second_level;			
+	}
+	ul li ul li a {
+		background: $third_level;
+	}
+	ul li ul li ul li a {
+		background: $fourth_level;
+	}
+	.touch-button {
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		background: #acaca1;
+		background: rgba(0,0,0,.075);
+		text-align: center;
+		&:hover {
+			cursor: pointer;
+		}
+		.navicon {
+			position: relative;
+			top: 1.4em;
+			font-size: 12px;
+			color: #666;
+		}
+	}
 }
 .menu-button {
 	position: relative;
@@ -39,196 +93,147 @@ time, mark, audio, video {
 	color: $nav_text;
 	cursor: pointer;
 	border-bottom: 1px solid rgba(0,0,0,.2);
-}
-#nav li {
-	font-size: 100%;
-	position: relative;			
-}
-#nav li a {
-	position: relative;
-	overflow: hidden;
-	display: block;
-	color: $nav_text;
-	background: #a6a6a2;
-	border-bottom: 1px solid rgba(0,0,0,.15);
-}
-.touch-button {
-	position: absolute;
-	z-index: 999;
-	top: 0;
-	right: 0;
-	width: 50px;
-	height: 50px;
-	display: inline-block;
-	background: #acaca1;
-	background: rgba(0,0,0,.075);
-	text-align: center;
-	&:hover {
-		cursor: pointer;
+	
+	.touch-button {
+		background: transparent;
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		text-align: center;
+				
+		.navicon {
+			font-size: 16px;
+			position: relative;
+			top: 1em;
+			color: #666;
+		}
 	}
-	.navicon {
-		position: relative;
-		top: 1.4em;
-		font-size: 12px;
-		color: #666;
-	}
-}
-.menu-button .touch-button {
-	background: transparent;
-}
-
-.menu-button .navicon {
-	font-size: 16px;
-	top: 1em;
-}
-#nav li a {
-	position: relative;
-	display: block;
-	padding: .96em;
-	z-index: 2;
-}
-#nav li ul {
-	width: 100%;
-}
-#nav li ul li {
-	float: none;
-	width: 100%;			
-}
-#nav li ul li a {
-	display: block;
-	background: $second_level;			
-}
-#nav li ul {
-	display: none;
-}
-#nav ul .item-with-ul ul li a {
-	background: $third_level;
-}
-#nav ul .item-with-ul ul li ul li a {
-	background: $fourth_level;
 }
 
 @media all and (min-width: 800px) {
-	p {font-size: 100%; margin-bottom: 1.5em; line-height: 1.25em;}
-	.menu-button {
-		display: none;
-	}
-	#nav li {
-		position: relative;
-		list-style: none;
-		float: left;
-		display: block;	
-		background-color: #a6a6a2;	
-		width: 20%;		
-	}
-	.flexNav-no-touch .item-with-ul:hover > ul { 
-		opacity: 1;
-		top: 3.1em;	
-		position: absolute;	
-	}	
-	#nav li a {
-		border-left: 1px solid #acaca1;
-		border-bottom: none;		
-	}
-	#nav li > ul {
-		position: absolute; 
-		top: auto;
-		left: 0;
-		opacity: 0;
-		visibility: hidden;
-		height: 1px;
-		z-index: 1;			
-	}
-	#nav li ul li ul { 
-		top: 0;		
-	}	
-	#nav li ul li a {
-		border-bottom: none;
-	}	
-	#nav li ul.open {
-		display: block;
-		opacity: 1;
-		visibility: visible;
-		height: auto;
+	.flexnav {
+
+		li {
+			position: relative;
+			list-style: none;
+			float: left;
+			display: block;	
+			background-color: #a6a6a2;	
+			width: 20%;
+		}
+		li:hover > ul { 
+			opacity: 1;
+			top: 3.1em;	
+			position: absolute;	
+		}
+		li a {
+			border-left: 1px solid #acaca1;
+			border-bottom: none;		
+		}
+		li > ul {
+			position: absolute; 
+			top: auto;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			height: 1px;
+			z-index: 1;			
+		}
+		li ul li ul { 
+			top: 0;		
+		}
+		li ul li a {
+			border-bottom: none;
+		}
+		li ul.open {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+			height: auto;
 	
-		ul.open {
+			ul.open {
+				margin-left: 100%;
+				top: 0;
+			}
+		}
+		li:hover > ul	 { 
+			visibility: visible;
+			opacity: 1;
+			height: auto;
+			display: block;	
+		}	
+		ul li:hover ul {
 			margin-left: 100%;
 			top: 0;
 		}
-	}	
-	#nav li.item-with-ul:hover > ul	 { 
-		visibility: visible;
-		opacity: 1;
-		height: auto;
-		display: block;	
-	}	
-	
-	.flexNav-no-touch ul .item-with-ul:hover ul {
-		margin-left: 100%;
-		top: 0;
+	}
+	.menu-button {
+		display: none;
 	}
 }
 
 .oldie {
-	p {font-size: 100%; margin-bottom: 1.5em; line-height: 1.25em;}
-	.menu-button {
-		display: none;
-	}
-	#nav li {
-		position: relative;
-		list-style: none;
-		float: left;
-		display: block;	
-		background-color: #a6a6a2;	
-		width: 20%;		
-	}
-	#nav li ul li {
-		width: 100%;		
-	}	
-	.flexNav-no-touch .item-with-ul:hover > ul { 
-		opacity: 1;
-		top: 3.1em;	
-		position: absolute;	
-	}	
-	#nav li a {
-		border-left: 1px solid #acaca1;
-		border-bottom: none;		
-	}
-	#nav li > ul {
-		position: absolute; 
-		top: auto;
-		left: 0;
-		opacity: 0;
-		visibility: hidden;
-		height: 1px;
-		z-index: 1;			
-	}
-	#nav li ul li ul { 
-		top: 0;		
-	}	
-	#nav li ul li a {
-		border-bottom: none;
-	}
-	#nav li.open ul {
-		display: block;
-		opacity: 1;
-		visibility: visible;
-		height: auto;
+	.flexnav {
+		
+		li {
+			position: relative;
+			list-style: none;
+			float: left;
+			display: block;	
+			background-color: #a6a6a2;	
+			width: 20%;
+		}
+		li:hover > ul { 
+			opacity: 1;
+			top: 3.1em;	
+			position: absolute;	
+		}
+		li a {
+			border-left: 1px solid #acaca1;
+			border-bottom: none;		
+		}
+		li > ul {
+			position: absolute; 
+			top: auto;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			height: 1px;
+			z-index: 1;			
+		}
+		li ul li ul { 
+			top: 0;		
+		}
+		li ul li a {
+			border-bottom: none;
+		}
+		li ul.open {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+			height: auto;
 	
-		ul.open {
+			ul.open {
+				margin-left: 100%;
+				top: 0;
+			}
+		}
+		li:hover > ul	 { 
+			visibility: visible;
+			opacity: 1;
+			height: auto;
+			display: block;	
+		}	
+		ul li:hover ul {
 			margin-left: 100%;
 			top: 0;
 		}
-	}	
-	#nav li.item-with-ul:hover > ul	 { 
-		visibility: visible;
-		opacity: 1;
-		height: auto;
-		display: block;	
-	}	
-	#nav ul .item-with-ul:hover ul {
-		margin-left: 100%;
-		top: 0;
 	}
-
+	.menu-button {
+		display: none;
+	}
 }

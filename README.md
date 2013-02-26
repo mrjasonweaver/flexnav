@@ -34,13 +34,13 @@ Add jquery.flexnav.min.js before closing body tag and after jQuery
 Initialize
 
 		<script>
-			$("#nav").flexNav();
+			$(".flexnav").flexNav();
 		</script>		
 
 you can change the defaults too
 	
 		<script>
-			$("#nav").flexNav({
+			$(".flexnav").flexNav({
 				'breakpoint' : '800', // default
 				'animationSpeed' : 'fast' // default			
 			});			
@@ -87,6 +87,8 @@ you can change the defaults too
 * Added Support for keyboard tab input accessibility. Hat tip [alliwagner](https://github.com/alliwagner)  https://github.com/alliwagner/flexnav/blob/852cd7838aebe635df43d6e8c32e4b9cbf4d74d9/index.html
 
 #### v.0.4.4 : February 25nd, 2013
-* Moved adding .sm/.lg-screen from `body` to `#nav` element
-* Moved adding flexNav-touch/-no-touch from `html` to `#nav` element
-* Removed superfluous classes from markup (.first-level, .second-level, .sub-menu)
+* Moved adding .sm/.lg-screen from `body` to `.flexnav` element
+* Moved adding flexNav-touch/-no-touch from `html` to `.flexnav` element
+* Removed superfluous classes from markup (`.first-level`, `.second-level`, `.sub-menu`)
+* Cleaned up sass/css
+* Using class name instead of id for example (`#nav` changed to `.flexnav`)

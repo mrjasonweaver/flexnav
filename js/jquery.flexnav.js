@@ -22,11 +22,11 @@
     }, options, $nav = $(this), resizer = function() {
       if ($(window).width() <= settings.breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
+        return $nav.hide();
       } else {
         $nav.removeClass("sm-screen").addClass("lg-screen");
+        return $nav.fadeIn();
       }
-      $('#nav.lg-screen, #nav.lg-screen ul').fadeIn();
-      return $('#nav.sm-screen, #nav.sm-screen ul').hide();
     }, is_touch_device = function() {
       return !!(__indexOf.call(window, 'ontouchstart') >= 0);
     }, is_touch_device() ? $nav.addClass('flexNav-touch') : $nav.addClass('flexNav-no-touch'), $(this).find("li").each(function() {
