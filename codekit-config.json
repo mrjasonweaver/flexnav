@@ -56,18 +56,6 @@
       "outputAbbreviatedPath" : "\/head.html",
       "fileType" : 512
     },
-    "\/sass\/page.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/page.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/page.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -77,14 +65,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/css\/page.css" : {
+    "\/js\/jquery.flexnav.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/page.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/js\/jquery.flexnav.js",
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.flexnav-ck.js",
+      "fileType" : 64
     },
     "\/sass\/flexnav.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -98,6 +88,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/css\/page.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/page.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -107,16 +106,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
     },
-    "\/js\/jquery.flexnav.js" : {
+    "\/sass\/page.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.flexnav.js",
+      "inputAbbreviatedPath" : "\/sass\/page.scss",
       "outputStyle" : 0,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.flexnav-ck.js",
-      "fileType" : 64
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/page.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/master.jade\/partials\/header.jade" : {
       "ignoreWasSetByUser" : 0,
