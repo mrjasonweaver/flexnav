@@ -92,7 +92,7 @@
               <p>Add flexnav.css to the head of your document<code>&lt;link href="css/flexnav.css" rel="stylesheet" type="text/css" /&gt;</code></p>
               <p>Add jquery.flexnav.min.js before the closing body tag<code>&lt;script type="text/javascript" src="js/jquery.flexnav.min.js"&gt;&lt;/script&gt;</code></p>
               <p>Initialize FlexNav right before your closing body tag<code>$(".flexnav").flexNav();</code></p>
-              <p>you can change the defaults too<code>$(".flexnav").flexNav({ 'animationSpeed' : 'fast' });</code></p>
+              <p>you can change the default speed too<code>$(".flexnav").flexNav({ 'animationSpeed' : 'fast' });</code></p>
             </div>
           </div>
         </article>
@@ -139,6 +139,9 @@
     </footer>
     <script src="http://code.jquery.com/jquery-1.9.0.js" type="text/javascript"></script>
     <script src="js/jquery.flexnav.min.js" type="text/javascript"></script>
-    <script type="text/javascript">$(".flexnav").flexNav({'animationSpeed': 150});</script>
+    <script type="text/javascript">
+      $(".flexnav").flexNav({'animationSpeed': 150});
+      $(".flexnav-sm").flexNav({'animationSpeed': 150});
+    </script>
   </body>
 </html>
