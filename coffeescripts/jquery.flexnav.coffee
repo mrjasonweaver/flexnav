@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 0.4.5
+	FlexNav.js 0.4.6
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under the WTFPL license
@@ -10,14 +10,14 @@
 
 $.fn.flexNav = (options) ->
 	settings = $.extend
-		'breakpoint': '800'
 		'animationSpeed': 'fast'
 		options
 
 		$nav = $(@)
+		breakpoint = $nav.data('breakpoint')
 		
 		resizer = ->
-			if $(window).width() <= settings.breakpoint
+			if $(window).width() <= breakpoint
 				$nav.removeClass("lg-screen").addClass("sm-screen")
 				$nav.hide()
 				$('.item-with-ul').off()
@@ -62,9 +62,9 @@ $.fn.flexNav = (options) ->
 		# Sub ul's should have a class of 'open' if an element has focus
 		$('.item-with-ul *').focus ->
 			# remove class of open from all elements that are not focused
-			$(@).parent('.item-with-ul').parent().find(".open").not(@).removeClass("open")
+			$(@).parent('.item-with-ul').parent().find(".open").not(@).hide().removeClass("open")
 			# add class of open to focused ul
-			$(@).parent('.item-with-ul').find('>ul').addClass("open")	
+			$(@).parent('.item-with-ul').find('>ul').addClass("open").show()
 				
 	# Call once to set		
 	resizer()

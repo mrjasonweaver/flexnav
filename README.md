@@ -23,7 +23,10 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Mobile Safari
 
 ### Usage
+Start with a simple unordered list, adding in the class and data attributes.
 
+	<ul class="flexnav" data-breakpoint="800"> <li>...</li> </ul>
+								
 Add flexnav.css to the head of your document
 		
 		<link href="css/flexnav.css" rel="stylesheet" type="text/css" / >
@@ -38,11 +41,10 @@ Initialize
 			$(".flexnav").flexNav();
 		</script>		
 
-you can change the defaults too
+you can change the default speed too
 	
 		<script>
 			$(".flexnav").flexNav({
-				'breakpoint' : '800', // default
 				'animationSpeed' : 'fast' // default			
 			});			
 		</script>	
@@ -80,20 +82,24 @@ you can change the defaults too
 #### v.0.4.1 : February 22nd, 2013
 * Added CSS support and markup conditionals for IE7/8
 
-#### v.0.4.2 : February 23nd, 2013
+#### v.0.4.2 : February 23rd, 2013
 * Fixed bug where nav doesn't open on hover after clicking drop arrow: [Click vs. mouse over](https://github.com/indyplanets/flexnav/issues/16)
 
-#### v.0.4.3 : February 24nd, 2013
+#### v.0.4.3 : February 24th, 2013
 * Rethinking using js hover events. Reverted back and now issue regarding [Click vs. mouse over](https://github.com/indyplanets/flexnav/issues/16) is reopened
 * Added Support for keyboard tab input accessibility. Hat tip [alliwagner](https://github.com/alliwagner)  https://github.com/alliwagner/flexnav/blob/852cd7838aebe635df43d6e8c32e4b9cbf4d74d9/index.html
 
-#### v.0.4.4 : February 25nd, 2013
+#### v.0.4.4 : February 25th, 2013
 * Moved adding .sm/.lg-screen from `body` to `.flexnav` element
 * Moved adding flexNav-touch/-no-touch from `html` to `.flexnav` element
 * Removed superfluous classes from markup (`.first-level`, `.second-level`, `.sub-menu`)
 * Cleaned up sass/css
 * Using class name instead of id for example (`#nav` changed to `.flexnav`)
 
-#### v.0.4.5 : February 26nd, 2013
+#### v.0.4.5 : February 26th, 2013
 * Adding support for js mousenter/mouseleave
 * Falls back to :hover with no js
+
+#### v.0.4.6 : February 27th, 2013
+* Fixed bug where keyboard accessibility didn't work after mousenter/mouseleave
+* Use data attribute on element to set breakpoint instead of plugin option (more flexible if wanting a single column flexnav or two flexnavs on one page)
