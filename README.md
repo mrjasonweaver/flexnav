@@ -3,7 +3,8 @@
 ## A Device Agnostic Approach to Complex Site Navigation
 
 ### The Details
-[View Demo](http://jasonweaver.name/lab/flexiblenavigation/)
+* [View Demo](http://jasonweaver.name/lab/flexiblenavigation/)
+* [Single page site with fixed navigation demo](http://jasonweaver.name/lab/flexiblenavigation/single-page-pattern.html)
 
 A mobile-first example of using media queries and jQuery to make a decent site menu with drop downs. Special attention is paid to touch screens using click events for tap targets. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
 
@@ -13,6 +14,7 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Hover reveal for desktop
 * Keyboard tab input accessibility
 * Fallback for no JavaScript
+* Use class `one-page` on the `body`, `.menu-button`, and `ul.flexnav` for single page fixed menu
 
 ### Browser Support
 * IE7-10
