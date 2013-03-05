@@ -31,6 +31,13 @@ time, mark, audio, video {
 	margin: 0 auto;
 	width: 100%;
 	
+	&.one-page {
+		position: fixed;
+		top: 50px;
+		right: 5%;
+		max-width: 200px;
+	}
+	
 	li {
 		font-size: 100%;
 		position: relative;			
@@ -94,6 +101,13 @@ time, mark, audio, video {
 	cursor: pointer;
 	border-bottom: 1px solid rgba(0,0,0,.2);
 	
+	&.one-page {
+		position: fixed;
+		top: 0;
+		right: 5%;
+		padding-right: 45px;
+	}
+	
 	.touch-button {
 		background: transparent;
 		position: absolute;
@@ -115,8 +129,16 @@ time, mark, audio, video {
 }
 
 @media all and (min-width: 800px) {
+	body.one-page {
+		padding-top: 70px;
+	}
 	.flexnav {
-
+		
+		&.one-page {
+			top: 0;
+			right: auto;
+			max-width: 1080px;
+		}
 		li {
 			position: relative;
 			list-style: none;

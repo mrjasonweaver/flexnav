@@ -58,6 +58,12 @@ p {
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		text-rendering: optimizeLegibility;
+		
+		a {
+			color: #f1f2eb;
+			color: rgba(255,255,255,.5);
+			text-decoration: none;		
+		}
 	}
 	h2 {
 		font-size: 1em;
@@ -135,10 +141,19 @@ code {
 #site-footer li a {
 	padding: 0 .5em;
 }
-
+#section2, #section3, #section4, #section5 {
+	padding-top: 80px;
+}
 @media all and (min-width: 800px) {
 	body {
 		font-size: 100%;
+		
+		&.home {
+			#site-header {
+				background: url('http://jasonweaver.name/img/look.png') no-repeat 90% 30px;
+			}
+		
+		}
 	}
 	.site-title {
 		h1 {
@@ -149,9 +164,6 @@ code {
 			font-size: 1.2em;
 			margin-bottom: 50px;
 		}
-	}
-	#site-header {
-		background: url('http://jasonweaver.name/img/look.png') no-repeat 90% 30px;
 	}
 	#content {
 		article:first-child {
