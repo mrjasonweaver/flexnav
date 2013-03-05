@@ -14,7 +14,7 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Hover reveal for desktop
 * Keyboard tab input accessibility
 * Fallback for no JavaScript
-* Use class `one-page` on the `body`, `.menu-button`, and `ul.flexnav` for single page fixed menu
+* Use class `.one-page` on the `body`, `.menu-button`, and `ul.flexnav` for single page fixed menu
 
 ### Browser Support
 * IE7-10

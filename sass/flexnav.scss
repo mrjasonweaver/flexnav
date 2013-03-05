@@ -200,8 +200,16 @@ time, mark, audio, video {
 }
 
 .oldie {
+	body.one-page {
+		padding-top: 70px;
+	}
 	.flexnav {
 		
+		&.one-page {
+			top: 0;
+			right: auto;
+			max-width: 1080px;
+		}	
 		li {
 			position: relative;
 			list-style: none;

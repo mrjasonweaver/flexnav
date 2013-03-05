@@ -283,7 +283,17 @@ time, mark, audio, video {
     display: none;
   }
 }
-/* line 205, ../sass/flexnav.scss */
+/* line 203, ../sass/flexnav.scss */
+.oldie body.one-page {
+  padding-top: 70px;
+}
+/* line 208, ../sass/flexnav.scss */
+.oldie .flexnav.one-page {
+  top: 0;
+  right: auto;
+  max-width: 1080px;
+}
+/* line 213, ../sass/flexnav.scss */
 .oldie .flexnav li {
   position: relative;
   list-style: none;
@@ -292,7 +302,7 @@ time, mark, audio, video {
   background-color: #a6a6a2;
   width: 20%;
 }
-/* line 213, ../sass/flexnav.scss */
+/* line 221, ../sass/flexnav.scss */
 .oldie .flexnav li:hover > ul {
   visibility: visible;
   opacity: 1;
@@ -301,16 +311,16 @@ time, mark, audio, video {
   top: 3.1em;
   position: absolute;
 }
-/* line 222, ../sass/flexnav.scss */
+/* line 230, ../sass/flexnav.scss */
 .oldie .flexnav.lg-screen li:hover > ul, .oldie .flexnav.sm-screen li:hover > ul {
   display: none;
 }
-/* line 225, ../sass/flexnav.scss */
+/* line 233, ../sass/flexnav.scss */
 .oldie .flexnav li a {
   border-left: 1px solid #acaca1;
   border-bottom: none;
 }
-/* line 229, ../sass/flexnav.scss */
+/* line 237, ../sass/flexnav.scss */
 .oldie .flexnav li > ul {
   position: absolute;
   top: auto;
@@ -320,32 +330,32 @@ time, mark, audio, video {
   height: 1px;
   z-index: 1;
 }
-/* line 238, ../sass/flexnav.scss */
+/* line 246, ../sass/flexnav.scss */
 .oldie .flexnav li ul li ul {
   top: 0;
 }
-/* line 241, ../sass/flexnav.scss */
+/* line 249, ../sass/flexnav.scss */
 .oldie .flexnav li ul li a {
   border-bottom: none;
 }
-/* line 244, ../sass/flexnav.scss */
+/* line 252, ../sass/flexnav.scss */
 .oldie .flexnav li ul.open {
   display: block;
   opacity: 1;
   visibility: visible;
   height: auto;
 }
-/* line 250, ../sass/flexnav.scss */
+/* line 258, ../sass/flexnav.scss */
 .oldie .flexnav li ul.open ul.open {
   margin-left: 100%;
   top: 0;
 }
-/* line 255, ../sass/flexnav.scss */
+/* line 263, ../sass/flexnav.scss */
 .oldie .flexnav ul li:hover ul {
   margin-left: 100%;
   top: 0;
 }
-/* line 260, ../sass/flexnav.scss */
+/* line 268, ../sass/flexnav.scss */
 .oldie .menu-button {
   display: none;
 }
