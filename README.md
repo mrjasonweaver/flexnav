@@ -3,6 +3,9 @@
 ## A Device Agnostic Approach to Complex Site Navigation
 
 ### The Details
+
+* * *
+
 * [View Demo](http://jasonweaver.name/lab/flexiblenavigation/)
 * [Single page site with fixed navigation demo](http://jasonweaver.name/lab/flexiblenavigation/single-page-pattern.html)
 
@@ -25,9 +28,16 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Mobile Safari
 
 ### Usage
-Start with a simple unordered list, adding in the class and data attributes.
+
+* * *
+
+Start with a simple unordered list, adding in the class and data attributes:
 
 	<ul class="flexnav" data-breakpoint="800"> <li>...</li> </ul>
+	
+For a single page site with id anchors, add `.one-page` class to `<body>`, `.menu-button`, and FlexNav `<ul>`:
+
+	<ul class="flexnav one-page" data-breakpoint="800"> <li>...</li> </ul>	
 								
 Add flexnav.css to the head of your document
 		
@@ -52,6 +62,8 @@ you can change the default speed too
 		</script>	
 		
 ### Todo
+
+* * *
 
 * Make several demo themes
 * Fix bug where menu closes on some mobile phones. Mainly Android 2.3 default browser.
