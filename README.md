@@ -1,6 +1,6 @@
 # FlexNav jQuery Plugin
 
-## A Device Agnostic Approach to Complex Site Navigation with Support for Touch and Keyboard Accessibility
+### A Device Agnostic Approach to Complex Site Navigation with Support for Touch and Keyboard Accessibility
 
 * * *
 ### The Details
