@@ -1,10 +1,9 @@
 # FlexNav jQuery Plugin
 
-## A Device Agnostic Approach to Complex Site Navigation
-
-### The Details
+## A Device Agnostic Approach to Complex Site Navigation with Support for Touch and Keyboard Accessibility
 
 * * *
+### The Details
 
 * [View Demo](http://jasonweaver.name/lab/flexiblenavigation/)
 * [Single page site with fixed navigation demo](http://jasonweaver.name/lab/flexiblenavigation/single-page-pattern.html)
@@ -27,9 +26,8 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Android 2.2 to Latest
 * Mobile Safari
 
-### Usage
-
 * * *
+### Usage
 
 Start with a simple unordered list, adding in the class and data attributes:
 
@@ -61,16 +59,14 @@ you can change the default speed too
 			});			
 		</script>	
 		
+* * *		
 ### Todo
-
-* * *
 
 * Make several demo themes
 * Fix bug where menu closes on some mobile phones. Mainly Android 2.3 default browser.
 
-### Changelog
-
 * * *
+### Changelog
 
 #### v.0.4.7 : March 5th, 2013
 * Added the ability to have FlexNav on a one page site. Nav links are anchors to single page content. Need to add `.one-page` class to `body`, `.menu-button`, and FlexNav `ul`.
