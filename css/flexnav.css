@@ -302,13 +302,18 @@ time, mark, audio, video {
 .oldie body.one-page {
   padding-top: 70px;
 }
-/* line 217, ../sass/flexnav.scss */
+/* line 215, ../sass/flexnav.scss */
+.oldie .flexnav {
+  overflow: visible;
+  max-height: 1000px;
+}
+/* line 219, ../sass/flexnav.scss */
 .oldie .flexnav.one-page {
   top: 0;
   right: auto;
   max-width: 1080px;
 }
-/* line 222, ../sass/flexnav.scss */
+/* line 224, ../sass/flexnav.scss */
 .oldie .flexnav li {
   position: relative;
   list-style: none;
@@ -317,7 +322,7 @@ time, mark, audio, video {
   background-color: #a6a6a2;
   width: 20%;
 }
-/* line 230, ../sass/flexnav.scss */
+/* line 232, ../sass/flexnav.scss */
 .oldie .flexnav li:hover > ul {
   visibility: visible;
   opacity: 1;
@@ -326,16 +331,16 @@ time, mark, audio, video {
   top: 3.1em;
   position: absolute;
 }
-/* line 239, ../sass/flexnav.scss */
+/* line 241, ../sass/flexnav.scss */
 .oldie .flexnav.lg-screen li:hover > ul, .oldie .flexnav.sm-screen li:hover > ul {
   display: none;
 }
-/* line 242, ../sass/flexnav.scss */
+/* line 244, ../sass/flexnav.scss */
 .oldie .flexnav li a {
   border-left: 1px solid #acaca1;
   border-bottom: none;
 }
-/* line 246, ../sass/flexnav.scss */
+/* line 248, ../sass/flexnav.scss */
 .oldie .flexnav li > ul {
   position: absolute;
   top: auto;
@@ -345,32 +350,32 @@ time, mark, audio, video {
   height: 1px;
   z-index: 1;
 }
-/* line 255, ../sass/flexnav.scss */
+/* line 257, ../sass/flexnav.scss */
 .oldie .flexnav li ul li ul {
   top: 0;
 }
-/* line 258, ../sass/flexnav.scss */
+/* line 260, ../sass/flexnav.scss */
 .oldie .flexnav li ul li a {
   border-bottom: none;
 }
-/* line 261, ../sass/flexnav.scss */
+/* line 263, ../sass/flexnav.scss */
 .oldie .flexnav li ul.open {
   display: block;
   opacity: 1;
   visibility: visible;
   height: auto;
 }
-/* line 267, ../sass/flexnav.scss */
+/* line 269, ../sass/flexnav.scss */
 .oldie .flexnav li ul.open ul.open {
   margin-left: 100%;
   top: 0;
 }
-/* line 272, ../sass/flexnav.scss */
+/* line 274, ../sass/flexnav.scss */
 .oldie .flexnav ul li:hover ul {
   margin-left: 100%;
   top: 0;
 }
-/* line 277, ../sass/flexnav.scss */
+/* line 279, ../sass/flexnav.scss */
 .oldie .menu-button {
   display: none;
 }

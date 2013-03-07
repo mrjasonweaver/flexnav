@@ -213,12 +213,14 @@ time, mark, audio, video {
 		padding-top: 70px;
 	}
 	.flexnav {
-		
+		overflow: visible;
+		max-height: 1000px;
+				
 		&.one-page {
 			top: 0;
 			right: auto;
 			max-width: 1080px;
-		}	
+		}
 		li {
 			position: relative;
 			list-style: none;
@@ -277,5 +279,4 @@ time, mark, audio, video {
 	.menu-button {
 		display: none;
 	}
-
 }
