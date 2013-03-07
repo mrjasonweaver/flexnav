@@ -68,6 +68,10 @@ you can change the default speed too
 * * *
 ### Changelog
 
+#### v.0.4.8 : March 6th, 2013
+* Updated the way FlexNav hides and shows menu. Using a class `.show` and css transitions instead of js
+* Update fixes bug where menu closed when user users scroll on small screens 
+
 #### v.0.4.7 : March 5th, 2013
 * Added the ability to have FlexNav on a one page site. Nav links are anchors to single page content. Need to add `.one-page` class to `body`, `.menu-button`, and FlexNav `ul`.
 * Updated js to close mobile menu when one-page FlexNav anchor links are clicked/tapped.

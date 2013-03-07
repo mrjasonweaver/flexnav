@@ -2,6 +2,7 @@
 
 @import "compass/reset";
 @import "compass/utilities";
+@import "compass/css3";
 
 $nav_text: #222;
 $top_level: #a6a6a2;
@@ -28,9 +29,15 @@ time, mark, audio, video {
 }
 .flexnav {
 	@include pie-clearfix;
+	overflow: hidden;
 	margin: 0 auto;
 	width: 100%;
+	max-height: 0;
 	
+	&.show {
+		@include transition(.4s);
+		max-height: 1000px;
+	}
 	&.one-page {
 		position: fixed;
 		top: 50px;
@@ -133,7 +140,9 @@ time, mark, audio, video {
 		padding-top: 70px;
 	}
 	.flexnav {
-		
+		overflow: visible;
+		max-height: 1000px;
+				
 		&.one-page {
 			top: 0;
 			right: auto;

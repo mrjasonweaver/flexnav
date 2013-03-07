@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 0.4.7
+	FlexNav.js 0.4.8
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under the WTFPL license
@@ -19,22 +19,20 @@ $.fn.flexNav = (options) ->
 		resizer = ->
 			if $(window).width() <= breakpoint
 				$nav.removeClass("lg-screen").addClass("sm-screen")
-				$nav.hide()
 				# Toggle nav menu closed for one pager after anchor clicked
 				$('.sm-screen.one-page li a').on( 'click', ->
-					$nav.hide()
+					$nav.removeClass('show')
 				)
 				$('.item-with-ul').off()
 			else
-				$nav.removeClass("sm-screen").addClass("lg-screen")		
-				$nav.fadeIn()
+				$nav.removeClass("sm-screen").addClass("lg-screen")
+				$nav.removeClass('show')
 				$('.item-with-ul').on(
 					mouseenter: ->	
 						$(@).find('>ul').slideDown(settings.animationSpeed)
 					mouseleave: ->
 						$(@).find('>ul').slideUp(settings.animationSpeed)				
-				)	
-
+				)
 
 		# Set class on $nav for touch/no-touch
 		is_touch_device = ->
@@ -52,7 +50,7 @@ $.fn.flexNav = (options) ->
 		
 		# Toggle for nav menu
 		$('.menu-button').on( 'click', ->
-			$nav.slideToggle(settings.animationSpeed)
+			$nav.toggleClass('show')
 		)
 				
 		# Add in touch buttons	
