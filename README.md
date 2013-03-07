@@ -63,7 +63,7 @@ you can change the default speed too
 ### Todo
 
 * Make several demo themes
-* Fix bug where menu closes on some mobile phones. Mainly Android 2.3 default browser.
+* Set viewport meta tag no zoom for fixed position nav on touch screens
 
 * * *
 ### Changelog
