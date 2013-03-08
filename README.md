@@ -63,7 +63,6 @@ you can change the default speed too
 ### Todo
 
 * Make several demo themes
-* Set viewport meta tag no zoom for fixed position nav on touch screens
 
 * * *
 ### Changelog
