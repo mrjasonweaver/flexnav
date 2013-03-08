@@ -17,6 +17,7 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Keyboard tab input accessibility
 * Fallback for no JavaScript
 * Use class `.one-page` on the `body`, `.menu-button`, and `ul.flexnav` for single page fixed menu
+* Supports em units
 
 ### Browser Support
 * IE7-10
@@ -32,6 +33,10 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 Start with a simple unordered list, adding in the class and data attributes:
 
 	<ul class="flexnav" data-breakpoint="800"> <li>...</li> </ul>
+	
+You can also use em units:
+
+	<ul class="flexnav one-page" data-breakpoint-em="50"> <li>...</li> </ul>
 	
 For a single page site with id anchors, add `.one-page` class to `<body>`, `.menu-button`, and FlexNav `<ul>`:
 
@@ -66,6 +71,9 @@ you can change the default speed too
 
 * * *
 ### Changelog
+
+#### v.0.4.9 : March 7th, 2013
+* Added support for em units
 
 #### v.0.4.8 : March 6th, 2013
 * Updated the way FlexNav hides and shows menu. Using a class `.show` and css transitions instead of js
