@@ -36,7 +36,7 @@ Start with a simple unordered list, adding in the class and data attributes:
 	
 You can also use em units:
 
-	<ul class="flexnav one-page" data-breakpoint-em="50"> <li>...</li> </ul>
+	<ul class="flexnav" data-breakpoint-em="50"> <li>...</li> </ul>
 	
 For a single page site with id anchors, add `.one-page` class to `<body>`, `.menu-button`, and FlexNav `<ul>`:
 
