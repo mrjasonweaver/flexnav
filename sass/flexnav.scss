@@ -27,7 +27,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-.flexnav, .oldie .sm-screen {
+.flexnav {
 	@include pie-clearfix;
 	overflow: hidden;
 	margin: 0 auto;
@@ -212,7 +212,7 @@ time, mark, audio, video {
 	body.one-page {
 		padding-top: 70px;
 	}
-	.flexnav .lg-screen {
+	.flexnav {
 		overflow: visible;
 		max-height: 1000px;
 				
