@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 0.4.9
+	FlexNav.js 0.5
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under the WTFPL license

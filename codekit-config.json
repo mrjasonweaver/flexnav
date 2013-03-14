@@ -1,6 +1,6 @@
 {
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
-  "creatorBuild" : "8265",
+  "creatorBuild" : "8283",
   "files" : {
     "\/coffeescripts\/jquery.flexnav.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -45,16 +45,17 @@
       "outputAbbreviatedPath" : "\/footer-scripts.html",
       "fileType" : 512
     },
-    "\/master.jade\/partials\/head.jade" : {
+    "\/sass\/page.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/master.jade\/partials\/head.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 0,
-      "outputAbbreviatedPath" : "\/head.html",
-      "fileType" : 512
+      "inputAbbreviatedPath" : "\/sass\/page.scss",
+      "outputStyle" : 2,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/page.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/css\/page.css" : {
       "ignoreWasSetByUser" : 0,
@@ -64,18 +65,6 @@
       "inputAbbreviatedPath" : "\/css\/page.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
-    },
-    "\/sass\/flexnav.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/flexnav.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/flexnav.css",
-      "fileType" : 4,
-      "debugStyle" : 0
     },
     "\/js\/jquery.flexnav.js" : {
       "ignoreWasSetByUser" : 0,
@@ -87,6 +76,18 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/jquery.flexnav-ck.js",
       "fileType" : 64
+    },
+    "\/sass\/flexnav.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/flexnav.scss",
+      "outputStyle" : 2,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/flexnav.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/css\/flexnav.css" : {
       "ignoreWasSetByUser" : 0,
@@ -106,17 +107,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
     },
-    "\/sass\/page.scss" : {
+    "\/master.jade\/partials\/head.jade" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/page.scss",
+      "inputAbbreviatedPath" : "\/master.jade\/partials\/head.jade",
       "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/page.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "compileDebug" : 0,
+      "outputAbbreviatedPath" : "\/head.html",
+      "fileType" : 512
     },
     "\/master.jade\/partials\/header.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -230,7 +230,7 @@
     "javascriptSyntaxCheckerStyle" : 1,
     "sassAutoOutputPathReplace1" : "sass",
     "slimAutoOutputPathReplace1" : "",
-    "sassOutputStyle" : 0,
+    "sassOutputStyle" : 2,
     "coffeeAutoOutputPathRelativePath" : "\/js\/",
     "slimCompileOnly" : 0,
     "slimLogicless" : 0,

@@ -72,6 +72,9 @@ you can change the default speed too
 * * *
 ### Changelog
 
+#### v.0.5 : March 7th, 2013
+* Added full responsive support for IE 7/8 (not tested)
+
 #### v.0.4.9 : March 7th, 2013
 * Added support for em units
 

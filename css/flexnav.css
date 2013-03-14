@@ -84,7 +84,7 @@ time, mark, audio, video {
 }
 
 /* line 30, ../sass/flexnav.scss */
-.flexnav {
+.flexnav, .oldie .sm-screen {
   *zoom: 1;
   overflow: hidden;
   margin: 0 auto;
@@ -92,13 +92,13 @@ time, mark, audio, video {
   max-height: 0;
 }
 /* line 38, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.flexnav:after {
+.flexnav:after, .oldie .sm-screen:after {
   content: "";
   display: table;
   clear: both;
 }
 /* line 37, ../sass/flexnav.scss */
-.flexnav.show {
+.flexnav.show, .oldie .sm-screen.show {
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -o-transition: 0.4s;
@@ -106,19 +106,19 @@ time, mark, audio, video {
   max-height: 1000px;
 }
 /* line 41, ../sass/flexnav.scss */
-.flexnav.one-page {
+.flexnav.one-page, .oldie .sm-screen.one-page {
   position: fixed;
   top: 50px;
   right: 5%;
   max-width: 200px;
 }
 /* line 48, ../sass/flexnav.scss */
-.flexnav li {
+.flexnav li, .oldie .sm-screen li {
   font-size: 100%;
   position: relative;
 }
 /* line 52, ../sass/flexnav.scss */
-.flexnav li a {
+.flexnav li a, .oldie .sm-screen li a {
   position: relative;
   display: block;
   padding: .96em;
@@ -129,30 +129,30 @@ time, mark, audio, video {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 /* line 62, ../sass/flexnav.scss */
-.flexnav li ul {
+.flexnav li ul, .oldie .sm-screen li ul {
   width: 100%;
   display: none;
 }
 /* line 66, ../sass/flexnav.scss */
-.flexnav li ul li {
+.flexnav li ul li, .oldie .sm-screen li ul li {
   float: none;
   width: 100%;
 }
 /* line 70, ../sass/flexnav.scss */
-.flexnav li ul li a {
+.flexnav li ul li a, .oldie .sm-screen li ul li a {
   display: block;
   background: #b2b2af;
 }
 /* line 74, ../sass/flexnav.scss */
-.flexnav ul li ul li a {
+.flexnav ul li ul li a, .oldie .sm-screen ul li ul li a {
   background: #bfbfbc;
 }
 /* line 77, ../sass/flexnav.scss */
-.flexnav ul li ul li ul li a {
+.flexnav ul li ul li ul li a, .oldie .sm-screen ul li ul li ul li a {
   background: #cbcbc9;
 }
 /* line 80, ../sass/flexnav.scss */
-.flexnav .touch-button {
+.flexnav .touch-button, .oldie .sm-screen .touch-button {
   position: absolute;
   z-index: 999;
   top: 0;
@@ -165,11 +165,11 @@ time, mark, audio, video {
   text-align: center;
 }
 /* line 91, ../sass/flexnav.scss */
-.flexnav .touch-button:hover {
+.flexnav .touch-button:hover, .oldie .sm-screen .touch-button:hover {
   cursor: pointer;
 }
 /* line 94, ../sass/flexnav.scss */
-.flexnav .touch-button .navicon {
+.flexnav .touch-button .navicon, .oldie .sm-screen .touch-button .navicon {
   position: relative;
   top: 1.4em;
   font-size: 12px;
@@ -299,22 +299,22 @@ time, mark, audio, video {
   }
 }
 /* line 212, ../sass/flexnav.scss */
-.oldie body.one-page {
+.oldie .lg-screen body.one-page {
   padding-top: 70px;
 }
 /* line 215, ../sass/flexnav.scss */
-.oldie .flexnav {
+.oldie .lg-screen .flexnav {
   overflow: visible;
   max-height: 1000px;
 }
 /* line 219, ../sass/flexnav.scss */
-.oldie .flexnav.one-page {
+.oldie .lg-screen .flexnav.one-page {
   top: 0;
   right: auto;
   max-width: 1080px;
 }
 /* line 224, ../sass/flexnav.scss */
-.oldie .flexnav li {
+.oldie .lg-screen .flexnav li {
   position: relative;
   list-style: none;
   float: left;
@@ -323,7 +323,7 @@ time, mark, audio, video {
   width: 20%;
 }
 /* line 232, ../sass/flexnav.scss */
-.oldie .flexnav li:hover > ul {
+.oldie .lg-screen .flexnav li:hover > ul {
   visibility: visible;
   opacity: 1;
   height: auto;
@@ -332,16 +332,16 @@ time, mark, audio, video {
   position: absolute;
 }
 /* line 241, ../sass/flexnav.scss */
-.oldie .flexnav.lg-screen li:hover > ul, .oldie .flexnav.sm-screen li:hover > ul {
+.oldie .lg-screen .flexnav.lg-screen li:hover > ul, .oldie .lg-screen .flexnav.sm-screen li:hover > ul {
   display: none;
 }
 /* line 244, ../sass/flexnav.scss */
-.oldie .flexnav li a {
+.oldie .lg-screen .flexnav li a {
   border-left: 1px solid #acaca1;
   border-bottom: none;
 }
 /* line 248, ../sass/flexnav.scss */
-.oldie .flexnav li > ul {
+.oldie .lg-screen .flexnav li > ul {
   position: absolute;
   top: auto;
   left: 0;
@@ -351,31 +351,31 @@ time, mark, audio, video {
   z-index: 1;
 }
 /* line 257, ../sass/flexnav.scss */
-.oldie .flexnav li ul li ul {
+.oldie .lg-screen .flexnav li ul li ul {
   top: 0;
 }
 /* line 260, ../sass/flexnav.scss */
-.oldie .flexnav li ul li a {
+.oldie .lg-screen .flexnav li ul li a {
   border-bottom: none;
 }
 /* line 263, ../sass/flexnav.scss */
-.oldie .flexnav li ul.open {
+.oldie .lg-screen .flexnav li ul.open {
   display: block;
   opacity: 1;
   visibility: visible;
   height: auto;
 }
 /* line 269, ../sass/flexnav.scss */
-.oldie .flexnav li ul.open ul.open {
+.oldie .lg-screen .flexnav li ul.open ul.open {
   margin-left: 100%;
   top: 0;
 }
 /* line 274, ../sass/flexnav.scss */
-.oldie .flexnav ul li:hover ul {
+.oldie .lg-screen .flexnav ul li:hover ul {
   margin-left: 100%;
   top: 0;
 }
 /* line 279, ../sass/flexnav.scss */
-.oldie .menu-button {
+.oldie .lg-screen .menu-button {
   display: none;
 }
