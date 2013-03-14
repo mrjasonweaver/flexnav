@@ -72,7 +72,10 @@ you can change the default speed too
 * * *
 ### Changelog
 
-#### v.0.5 : March 7th, 2013
+#### v.0.5.1 : March 14th, 2013
+* Reverted back to no full responsive support for old IE
+
+#### v.0.5 : March 13th, 2013
 * Added full responsive support for IE 7/8 (not tested)
 
 #### v.0.4.9 : March 7th, 2013
