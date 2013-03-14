@@ -299,22 +299,22 @@ time, mark, audio, video {
   }
 }
 /* line 212, ../sass/flexnav.scss */
-.oldie .lg-screen body.one-page {
+.oldie body.one-page {
   padding-top: 70px;
 }
 /* line 215, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav {
+.oldie .flexnav .lg-screen {
   overflow: visible;
   max-height: 1000px;
 }
 /* line 219, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav.one-page {
+.oldie .flexnav .lg-screen.one-page {
   top: 0;
   right: auto;
   max-width: 1080px;
 }
 /* line 224, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav li {
+.oldie .flexnav .lg-screen li {
   position: relative;
   list-style: none;
   float: left;
@@ -323,7 +323,7 @@ time, mark, audio, video {
   width: 20%;
 }
 /* line 232, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav li:hover > ul {
+.oldie .flexnav .lg-screen li:hover > ul {
   visibility: visible;
   opacity: 1;
   height: auto;
@@ -332,16 +332,16 @@ time, mark, audio, video {
   position: absolute;
 }
 /* line 241, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav.lg-screen li:hover > ul, .oldie .lg-screen .flexnav.sm-screen li:hover > ul {
+.oldie .flexnav .lg-screen.lg-screen li:hover > ul, .oldie .flexnav .lg-screen.sm-screen li:hover > ul {
   display: none;
 }
 /* line 244, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav li a {
+.oldie .flexnav .lg-screen li a {
   border-left: 1px solid #acaca1;
   border-bottom: none;
 }
 /* line 248, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav li > ul {
+.oldie .flexnav .lg-screen li > ul {
   position: absolute;
   top: auto;
   left: 0;
@@ -351,31 +351,31 @@ time, mark, audio, video {
   z-index: 1;
 }
 /* line 257, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav li ul li ul {
+.oldie .flexnav .lg-screen li ul li ul {
   top: 0;
 }
 /* line 260, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav li ul li a {
+.oldie .flexnav .lg-screen li ul li a {
   border-bottom: none;
 }
 /* line 263, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav li ul.open {
+.oldie .flexnav .lg-screen li ul.open {
   display: block;
   opacity: 1;
   visibility: visible;
   height: auto;
 }
 /* line 269, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav li ul.open ul.open {
+.oldie .flexnav .lg-screen li ul.open ul.open {
   margin-left: 100%;
   top: 0;
 }
 /* line 274, ../sass/flexnav.scss */
-.oldie .lg-screen .flexnav ul li:hover ul {
+.oldie .flexnav .lg-screen ul li:hover ul {
   margin-left: 100%;
   top: 0;
 }
 /* line 279, ../sass/flexnav.scss */
-.oldie .lg-screen .menu-button {
+.oldie .menu-button {
   display: none;
 }
