@@ -72,6 +72,9 @@ you can change the default speed too
 * * *
 ### Changelog
 
+#### v.0.5.2 : March 19th, 2013
+* IE 7/8 large screen bug fixes
+
 #### v.0.5.1 : March 14th, 2013
 * Reverted back to no full responsive support for old IE
 

@@ -227,3 +227,49 @@ code {
     font-size: 1.1em;
   }
 }
+/* line 196, ../sass/page.scss */
+.oldie body {
+  font-size: 100%;
+}
+/* line 200, ../sass/page.scss */
+.oldie body.home-page #site-header {
+  background: url("http://jasonweaver.name/img/look.png") no-repeat 90% 30px;
+}
+/* line 207, ../sass/page.scss */
+.oldie .site-title h1 {
+  font-size: 2.25em;
+  margin-bottom: 10px;
+}
+/* line 211, ../sass/page.scss */
+.oldie .site-title h2 {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+/* line 217, ../sass/page.scss */
+.oldie #content article:first-child {
+  width: 56%;
+  margin-right: 10%;
+}
+/* line 221, ../sass/page.scss */
+.oldie #content article:nth-child(2) {
+  width: 34%;
+  margin-right: 0;
+}
+/* line 225, ../sass/page.scss */
+.oldie #content p {
+  font-size: 1.1em;
+}
+/* line 228, ../sass/page.scss */
+.oldie #content h2 {
+  font-size: 1.9em;
+}
+/* line 231, ../sass/page.scss */
+.oldie #content article {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+}
+/* line 236, ../sass/page.scss */
+.oldie #content li {
+  font-size: 1.1em;
+}

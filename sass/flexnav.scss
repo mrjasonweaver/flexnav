@@ -228,6 +228,7 @@ time, mark, audio, video {
 			display: block;	
 			background-color: #a6a6a2;	
 			width: 20%;
+			min-height: 50px;
 		}
 		li:hover > ul { 
 			visibility: visible;
@@ -235,7 +236,11 @@ time, mark, audio, video {
 			height: auto;
 			display: block;
 			top: 3.1em;	
-			position: absolute;	
+			position: absolute;
+			
+			li {
+				width: 100%;
+			}
 		}
 		&.lg-screen li:hover > ul,
 		&.sm-screen li:hover > ul {
@@ -252,7 +257,7 @@ time, mark, audio, video {
 			opacity: 0;
 			visibility: hidden;
 			height: 1px;
-			z-index: 1;			
+			z-index: 1;	
 		}
 		li ul li ul { 
 			top: 0;		
@@ -278,5 +283,8 @@ time, mark, audio, video {
 	}
 	.menu-button {
 		display: none;
+	}
+	&.ie7 .flexnav li {
+		width: 19.9%;
 	}
 }
