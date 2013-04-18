@@ -37,7 +37,11 @@ Start with a simple unordered list, adding in the class and data attributes:
 You can also use em units:
 
 	<ul class="flexnav" data-breakpoint-em="50"> <li>...</li> </ul>
-	
+
+Add the small screen menu button somewhere outside your navigation markup:
+
+		<div class="menu-button">Menu</div>
+		
 For a single page site with id anchors, add `.one-page` class to `<body>`, `.menu-button`, and FlexNav `<ul>`:
 
 	<ul class="flexnav one-page" data-breakpoint="800"> <li>...</li> </ul>	
