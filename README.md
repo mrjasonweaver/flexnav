@@ -40,7 +40,7 @@ You can also use em units:
 
 Add the small screen menu button somewhere outside your navigation markup:
 
-		<div class="menu-button">Menu</div>
+	<div class="menu-button">Menu</div>
 		
 For a single page site with id anchors, add `.one-page` class to `<body>`, `.menu-button`, and FlexNav `<ul>`:
 

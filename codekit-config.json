@@ -77,15 +77,6 @@
       "outputAbbreviatedPath" : "\/js\/jquery.flexnav-ck.js",
       "fileType" : 64
     },
-    "\/css\/page.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/page.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/sass\/flexnav.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -97,6 +88,15 @@
       "outputAbbreviatedPath" : "\/css\/flexnav.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/css\/page.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/page.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
@@ -160,17 +160,6 @@
       "outputAbbreviatedPath" : "\/js\/jquery.flexnav.min-ck.js",
       "fileType" : 64
     },
-    "\/master.jade\/partials\/footer.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/master.jade\/partials\/footer.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 0,
-      "outputAbbreviatedPath" : "\/footer.html",
-      "fileType" : 512
-    },
     "\/master.jade\/single-page-pattern.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -180,6 +169,17 @@
       "outputStyle" : 0,
       "compileDebug" : 0,
       "outputAbbreviatedPath" : "\/single-page-pattern.html",
+      "fileType" : 512
+    },
+    "\/master.jade\/partials\/footer.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/master.jade\/partials\/footer.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 0,
+      "outputAbbreviatedPath" : "\/footer.html",
       "fileType" : 512
     }
   },
