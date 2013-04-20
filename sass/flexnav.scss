@@ -179,6 +179,7 @@ time, mark, audio, video {
 			display: block;
 			
 			li {
+				@include transition(.4s);
 				width: 100%;
 				overflow: hidden;
 				max-height: 0;

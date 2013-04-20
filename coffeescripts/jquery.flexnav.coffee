@@ -52,6 +52,8 @@ $.fn.flexNav = (options) ->
 	resizer = ->
 		if $(window).width() <= breakpoint
 			$nav.removeClass("lg-screen").addClass("sm-screen")
+			# set all drops to max-height: 0
+			$nav.css("maxHeight": 0).find(".item-with-ul ul").css("maxHeight":0)
 			# Toggle nav menu closed for one pager after anchor clicked
 			$('.one-page li a').on( 'click', ->
 				$nav.removeClass('show')
@@ -60,6 +62,7 @@ $.fn.flexNav = (options) ->
 		else
 			$nav.removeClass("sm-screen").addClass("lg-screen")
 			$nav.removeClass('show')
+			$nav.css("maxHeight": settings.itemHeight).find(".item-with-ul ul").css("maxHeight":0)
 			$('.item-with-ul').on(
 				mouseenter: ->	
 					$(@).find('>ul').addClass('show')
@@ -75,9 +78,6 @@ $.fn.flexNav = (options) ->
 		OTransition : transition
 		transition : transition
 	)
-	
-	# set all drops to max-height: 0
-	$nav.css("maxHeight":0).find(".item-with-ul ul").css("maxHeight":0)
 		
 	# Add in touch buttons	
 	$('.item-with-ul, .menu-button').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')

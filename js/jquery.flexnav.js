@@ -58,6 +58,11 @@
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
+        $nav.css({
+          "maxHeight": 0
+        }).find(".item-with-ul ul").css({
+          "maxHeight": 0
+        });
         $('.one-page li a').on('click', function() {
           return $nav.removeClass('show');
         });
@@ -65,6 +70,11 @@
       } else {
         $nav.removeClass("sm-screen").addClass("lg-screen");
         $nav.removeClass('show');
+        $nav.css({
+          "maxHeight": settings.itemHeight
+        }).find(".item-with-ul ul").css({
+          "maxHeight": 0
+        });
         return $('.item-with-ul').on({
           mouseenter: function() {
             return $(this).find('>ul').addClass('show');
@@ -81,11 +91,6 @@
       MsTransition: transition,
       OTransition: transition,
       transition: transition
-    });
-    $nav.css({
-      "maxHeight": 0
-    }).find(".item-with-ul ul").css({
-      "maxHeight": 0
     });
     $('.item-with-ul, .menu-button').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
     $('.menu-button, .menu-button .touch-button').on('touchstart click', function(e) {
