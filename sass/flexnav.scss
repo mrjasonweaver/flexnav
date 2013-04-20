@@ -36,7 +36,7 @@ time, mark, audio, video {
 	
 	&.show {
 		@include transition(.4s);
-		max-height: 1000px;
+		max-height: 3000px;
 	}
 	&.one-page {
 		position: fixed;
@@ -47,7 +47,8 @@ time, mark, audio, video {
 	
 	li {
 		font-size: 100%;
-		position: relative;			
+		position: relative;
+		overflow: hidden;		
 	}
 	li a {
 		position: relative;
@@ -60,13 +61,14 @@ time, mark, audio, video {
 		border-bottom: 1px solid rgba(0,0,0,.15);
 	}
 	li ul {
+		@include transition(.4s);
 		width: 100%;
-		display: none;
+		max-height: 0;
 	}
-	li ul li {
-		float: none;
-		width: 100%;			
-	}
+	li ul.show {
+		max-height: 3000px;
+	}	
+	
 	li ul li a {
 		display: block;
 		background: $second_level;			
@@ -155,18 +157,7 @@ time, mark, audio, video {
 			display: block;	
 			background-color: #a6a6a2;	
 			width: 20%;
-		}
-		li:hover > ul { 
-			visibility: visible;
-			opacity: 1;
-			height: auto;
-			display: block;
-			top: 3.1em;	
-			position: absolute;
-		}
-		&.lg-screen li:hover > ul,
-		&.sm-screen li:hover > ul {
-			display: none;
+			overflow: visible;
 		}
 		li a {
 			border-left: 1px solid #acaca1;
@@ -177,13 +168,28 @@ time, mark, audio, video {
 			top: auto;
 			left: 0;
 			opacity: 0;
-			visibility: hidden;
-			height: 1px;
-			z-index: 1;			
+			max-height: 0;
+			z-index: -1;
+			display: block;
+			
+			li {
+				width: 100%;
+			}
 		}
-		li ul li ul { 
-			top: 0;		
+		li:hover > ul,
+		li .show {
+			opacity: 1;
+			max-height: auto;
+			top: 3.1em;
+			z-index: 1;
 		}
+		li ul li > ul {
+			margin-left: 100%;
+			top: -3em;
+		}
+		li ul li:hover > ul {
+			top: 0;
+		}		
 		li ul li a {
 			border-bottom: none;
 		}
@@ -191,16 +197,13 @@ time, mark, audio, video {
 			display: block;
 			opacity: 1;
 			visibility: visible;
+			z-index: 1;
 			height: auto;
 	
 			ul.open {
 				margin-left: 100%;
 				top: 0;
 			}
-		}
-		ul li:hover ul {
-			margin-left: 100%;
-			top: 0;
 		}
 	}
 	.menu-button {
@@ -240,11 +243,8 @@ time, mark, audio, video {
 			
 			li {
 				width: 100%;
+				float: none;
 			}
-		}
-		&.lg-screen li:hover > ul,
-		&.sm-screen li:hover > ul {
-			display: none;
 		}
 		li a {
 			border-left: 1px solid #acaca1;
