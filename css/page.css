@@ -14,17 +14,22 @@ body {
 }
 
 /* line 15, ../sass/page.scss */
+#site-header {
+  height: 196px;
+}
+
+/* line 18, ../sass/page.scss */
 a {
   text-decoration: none;
   color: #548fa7;
 }
 
-/* line 19, ../sass/page.scss */
+/* line 22, ../sass/page.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 22, ../sass/page.scss */
+/* line 25, ../sass/page.scss */
 p {
   font-size: 1em;
   margin-bottom: 1em;
@@ -32,13 +37,13 @@ p {
   font-weight: 300;
 }
 
-/* line 28, ../sass/page.scss */
+/* line 31, ../sass/page.scss */
 .img-devices {
   max-width: 100%;
   margin-top: 12px;
 }
 
-/* line 32, ../sass/page.scss */
+/* line 35, ../sass/page.scss */
 .callout {
   padding: 10px 30px;
   border-radius: 5px;
@@ -47,13 +52,13 @@ p {
   margin-top: 5px;
   display: inline-block;
 }
-/* line 40, ../sass/page.scss */
+/* line 43, ../sass/page.scss */
 .callout:hover {
   background: #437285;
   text-decoration: none;
 }
 
-/* line 46, ../sass/page.scss */
+/* line 49, ../sass/page.scss */
 .site-title h1 {
   font-family: "ff-dax-compact-web-pro-1","ff-dax-compact-web-pro-2";
   font-weight: 100;
@@ -70,46 +75,46 @@ p {
   letter-spacing: 2px;
   text-rendering: optimizeLegibility;
 }
-/* line 62, ../sass/page.scss */
+/* line 65, ../sass/page.scss */
 .site-title h1 a {
   color: #f1f2eb;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
-/* line 68, ../sass/page.scss */
+/* line 71, ../sass/page.scss */
 .site-title h2 {
   font-size: 1em;
   margin-bottom: 5%;
   font-weight: 100;
 }
 
-/* line 74, ../sass/page.scss */
+/* line 77, ../sass/page.scss */
 .container {
   margin: -1px auto 0;
   max-width: 1080px;
   padding: 0 5%;
 }
 
-/* line 79, ../sass/page.scss */
+/* line 82, ../sass/page.scss */
 #content {
   margin: 7% auto;
   overflow: hidden;
 }
-/* line 83, ../sass/page.scss */
+/* line 86, ../sass/page.scss */
 #content h1, #content h2 {
   margin-bottom: .5em;
 }
-/* line 86, ../sass/page.scss */
+/* line 89, ../sass/page.scss */
 #content h2 {
   font-size: 1.6em;
   color: #3a3261;
 }
-/* line 90, ../sass/page.scss */
+/* line 93, ../sass/page.scss */
 #content ul {
   margin: 1em;
   list-style-type: circle;
 }
-/* line 94, ../sass/page.scss */
+/* line 97, ../sass/page.scss */
 #content li {
   font-size: 1em;
   margin-bottom: .4em;
@@ -117,18 +122,18 @@ p {
   font-weight: 300;
 }
 
-/* line 101, ../sass/page.scss */
+/* line 104, ../sass/page.scss */
 .block {
   margin-bottom: 3em;
 }
 
-/* line 104, ../sass/page.scss */
+/* line 107, ../sass/page.scss */
 .article-wrap {
   padding: 0;
   overflow: hidden;
 }
 
-/* line 108, ../sass/page.scss */
+/* line 111, ../sass/page.scss */
 code {
   overflow: scroll;
   background: rgba(55, 47, 91, 0.9);
@@ -144,7 +149,7 @@ code {
   box-shadow: inset 0 0 10px #3a3261;
 }
 
-/* line 122, ../sass/page.scss */
+/* line 125, ../sass/page.scss */
 #site-footer {
   overflow: hidden;
   clear: both;
@@ -154,12 +159,12 @@ code {
   box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
   width: 100%;
 }
-/* line 131, ../sass/page.scss */
+/* line 134, ../sass/page.scss */
 #site-footer .container {
   margin-top: 0;
 }
 
-/* line 135, ../sass/page.scss */
+/* line 138, ../sass/page.scss */
 #site-footer li {
   list-style: none;
   margin: 1em 0;
@@ -167,109 +172,109 @@ code {
   float: left;
 }
 
-/* line 141, ../sass/page.scss */
+/* line 144, ../sass/page.scss */
 #site-footer li a {
   padding: 0 0.5em;
 }
 
-/* line 144, ../sass/page.scss */
+/* line 147, ../sass/page.scss */
 #section2, #section3, #section4, #section5 {
   padding-top: 80px;
 }
 
 @media all and (min-width: 800px) {
-  /* line 148, ../sass/page.scss */
+  /* line 151, ../sass/page.scss */
   body {
     font-size: 100%;
   }
-  /* line 152, ../sass/page.scss */
+  /* line 155, ../sass/page.scss */
   body.home-page #site-header {
     background: url("http://jasonweaver.name/img/look.png") no-repeat 90% 30px;
   }
 
-  /* line 159, ../sass/page.scss */
+  /* line 163, ../sass/page.scss */
   .site-title h1 {
     font-size: 2.25em;
     margin-bottom: 10px;
   }
-  /* line 163, ../sass/page.scss */
+  /* line 167, ../sass/page.scss */
   .site-title h2 {
     font-size: 1.2em;
     margin-bottom: 50px;
   }
 
-  /* line 169, ../sass/page.scss */
+  /* line 173, ../sass/page.scss */
   #content article:first-child {
     width: 56%;
     margin-right: 10%;
   }
-  /* line 173, ../sass/page.scss */
+  /* line 177, ../sass/page.scss */
   #content article:nth-child(2) {
     width: 34%;
     margin-right: 0;
   }
-  /* line 177, ../sass/page.scss */
+  /* line 181, ../sass/page.scss */
   #content p {
     font-size: 1.1em;
   }
-  /* line 180, ../sass/page.scss */
+  /* line 184, ../sass/page.scss */
   #content h2 {
     font-size: 1.9em;
   }
-  /* line 183, ../sass/page.scss */
+  /* line 187, ../sass/page.scss */
   #content article {
     width: 50%;
     float: left;
     overflow: hidden;
   }
-  /* line 188, ../sass/page.scss */
+  /* line 192, ../sass/page.scss */
   #content li {
     font-size: 1.1em;
   }
 }
-/* line 196, ../sass/page.scss */
+/* line 200, ../sass/page.scss */
 .oldie body {
   font-size: 100%;
 }
-/* line 200, ../sass/page.scss */
+/* line 204, ../sass/page.scss */
 .oldie body.home-page #site-header {
   background: url("http://jasonweaver.name/img/look.png") no-repeat 90% 30px;
 }
-/* line 207, ../sass/page.scss */
+/* line 211, ../sass/page.scss */
 .oldie .site-title h1 {
   font-size: 2.25em;
   margin-bottom: 10px;
 }
-/* line 211, ../sass/page.scss */
+/* line 215, ../sass/page.scss */
 .oldie .site-title h2 {
   font-size: 1.2em;
   margin-bottom: 50px;
 }
-/* line 217, ../sass/page.scss */
+/* line 221, ../sass/page.scss */
 .oldie #content article:first-child {
   width: 56%;
   margin-right: 10%;
 }
-/* line 221, ../sass/page.scss */
+/* line 225, ../sass/page.scss */
 .oldie #content article:nth-child(2) {
   width: 34%;
   margin-right: 0;
 }
-/* line 225, ../sass/page.scss */
+/* line 229, ../sass/page.scss */
 .oldie #content p {
   font-size: 1.1em;
 }
-/* line 228, ../sass/page.scss */
+/* line 232, ../sass/page.scss */
 .oldie #content h2 {
   font-size: 1.9em;
 }
-/* line 231, ../sass/page.scss */
+/* line 235, ../sass/page.scss */
 .oldie #content article {
   width: 50%;
   float: left;
   overflow: hidden;
 }
-/* line 236, ../sass/page.scss */
+/* line 240, ../sass/page.scss */
 .oldie #content li {
   font-size: 1.1em;
 }
