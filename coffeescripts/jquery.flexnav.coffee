@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 0.4.6
+	FlexNav.js 0.5.2
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under the WTFPL license
@@ -14,23 +14,42 @@ $.fn.flexNav = (options) ->
 		options
 
 		$nav = $(@)
-		breakpoint = $nav.data('breakpoint')
+		if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
+		# if data-breakpoint is in ems, do some em calc
+		if $nav.data('breakpoint-em')
+			hidden_text = "<div class='hidden-text'>M and FlexNav</div>"
+			$('body').append(hidden_text)
+			$sneaky_div = $('.hidden-text')
+			$sneaky_div.css 
+				'display':'inline-block'
+				'padding':'0'
+				'line-height':'1'
+				'position':'absolute'
+				'visibility':'hidden'
+				'font-size':'1em'
+			em_unit = $nav.data('breakpoint-em')
+			base_font = $sneaky_div.css('font-size')
+			breakpoint = em_unit * parseInt(base_font)
+			console.log(breakpoint)
+			$sneaky_div.remove()
 		
 		resizer = ->
 			if $(window).width() <= breakpoint
 				$nav.removeClass("lg-screen").addClass("sm-screen")
-				$nav.hide()
+				# Toggle nav menu closed for one pager after anchor clicked
+				$('.sm-screen.one-page li a').on( 'click', ->
+					$nav.removeClass('show')
+				)
 				$('.item-with-ul').off()
 			else
-				$nav.removeClass("sm-screen").addClass("lg-screen")		
-				$nav.fadeIn()
+				$nav.removeClass("sm-screen").addClass("lg-screen")
+				$nav.removeClass('show')
 				$('.item-with-ul').on(
 					mouseenter: ->	
 						$(@).find('>ul').slideDown(settings.animationSpeed)
 					mouseleave: ->
 						$(@).find('>ul').slideUp(settings.animationSpeed)				
-				)	
-
+				)
 
 		# Set class on $nav for touch/no-touch
 		is_touch_device = ->
@@ -48,9 +67,9 @@ $.fn.flexNav = (options) ->
 		
 		# Toggle for nav menu
 		$('.menu-button').on( 'click', ->
-			$nav.slideToggle(settings.animationSpeed)
+			$nav.toggleClass('show')
 		)
-		
+				
 		# Add in touch buttons	
 		$('.menu-button, .item-with-ul').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
 			

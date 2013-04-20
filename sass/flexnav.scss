@@ -2,6 +2,7 @@
 
 @import "compass/reset";
 @import "compass/utilities";
+@import "compass/css3";
 
 $nav_text: #222;
 $top_level: #a6a6a2;
@@ -28,8 +29,21 @@ time, mark, audio, video {
 }
 .flexnav {
 	@include pie-clearfix;
+	overflow: hidden;
 	margin: 0 auto;
 	width: 100%;
+	max-height: 0;
+	
+	&.show {
+		@include transition(.4s);
+		max-height: 1000px;
+	}
+	&.one-page {
+		position: fixed;
+		top: 50px;
+		right: 5%;
+		max-width: 200px;
+	}
 	
 	li {
 		font-size: 100%;
@@ -94,6 +108,13 @@ time, mark, audio, video {
 	cursor: pointer;
 	border-bottom: 1px solid rgba(0,0,0,.2);
 	
+	&.one-page {
+		position: fixed;
+		top: 0;
+		right: 5%;
+		padding-right: 45px;
+	}
+	
 	.touch-button {
 		background: transparent;
 		position: absolute;
@@ -115,8 +136,18 @@ time, mark, audio, video {
 }
 
 @media all and (min-width: 800px) {
+	body.one-page {
+		padding-top: 70px;
+	}
 	.flexnav {
-
+		overflow: visible;
+		max-height: 1000px;
+				
+		&.one-page {
+			top: 0;
+			right: auto;
+			max-width: 1080px;
+		}
 		li {
 			position: relative;
 			list-style: none;
@@ -131,7 +162,7 @@ time, mark, audio, video {
 			height: auto;
 			display: block;
 			top: 3.1em;	
-			position: absolute;	
+			position: absolute;
 		}
 		&.lg-screen li:hover > ul,
 		&.sm-screen li:hover > ul {
@@ -139,7 +170,7 @@ time, mark, audio, video {
 		}
 		li a {
 			border-left: 1px solid #acaca1;
-			border-bottom: none;		
+			border-bottom: none;
 		}
 		li > ul {
 			position: absolute; 
@@ -178,8 +209,18 @@ time, mark, audio, video {
 }
 
 .oldie {
+	body.one-page {
+		padding-top: 70px;
+	}
 	.flexnav {
-		
+		overflow: visible;
+		max-height: 1000px;
+				
+		&.one-page {
+			top: 0;
+			right: auto;
+			max-width: 1080px;
+		}
 		li {
 			position: relative;
 			list-style: none;
@@ -187,6 +228,7 @@ time, mark, audio, video {
 			display: block;	
 			background-color: #a6a6a2;	
 			width: 20%;
+			min-height: 50px;
 		}
 		li:hover > ul { 
 			visibility: visible;
@@ -194,7 +236,11 @@ time, mark, audio, video {
 			height: auto;
 			display: block;
 			top: 3.1em;	
-			position: absolute;	
+			position: absolute;
+			
+			li {
+				width: 100%;
+			}
 		}
 		&.lg-screen li:hover > ul,
 		&.sm-screen li:hover > ul {
@@ -211,7 +257,7 @@ time, mark, audio, video {
 			opacity: 0;
 			visibility: hidden;
 			height: 1px;
-			z-index: 1;			
+			z-index: 1;	
 		}
 		li ul li ul { 
 			top: 0;		
@@ -238,5 +284,7 @@ time, mark, audio, video {
 	.menu-button {
 		display: none;
 	}
-
+	&.ie7 .flexnav li {
+		width: 19.9%;
+	}
 }

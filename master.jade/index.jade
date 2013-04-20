@@ -18,23 +18,32 @@ html(lang="en")
 					.article-wrap
 						.block
 							h2 A Device-Agnostic Approach to Complex Site Navigation
-							p The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events for tap targets. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
+							p The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using click events for tap targets (the key feature of FlexNav). This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
+
+							p Want a FlexNav for a one page site with anchors to different sections of the page? Check out the 
+								a(href="http://jasonweaver.name/lab/flexiblenavigation/single-page-pattern.html") single page pattern demo.
 
 						.block
 							h2 Usage
-							p Start with a simple unordered list, adding in the class and data attributes.
+							p Start with a simple unordered list, adding in the class and data attributes:
 								code &lt;ul class="flexnav" data-breakpoint="800"&gt; &lt;li&gt...&lt;/li&gt &lt;/ul&gt;
 
-							p Add flexnav.css to the head of your document
+							p You can also use em units:
+								code &lt;ul class="flexnav" data-breakpoint-em="50"&gt; &lt;li&gt...&lt;/li&gt &lt;/ul&gt;
+
+							p Add the small screen menu button somewhere outside your navigation markup:
+								code &lt;div class="menu-button"&gt;Menu&lt;/div&gt;
+
+							p Add flexnav.css to the head of your document:
 								code &lt;link href="css/flexnav.css" rel="stylesheet" type="text/css" /&gt;
 		
-							p Add jquery.flexnav.min.js before the closing body tag
+							p Add jquery.flexnav.min.js before the closing body tag:
 								code &lt;script type="text/javascript" src="js/jquery.flexnav.min.js"&gt;&lt;/script&gt;
 		
-							p Initialize FlexNav right before your closing body tag
+							p Initialize FlexNav right before your closing body tag:
 								code $(".flexnav").flexNav();
 
-							p you can change the default speed too
+							p you can change the default speed too:
 								code $(".flexnav").flexNav({ 'animationSpeed' : 'fast' });
 
 				article
@@ -42,7 +51,7 @@ html(lang="en")
 						.block
 							img(src="http://jasonweaver.name/img/devices.png", alt="devices", class="img-devices") 
 						.block
-							h2 Get FlexNav v0.4.6
+							h2 Get FlexNav v0.5.2
 							p
 								a(href="https://github.com/indyplanets/flexnav", class="callout") Download on GitHub &rarr;
 						
@@ -54,7 +63,7 @@ html(lang="en")
 								li Hover reveal for desktop
 								li Keyboard tab input accessibility
 								li No js fallback support
-								li More features to come!
+								li Supports em units
 
 						.block
 							h2 Browser Support

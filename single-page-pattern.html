@@ -1,0 +1,122 @@
+<!DOCTYPE html><!--[if IE 7]>
+<html lang="en" class="ie7 oldie"></html><![endif]--><!--[if IE 8]>
+<html lang="en" class="ie8 oldie"></html><![endif]-->
+<!-- [if gt IE 8] <!-->
+<html lang="en">
+  <!-- <![endif]-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>FlexNav - Flexible, Device Agnostic Navigation</title>
+    <link href="css/flexnav.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="css/page.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//use.typekit.net/qyb8ood.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body id="page" class="single-page-pattern-page one-page">
+    <div class="container">
+      <header id="site-header">
+        <hgroup class="site-title">
+          <h1> <a href="http://jasonweaver.name/lab/flexiblenavigation">FlexNav</a></h1>
+          <h2 class="site-title-sub">A jQuery Plugin for Responsive Menus</h2>
+        </hgroup>
+        <div class="menu-button one-page">Menu</div>
+        <nav>
+          <ul data-breakpoint="800" class="flexnav one-page">
+            <li><a href="#page">Item 1</a></li>
+            <li><a href="#section2">Item 2</a></li>
+            <li><a href="#section3">Item 3</a></li>
+            <li><a href="#section4">Item 4</a></li>
+            <li><a href="#section5">Item 5</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="content" role="main">
+        <article>
+          <div class="article-wrap">
+            <div class="block">
+              <h2>Single page navigation pattern</h2>
+              <p>This is an example of using FlexNav on a single page with the navigation anchoring to each section of the page. Just add the .one-page class to the body, .menu-button, and your navigation ul.</p>
+            </div>
+            <div class="block">
+              <h2>Usage</h2>
+              <p>Start with a simple unordered list, adding in the class and data attributes:<code>&lt;ul class="flexnav one-page" data-breakpoint="800"&gt; &lt;li&gt...&lt;/li&gt &lt;/ul&gt;</code></p>
+              <p>You can also use em units:<code>&lt;ul class="flexnav one-page" data-breakpoint-em="50"&gt; &lt;li&gt...&lt;/li&gt &lt;/ul&gt;</code></p>
+              <p>Add the small screen menu button somewhere outside your navigation markup:<code>&lt;div class="menu-button"&gt;Menu&lt;/div&gt;</code></p>
+              <p>Add flexnav.css to the head of your document:<code>&lt;link href="css/flexnav.css" rel="stylesheet" type="text/css" /&gt;</code></p>
+              <p>Add jquery.flexnav.min.js before the closing body tag:<code>&lt;script type="text/javascript" src="js/jquery.flexnav.min.js"&gt;&lt;/script&gt;</code></p>
+              <p>Initialize FlexNav right before your closing body tag:<code>$(".flexnav").flexNav();</code></p>
+              <p>you can change the default speed too:<code>$(".flexnav").flexNav({ 'animationSpeed' : 'fast' });</code></p>
+            </div>
+            <div id="section2" class="block">
+              <h2>Section 2</h2>
+              <p>Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.</p>
+              <p>Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.</p>
+              <p>Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.</p>
+            </div>
+            <div id="section3" class="block">
+              <h2>Section 3</h2>
+              <p>Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.</p>
+              <p>Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.</p>
+              <p>Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.</p>
+            </div>
+            <div id="section4" class="block">
+              <h2>Section 4</h2>
+              <p>Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.</p>
+              <p>Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.</p>
+              <p>Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.</p>
+            </div>
+            <div id="section5" class="block">
+              <h2>Section 5</h2>
+              <p>Bacon ipsum dolor sit amet shank beef ribs tongue pork loin prosciutto sirloin ribeye leberkas doner capicola brisket pork chop chicken. Turducken prosciutto filet mignon beef t-bone. Jerky bresaola filet mignon, chuck shankle rump boudin tongue. Shank jowl biltong, shankle frankfurter andouille prosciutto hamburger tri-tip spare ribs pastrami short loin fatback. Rump salami bresaola frankfurter pig ball tip.</p>
+              <p>Pork brisket ground round, meatball cow fatback tail salami beef ribs ribeye pork chop short loin pancetta venison bresaola. Tenderloin meatloaf corned beef rump leberkas chuck. Flank ribeye meatball, ham pork belly beef pastrami capicola andouille fatback. Pork belly ham hock short ribs, chicken ball tip brisket tongue bacon short loin kielbasa pork chop sirloin biltong pancetta swine.</p>
+              <p>Shank pastrami pork belly doner filet mignon biltong sausage pork chop boudin pork loin. Sirloin frankfurter andouille jerky biltong filet mignon. Pig salami t-bone ground round venison, jowl short ribs sausage meatball. Pig sirloin tail, tongue ham hock drumstick salami ham doner. Pork chop hamburger brisket, short ribs cow doner t-bone tongue swine pastrami biltong. Filet mignon sausage cow, drumstick shoulder pork loin ground round pork.</p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrap">
+            <div class="block"><img src="http://jasonweaver.name/img/devices.png" alt="devices" class="img-devices"></div>
+            <div class="block">
+              <h2>Get FlexNav v0.5.2</h2>
+              <p><a href="https://github.com/indyplanets/flexnav" class="callout">Download on GitHub &rarr;</a></p>
+            </div>
+            <div class="block">
+              <h2>Features</h2>
+              <ul>
+                <li>Multiple nested sub menus</li>
+                <li>Tap targets to reveal sub menus for touch screens</li>
+                <li>Hover reveal for desktop</li>
+                <li>Keyboard tab input accessibility</li>
+                <li>No js fallback support</li>
+                <li>Supports em units</li>
+              </ul>
+            </div>
+            <div class="block">
+              <h2>Browser Support</h2>
+              <ul>
+                <li>IE7-10</li>
+                <li>Latest Safari</li>
+                <li>Latest Chrome</li>
+                <li>Latest FireFox</li>
+                <li>Android 2.2 to Latest</li>
+                <li>Mobile Safari</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+    <footer id="site-footer">
+      <div class="container">
+        <ul>
+          <li>Code by <a href="http://jasonweaver.name">Jason Weaver</a></li>
+          <li><a href="mailto:indyplanets@gmail.com">Contact Me</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.9.0.js" type="text/javascript"></script>
+    <script src="js/jquery.flexnav.min.js" type="text/javascript"></script>
+    <script type="text/javascript">$(".flexnav").flexNav({'animationSpeed': 150});</script>
+  </body>
+</html>

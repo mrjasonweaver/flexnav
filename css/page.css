@@ -71,39 +71,45 @@ p {
   text-rendering: optimizeLegibility;
 }
 /* line 62, ../sass/page.scss */
+.site-title h1 a {
+  color: #f1f2eb;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+/* line 68, ../sass/page.scss */
 .site-title h2 {
   font-size: 1em;
   margin-bottom: 5%;
   font-weight: 100;
 }
 
-/* line 68, ../sass/page.scss */
+/* line 74, ../sass/page.scss */
 .container {
   margin: -1px auto 0;
   max-width: 1080px;
   padding: 0 5%;
 }
 
-/* line 73, ../sass/page.scss */
+/* line 79, ../sass/page.scss */
 #content {
   margin: 7% auto;
   overflow: hidden;
 }
-/* line 77, ../sass/page.scss */
+/* line 83, ../sass/page.scss */
 #content h1, #content h2 {
   margin-bottom: .5em;
 }
-/* line 80, ../sass/page.scss */
+/* line 86, ../sass/page.scss */
 #content h2 {
   font-size: 1.6em;
   color: #3a3261;
 }
-/* line 84, ../sass/page.scss */
+/* line 90, ../sass/page.scss */
 #content ul {
   margin: 1em;
   list-style-type: circle;
 }
-/* line 88, ../sass/page.scss */
+/* line 94, ../sass/page.scss */
 #content li {
   font-size: 1em;
   margin-bottom: .4em;
@@ -111,18 +117,18 @@ p {
   font-weight: 300;
 }
 
-/* line 95, ../sass/page.scss */
+/* line 101, ../sass/page.scss */
 .block {
   margin-bottom: 3em;
 }
 
-/* line 98, ../sass/page.scss */
+/* line 104, ../sass/page.scss */
 .article-wrap {
   padding: 0;
   overflow: hidden;
 }
 
-/* line 102, ../sass/page.scss */
+/* line 108, ../sass/page.scss */
 code {
   overflow: scroll;
   background: rgba(55, 47, 91, 0.9);
@@ -138,7 +144,7 @@ code {
   box-shadow: inset 0 0 10px #3a3261;
 }
 
-/* line 116, ../sass/page.scss */
+/* line 122, ../sass/page.scss */
 #site-footer {
   overflow: hidden;
   clear: both;
@@ -148,12 +154,12 @@ code {
   box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
   width: 100%;
 }
-/* line 125, ../sass/page.scss */
+/* line 131, ../sass/page.scss */
 #site-footer .container {
   margin-top: 0;
 }
 
-/* line 129, ../sass/page.scss */
+/* line 135, ../sass/page.scss */
 #site-footer li {
   list-style: none;
   margin: 1em 0;
@@ -161,59 +167,109 @@ code {
   float: left;
 }
 
-/* line 135, ../sass/page.scss */
+/* line 141, ../sass/page.scss */
 #site-footer li a {
   padding: 0 0.5em;
 }
 
+/* line 144, ../sass/page.scss */
+#section2, #section3, #section4, #section5 {
+  padding-top: 80px;
+}
+
 @media all and (min-width: 800px) {
-  /* line 140, ../sass/page.scss */
+  /* line 148, ../sass/page.scss */
   body {
     font-size: 100%;
   }
+  /* line 152, ../sass/page.scss */
+  body.home-page #site-header {
+    background: url("http://jasonweaver.name/img/look.png") no-repeat 90% 30px;
+  }
 
-  /* line 144, ../sass/page.scss */
+  /* line 159, ../sass/page.scss */
   .site-title h1 {
     font-size: 2.25em;
     margin-bottom: 10px;
   }
-  /* line 148, ../sass/page.scss */
+  /* line 163, ../sass/page.scss */
   .site-title h2 {
     font-size: 1.2em;
     margin-bottom: 50px;
   }
 
-  /* line 153, ../sass/page.scss */
-  #site-header {
-    background: url("http://jasonweaver.name/img/look.png") no-repeat 90% 30px;
-  }
-
-  /* line 157, ../sass/page.scss */
+  /* line 169, ../sass/page.scss */
   #content article:first-child {
     width: 56%;
     margin-right: 10%;
   }
-  /* line 161, ../sass/page.scss */
+  /* line 173, ../sass/page.scss */
   #content article:nth-child(2) {
     width: 34%;
     margin-right: 0;
   }
-  /* line 165, ../sass/page.scss */
+  /* line 177, ../sass/page.scss */
   #content p {
     font-size: 1.1em;
   }
-  /* line 168, ../sass/page.scss */
+  /* line 180, ../sass/page.scss */
   #content h2 {
     font-size: 1.9em;
   }
-  /* line 171, ../sass/page.scss */
+  /* line 183, ../sass/page.scss */
   #content article {
     width: 50%;
     float: left;
     overflow: hidden;
   }
-  /* line 176, ../sass/page.scss */
+  /* line 188, ../sass/page.scss */
   #content li {
     font-size: 1.1em;
   }
+}
+/* line 196, ../sass/page.scss */
+.oldie body {
+  font-size: 100%;
+}
+/* line 200, ../sass/page.scss */
+.oldie body.home-page #site-header {
+  background: url("http://jasonweaver.name/img/look.png") no-repeat 90% 30px;
+}
+/* line 207, ../sass/page.scss */
+.oldie .site-title h1 {
+  font-size: 2.25em;
+  margin-bottom: 10px;
+}
+/* line 211, ../sass/page.scss */
+.oldie .site-title h2 {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+/* line 217, ../sass/page.scss */
+.oldie #content article:first-child {
+  width: 56%;
+  margin-right: 10%;
+}
+/* line 221, ../sass/page.scss */
+.oldie #content article:nth-child(2) {
+  width: 34%;
+  margin-right: 0;
+}
+/* line 225, ../sass/page.scss */
+.oldie #content p {
+  font-size: 1.1em;
+}
+/* line 228, ../sass/page.scss */
+.oldie #content h2 {
+  font-size: 1.9em;
+}
+/* line 231, ../sass/page.scss */
+.oldie #content article {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+}
+/* line 236, ../sass/page.scss */
+.oldie #content li {
+  font-size: 1.1em;
 }
