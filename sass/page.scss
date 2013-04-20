@@ -12,9 +12,6 @@ body {
 	color: #fff;
 	background: $accent;
 }
-#site-header {
-	height: 196px;
-}
 a {
 	text-decoration: none;
 	color: $link;
@@ -154,7 +151,7 @@ code {
 		&.home-page {
 			#site-header {
 				background: url('http://jasonweaver.name/img/look.png') no-repeat 90% 30px;
-				
+				min-height: 196px;
 			}
 		
 		}
