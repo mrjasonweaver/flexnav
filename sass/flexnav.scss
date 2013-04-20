@@ -163,7 +163,11 @@ time, mark, audio, video {
 			display: block;	
 			background-color: #a6a6a2;	
 			width: 20%;
-			overflow: visible;
+			overflow: hidden;
+			
+			&:hover {
+				overflow: visible;
+			}
 		}
 		li a {
 			border-left: 1px solid #acaca1;
@@ -174,13 +178,11 @@ time, mark, audio, video {
 			top: auto;
 			left: 0;
 			opacity: 0;
-			//max-height: 0;
 			z-index: -1;
 			display: block;
 			
 			li {
 				width: 100%;
-				//max-height: 0;
 				overflow: hidden;
 			}
 		}

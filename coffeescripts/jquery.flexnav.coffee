@@ -10,14 +10,13 @@
 
 $.fn.flexNav = (options) ->
 	settings = $.extend
-		'animationSpeed': '0.4s'
-		'itemHeight': 51
+		'transitionSpeed': '0.4s'
+		'itemHeight': 50
 		options
 			
 	$nav = $(@)
 	nav_open = false
-	items_count = null
-	transition = 'all '+settings.animationSpeed+' ease-in-out'
+	transition = 'all '+settings.transitionSpeed+' ease-in-out'
 	
 	# Set some classes and data attrs in the markup
 	$nav.find("li").each ->
