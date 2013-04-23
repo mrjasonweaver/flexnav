@@ -157,7 +157,6 @@ time, mark, audio, video {
 			max-width: 1080px;
 		}
 		li {
-			@include transition(.4s);
 			position: relative;
 			list-style: none;
 			float: left;
@@ -179,7 +178,6 @@ time, mark, audio, video {
 			display: block;
 			
 			li {
-				@include transition(.4s);
 				width: 100%;
 				overflow: hidden;
 				max-height: 0;
@@ -216,6 +214,7 @@ time, mark, audio, video {
 			
 			li {
 				overflow: visible;
+				max-height: 100px;
 			}	
 			ul.open {
 				margin-left: 100%;

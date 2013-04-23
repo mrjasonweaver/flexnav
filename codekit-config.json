@@ -25,14 +25,14 @@
       "outputAbbreviatedPath" : "\/index.html",
       "fileType" : 512
     },
-    "\/index.html" : {
+    "\/css\/flexnav.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
+      "inputAbbreviatedPath" : "\/css\/flexnav.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
     },
     "\/master.jade\/partials\/footer-scripts.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -45,16 +45,26 @@
       "outputAbbreviatedPath" : "\/footer-scripts.html",
       "fileType" : 512
     },
-    "\/master.jade\/partials\/head.jade" : {
+    "\/sass\/page.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/page.scss",
+      "outputStyle" : 2,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/page.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/master.jade\/partials\/head.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 0,
-      "outputAbbreviatedPath" : "\/head.html",
-      "fileType" : 512
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/js\/jquery.flexnav.js" : {
       "ignoreWasSetByUser" : 0,
@@ -88,18 +98,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/sass\/page.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/page.scss",
-      "outputStyle" : 2,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/page.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -109,14 +107,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
     },
-    "\/css\/flexnav.css" : {
+    "\/master.jade\/partials\/head.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/flexnav.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/master.jade\/partials\/head.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 0,
+      "outputAbbreviatedPath" : "\/head.html",
+      "fileType" : 512
     },
     "\/master.jade\/partials\/header.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -129,15 +129,6 @@
       "outputAbbreviatedPath" : "\/header.html",
       "fileType" : 512
     },
-    "\/single-page-pattern.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/single-page-pattern.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/master.jade\/partials\/single-page-site-header.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -148,6 +139,15 @@
       "compileDebug" : 0,
       "outputAbbreviatedPath" : "\/single-page-site-header.html",
       "fileType" : 512
+    },
+    "\/single-page-pattern.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/single-page-pattern.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/js\/jquery.flexnav.min.js" : {
       "ignoreWasSetByUser" : 0,
