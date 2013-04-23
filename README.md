@@ -81,6 +81,9 @@ you can change the default speed too
 * * *
 ### Changelog
 
+#### v.0.6.1 : April 22th, 2013
+* Fixed tabbed accessibility bug
+
 #### v.0.6 : April 20th, 2013
 * Better animation support using css transitions
 * touch events added to get rid of 300ms delay on touch screens
