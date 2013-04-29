@@ -32,6 +32,11 @@
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
+        $nav.css({
+          "maxHeight": 0
+        }).find(".item-with-ul ul").css({
+          "maxHeight": 0
+        });
         $('.one-page li a').on('click', function() {
           return $nav.removeClass('show');
         });

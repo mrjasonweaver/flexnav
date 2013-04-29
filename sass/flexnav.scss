@@ -181,9 +181,6 @@ time, mark, audio, video {
 				width: 100%;
 			}
 		}
-		li:hover > ul,
-		li > ul.show {
-		}
 		li ul li > ul {
 			margin-left: 100%;
 			top: 0;
@@ -202,6 +199,7 @@ time, mark, audio, video {
 			
 			li {
 				overflow: visible;
+				max-height: 100px;
 			}	
 			ul.open {
 				margin-left: 100%;

@@ -17,7 +17,7 @@ $.fn.flexNav = (options) ->
 	nav_open = false
 	isDragging = false
 	
-	# Set some classes and data attrs in the markup
+	# Set some classes in the markup
 	$nav.find("li").each ->
 		if $(@).has("ul").length
 			$(@).addClass("item-with-ul").find("ul").hide()
@@ -27,6 +27,8 @@ $.fn.flexNav = (options) ->
 	resizer = ->
 		if $(window).width() <= breakpoint
 			$nav.removeClass("lg-screen").addClass("sm-screen")
+			# set all drops to max-height: 0
+			$nav.css("maxHeight": 0).find(".item-with-ul ul").css("maxHeight":0)
 			# Toggle nav menu closed for one pager after anchor clicked
 			$('.one-page li a').on( 'click', ->
 				$nav.removeClass('show')

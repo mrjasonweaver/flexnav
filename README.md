@@ -8,7 +8,9 @@
 * [View Demo](http://jasonweaver.name/lab/flexiblenavigation/)
 * [Single page site with fixed navigation demo](http://jasonweaver.name/lab/flexiblenavigation/single-page-pattern.html)
 
-A mobile-first example of using media queries and jQuery to make a decent site menu with drop downs. Special attention is paid to touch screens using click events for tap targets. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
+A mobile-first example of using media queries and jQuery to make a decent site menu with drop downs. Special attention is paid to touch screens using touch events and tap targets. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
+
+**Note:** FlexNav is still in beta. If you find a bug, please [file an issue](https://github.com/indyplanets/flexnav/issues) and note device and browser versions
 
 ### Features
 * Multiple nested sub menus
@@ -16,6 +18,7 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Hover reveal for desktop
 * Keyboard tab input accessibility
 * Fallback for no JavaScript
+* Fast clicks for touch screens (no 300ms delay)
 * Use class `.one-page` on the `body`, `.menu-button`, and `ul.flexnav` for single page fixed menu
 * Supports em units
 
@@ -64,7 +67,8 @@ you can change the default speed too
 	
 		<script>
 			$(".flexnav").flexNav({
-				'animationSpeed' : 'fast' // default			
+				'transitionSpeed' : '0.4s', // css transition speed
+				'itemHeight': 50 // single nav item height
 			});			
 		</script>	
 		
@@ -72,9 +76,17 @@ you can change the default speed too
 ### Todo
 
 * Make several demo themes
+* itemHeight needs to calc current css defaults
 
 * * *
 ### Changelog
+
+#### v.0.6.1 : April 22th, 2013
+* Fixed tabbed accessibility bug
+
+#### v.0.6 : April 20th, 2013
+* Better animation support using css transitions
+* touch events added to get rid of 300ms delay on touch screens
 
 #### v.0.5.2 : March 19th, 2013
 * IE 7/8 large screen bug fixes
