@@ -87,9 +87,9 @@ $.fn.flexNav = (options) ->
 			$(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show')
 		# add class of show to current
 		if $sub.hasClass('show') is true
-			$sub.removeClass('show')
+			$sub.removeClass('show').slideUp(settings.animationSpeed)
 		else if $sub.hasClass('show') is false
-			$sub.addClass('show')		
+			$sub.addClass('show').slideDown(settings.animationSpeed)	
 	)
 	
 	# Sub ul's should have a class of 'open' if an element has focus
