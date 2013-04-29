@@ -60,7 +60,6 @@ time, mark, audio, video {
 		border-bottom: 1px solid rgba(0,0,0,.15);
 	}
 	li ul {
-		@include transition(.4s);
 		width: 100%;
 		
 		li {
@@ -173,34 +172,21 @@ time, mark, audio, video {
 			position: absolute; 
 			top: auto;
 			left: 0;
-			opacity: 0;
-			//max-height: 0;
-			z-index: -1;
 			display: block;
 			
 			li {
 				width: 100%;
-				//max-height: 0;
-				overflow: hidden;
 			}
 		}
 		li:hover > ul,
 		li > ul.show {
-			opacity: 1;
-			top: 3.1em;
-			z-index: 1;
-			
-			li {
-				overflow: visible;
-			}
 		}
 		li ul li > ul {
 			margin-left: 100%;
-			top: -3em;
+			top: 0;
 		}
 		li ul li:hover > ul,
 		li ul li > ul.show {
-			top: 0;
 		}		
 		li ul li a {
 			border-bottom: none;
@@ -210,7 +196,6 @@ time, mark, audio, video {
 			opacity: 1;
 			visibility: visible;
 			z-index: 1;
-			height: auto;
 			
 			li {
 				overflow: visible;
@@ -252,7 +237,6 @@ time, mark, audio, video {
 			opacity: 1;
 			height: auto;
 			display: block;
-			top: 3.1em;	
 			position: absolute;
 			
 			li {

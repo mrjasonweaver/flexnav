@@ -34,25 +34,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/css\/page.css" : {
+    "\/js\/jquery.flexnav.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/page.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/master.jade\/partials\/head.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/master.jade\/partials\/head.jade",
+      "inputAbbreviatedPath" : "\/js\/jquery.flexnav.js",
       "outputStyle" : 0,
-      "compileDebug" : 0,
-      "outputAbbreviatedPath" : "\/head.html",
-      "fileType" : 512
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.flexnav-ck.js",
+      "fileType" : 64
     },
     "\/sass\/page.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -66,16 +57,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/js\/jquery.flexnav.js" : {
+    "\/master.jade\/partials\/head.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.flexnav.js",
+      "inputAbbreviatedPath" : "\/master.jade\/partials\/head.jade",
       "outputStyle" : 0,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.flexnav-ck.js",
-      "fileType" : 64
+      "compileDebug" : 0,
+      "outputAbbreviatedPath" : "\/head.html",
+      "fileType" : 512
     },
     "\/sass\/flexnav.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -89,16 +80,23 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/master.jade\/partials\/footer-scripts.jade" : {
+    "\/css\/page.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/master.jade\/partials\/footer-scripts.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 0,
-      "outputAbbreviatedPath" : "\/footer-scripts.html",
-      "fileType" : 512
+      "inputAbbreviatedPath" : "\/css\/page.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
@@ -109,14 +107,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 32768
     },
-    "\/index.html" : {
+    "\/master.jade\/partials\/footer-scripts.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/master.jade\/partials\/footer-scripts.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 0,
+      "outputAbbreviatedPath" : "\/footer-scripts.html",
+      "fileType" : 512
     },
     "\/master.jade\/partials\/header.jade" : {
       "ignoreWasSetByUser" : 0,

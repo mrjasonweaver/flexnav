@@ -14,13 +14,20 @@
 (function() {
 
   $.fn.flexNav = function(options) {
-    var $nav, $sneaky_div, base_font, breakpoint, em_unit, hidden_text, nav_open, resizer, settings, transition;
+    var $nav, $sneaky_div, base_font, breakpoint, em_unit, hidden_text, isDragging, nav_count, nav_open, resizer, settings;
     settings = $.extend({
-      'animationSpeed': '0.3s'
+      'animationSpeed': '0.4s'
     }, options);
-    transition = 'all ' + settings.animationSpeed + ' ease-in-out';
-    nav_open = false;
     $nav = $(this);
+    nav_open = false;
+    isDragging = false;
+    $nav.find("li").each(function() {
+      if ($(this).has("ul").length) {
+        return $(this).addClass("item-with-ul");
+      }
+    });
+    nav_count = $nav.find('li').length;
+    $nav.attr("data-height", settings.itemHeight * nav_count);
     if ($nav.data('breakpoint')) {
       breakpoint = $nav.data('breakpoint');
     }
@@ -62,41 +69,81 @@
         });
       }
     };
-    $(this).find("li").each(function() {
-      if ($(this).has("ul").length) {
-        return $(this).addClass("item-with-ul");
-      }
-    });
-    $(".flexnav > li ul").css({
-      WebkitTransition: transition,
-      MozTransition: transition,
-      MsTransition: transition,
-      OTransition: transition,
-      transition: transition
-    });
     $('.item-with-ul, .menu-button').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
     $('.menu-button, .menu-button .touch-button').on('touchstart click', function(e) {
+      var nav_drop_height;
       e.stopPropagation();
       e.preventDefault();
+      nav_drop_height = $nav.data("height");
       if (nav_open === false) {
-        $nav.addClass('show');
+        $nav.css({
+          "maxHeight": nav_drop_height
+        }).addClass('show');
         return nav_open = true;
       } else if (nav_open === true) {
-        $nav.removeClass('show');
+        $nav.css({
+          "maxHeight": 0
+        }).removeClass('show');
         return nav_open = false;
       }
     });
+    $cards.on('touchstart mousedown', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log(isDragging);
+      return $(this).on('touchmove mousemove', function(e) {
+        var msg;
+        msg = e.pageX;
+        isDragging = true;
+        console.log(isDragging, msg);
+        return $(window).off("touchmove mousemove");
+      });
+    }).on('touchend mouseup', function(e) {
+      var $parent;
+      e.preventDefault();
+      e.stopPropagation();
+      isDragging = false;
+      $parent = $(this).parent();
+      if (isDragging === false) {
+        console.log('clicked');
+      }
+      $parent.find('.card').removeClass("active");
+      $(this).addClass("active");
+      if ($(this).hasClass("sidebar1") === true) {
+        $parent.removeClass("sidebar2-active main-active");
+        $parent.addClass("sidebar1-active");
+      }
+      if ($(this).hasClass("sidebar2") === true) {
+        $parent.removeClass("sidebar1-active main-active");
+        $parent.addClass("sidebar2-active");
+      }
+      if ($(this).hasClass("main") === true) {
+        $parent.removeClass("sidebar1-active sidebar2-active");
+        return $parent.addClass("main-active");
+      }
+    });
     $('.touch-button').on('touchstart click', function(e) {
+      var $sub, drop_height;
       e.stopPropagation();
       e.preventDefault();
+      $sub = $(this).parent('.item-with-ul').find('>ul');
+      drop_height = $sub.data("height");
       if ($nav.hasClass('lg-screen') === true) {
         $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show');
       }
-      return $(this).parent('.item-with-ul').find('>ul').toggleClass('show');
+      if ($sub.hasClass('show') === true) {
+        return $sub.css({
+          "maxHeight": 0
+        }).removeClass('show');
+      } else if ($sub.hasClass('show') === false) {
+        return $sub.css({
+          "maxHeight": drop_height
+        }).addClass('show');
+      }
     });
     $('.item-with-ul *').focus(function() {
-      $(this).parent('.item-with-ul').parent().find(".open").not(this).removeClass("open");
-      return $(this).parent('.item-with-ul').find('>ul').addClass("open");
+      $(this).parent('.item-with-ul').parent().find(".open").not(this).removeClass("open").hide();
+      return $(this).parent('.item-with-ul').find('>ul').addClass("open").show();
     });
     resizer();
     return $(window).on('resize', resizer);

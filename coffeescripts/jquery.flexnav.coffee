@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 0.6
+	FlexNav.js 0.7
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under the WTFPL license
@@ -10,45 +10,19 @@
 
 $.fn.flexNav = (options) ->
 	settings = $.extend
-		'animationSpeed': '0.4s'
-		'itemHeight': 51
+		'animationSpeed': '400'
 		options
 			
 	$nav = $(@)
 	nav_open = false
-	items_count = null
-	transition = 'all '+settings.animationSpeed+' ease-in-out'
+	isDragging = false
 	
 	# Set some classes and data attrs in the markup
 	$nav.find("li").each ->
 		if $(@).has("ul").length
-			$(@).addClass("item-with-ul")
-			$sub_nav = $(@).find('>ul')
-			count = $sub_nav.find('li').length
-			$sub_nav.attr("data-height", settings.itemHeight*count)
-			$nav.attr("data-height", settings.itemHeight*count)
-
-	nav_count = $nav.find('li').length
-	$nav.attr("data-height", settings.itemHeight*nav_count)	
+			$(@).addClass("item-with-ul").find("ul").hide()
 	
 	if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
-	# if data-breakpoint is in ems, do some em calc
-	if $nav.data('breakpoint-em')
-		hidden_text = "<div class='hidden-text'>M and FlexNav</div>"
-		$('body').append(hidden_text)
-		$sneaky_div = $('.hidden-text')
-		$sneaky_div.css 
-			'display':'inline-block'
-			'padding':'0'
-			'line-height':'1'
-			'position':'absolute'
-			'visibility':'hidden'
-			'font-size':'1em'
-		em_unit = $nav.data('breakpoint-em')
-		base_font = $sneaky_div.css('font-size')
-		breakpoint = em_unit * parseInt(base_font)
-		console.log(breakpoint)
-		$sneaky_div.remove()
 	
 	resizer = ->
 		if $(window).width() <= breakpoint
@@ -61,64 +35,69 @@ $.fn.flexNav = (options) ->
 		else
 			$nav.removeClass("sm-screen").addClass("lg-screen")
 			$nav.removeClass('show')
-			$('.item-with-ul').on(
-				mouseenter: ->	
-					$(@).find('>ul').addClass('show')
-				mouseleave: ->
-					$(@).find('>ul').removeClass('show')			
+			$('.item-with-ul').on('mouseenter', ->
+				$(@).find('>ul').addClass('show').slideDown(settings.animationSpeed)
+			).on('mouseleave', ->
+				$(@).find('>ul').removeClass('show').hide()	
 			)
-			
-	# set transitions
-	$(".flexnav, .item-with-ul ul, .show").css(
-		WebkitTransition : transition
-		MozTransition : transition
-		MsTransition : transition
-		OTransition : transition
-		transition : transition
-	)
-	
-	# set all drops to max-height: 0
-	$nav.css("maxHeight":0).find(".item-with-ul ul").css("maxHeight":0)
 		
 	# Add in touch buttons	
 	$('.item-with-ul, .menu-button').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
 
 	# Toggle touch for nav menu
-	$('.menu-button, .menu-button .touch-button').on('touchstart click', (e) ->
-		e.stopPropagation()
+	$('.menu-button, .menu-button .touch-button').on('touchstart mousedown', (e) ->
 		e.preventDefault()
-		nav_drop_height = $nav.data("height")
-		if nav_open is false
-			$nav.css("maxHeight":nav_drop_height).addClass('show')
-			nav_open = true
-		else if nav_open is true
-			$nav.css("maxHeight":0).removeClass('show')			
-			nav_open = false
+		e.stopPropagation()
+		console.log(isDragging)
+		$(@).on( 'touchmove mousemove', (e) ->
+			msg = e.pageX
+			isDragging = true
+			$(window).off("touchmove mousemove")
+		)		
+	).on('touchend mouseup', (e) ->
+		e.preventDefault()
+		e.stopPropagation()
+		isDragging = false
+		$parent = $(@).parent()
+		if isDragging is false
+    	console.log('clicked')
+			if nav_open is false
+				$nav.addClass('show')
+				nav_open = true
+			else if nav_open is true
+				$nav.removeClass('show')			
+				nav_open = false
 		)
+			
 				
 	# Toggle for sub-menus
-	$('.touch-button').on('touchstart click', (e) ->
+	$('.touch-button').on('touchstart mousedown', (e) ->
 		e.stopPropagation()
 		e.preventDefault()
+		$(@).on( 'touchmove mousemove', (e) ->
+			isDragging = true
+			$(window).off("touchmove mousemove")
+		)
+	).on('touchend mouseup', (e) ->
+		e.preventDefault()
+		e.stopPropagation()
 		$sub = $(@).parent('.item-with-ul').find('>ul')
-		drop_height = $sub.data("height")
-
 		# remove class of show from all elements that are not current
 		if $nav.hasClass('lg-screen') is true
 			$(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show')
 		# add class of show to current
 		if $sub.hasClass('show') is true
-			$sub.css("maxHeight":0).removeClass('show')
+			$sub.removeClass('show')
 		else if $sub.hasClass('show') is false
-			$sub.css("maxHeight":drop_height).addClass('show')		
+			$sub.addClass('show')		
 	)
 	
 	# Sub ul's should have a class of 'open' if an element has focus
 	$('.item-with-ul *').focus ->
 		# remove class of open from all elements that are not focused
-		$(@).parent('.item-with-ul').parent().find(".open").not(@).removeClass("open")
+		$(@).parent('.item-with-ul').parent().find(".open").not(@).removeClass("open").hide()
 		# add class of open to focused ul
-		$(@).parent('.item-with-ul').find('>ul').addClass("open")
+		$(@).parent('.item-with-ul').find('>ul').addClass("open").show()
 
 	# Call once to set		
 	resizer()
