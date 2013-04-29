@@ -36,10 +36,6 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 Start with a simple unordered list, adding in the class and data attributes:
 
 	<ul class="flexnav" data-breakpoint="800"> <li>...</li> </ul>
-	
-You can also use em units:
-
-	<ul class="flexnav" data-breakpoint-em="50"> <li>...</li> </ul>
 
 Add the small screen menu button somewhere outside your navigation markup:
 
@@ -67,8 +63,7 @@ you can change the default speed too
 	
 		<script>
 			$(".flexnav").flexNav({
-				'transitionSpeed' : '0.4s', // css transition speed
-				'itemHeight': 50 // single nav item height
+				'animationSpeed' : 'fast'
 			});			
 		</script>	
 		
@@ -80,6 +75,9 @@ you can change the default speed too
 
 * * *
 ### Changelog
+
+#### v.0.7 : April 28th, 2013
+* Reverting back to jQuery animations
 
 #### v.0.6.1 : April 22th, 2013
 * Fixed tabbed accessibility bug
