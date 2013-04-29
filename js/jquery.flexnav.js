@@ -16,7 +16,7 @@
   $.fn.flexNav = function(options) {
     var $nav, breakpoint, isDragging, nav_open, resizer, settings;
     settings = $.extend({
-      'animationSpeed': '400'
+      'animationSpeed': 100
     }, options);
     $nav = $(this);
     nav_open = false;
@@ -32,11 +32,6 @@
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
-        $nav.css({
-          "maxHeight": 0
-        }).find(".item-with-ul ul").css({
-          "maxHeight": 0
-        });
         $('.one-page li a').on('click', function() {
           return $nav.removeClass('show');
         });
@@ -92,7 +87,7 @@
       e.stopPropagation();
       $sub = $(this).parent('.item-with-ul').find('>ul');
       if ($nav.hasClass('lg-screen') === true) {
-        $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show');
+        $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
       }
       if ($sub.hasClass('show') === true) {
         return $sub.removeClass('show').slideUp(settings.animationSpeed);

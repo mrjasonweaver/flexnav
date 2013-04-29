@@ -10,7 +10,7 @@
 
 $.fn.flexNav = (options) ->
 	settings = $.extend
-		'animationSpeed': '400'
+		'animationSpeed': 100
 		options
 			
 	$nav = $(@)
@@ -84,7 +84,7 @@ $.fn.flexNav = (options) ->
 		$sub = $(@).parent('.item-with-ul').find('>ul')
 		# remove class of show from all elements that are not current
 		if $nav.hasClass('lg-screen') is true
-			$(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show')
+			$(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide()
 		# add class of show to current
 		if $sub.hasClass('show') is true
 			$sub.removeClass('show').slideUp(settings.animationSpeed)
