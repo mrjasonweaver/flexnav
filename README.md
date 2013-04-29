@@ -20,7 +20,6 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Fallback for no JavaScript
 * Fast clicks for touch screens (no 300ms delay)
 * Use class `.one-page` on the `body`, `.menu-button`, and `ul.flexnav` for single page fixed menu
-* Supports em units
 
 ### Browser Support
 * IE7-10
@@ -71,13 +70,13 @@ you can change the default speed too
 ### Todo
 
 * Make several demo themes
-* itemHeight needs to calc current css defaults
 
 * * *
 ### Changelog
 
 #### v.0.7 : April 28th, 2013
 * Reverting back to jQuery animations
+* No longer supporting em units due to miscalculations during testing
 
 #### v.0.6.1 : April 22th, 2013
 * Fixed tabbed accessibility bug
