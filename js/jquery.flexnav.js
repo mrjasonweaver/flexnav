@@ -40,9 +40,9 @@
         $nav.removeClass("sm-screen").addClass("lg-screen");
         $nav.removeClass('show');
         return $('.item-with-ul').on('mouseenter', function() {
-          return $(this).find('>ul').addClass('show').slideDown(settings.animationSpeed);
+          return $(this).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed);
         }).on('mouseleave', function() {
-          return $(this).find('>ul').removeClass('show').hide();
+          return $(this).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed);
         });
       }
     };

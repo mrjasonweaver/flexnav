@@ -36,9 +36,9 @@ $.fn.flexNav = (options) ->
 			$nav.removeClass("sm-screen").addClass("lg-screen")
 			$nav.removeClass('show')
 			$('.item-with-ul').on('mouseenter', ->
-				$(@).find('>ul').addClass('show').slideDown(settings.animationSpeed)
+				$(@).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed)
 			).on('mouseleave', ->
-				$(@).find('>ul').removeClass('show').hide()	
+				$(@).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed)	
 			)
 		
 	# Add in touch buttons	
