@@ -15,7 +15,15 @@ module.exports = function(grunt) {
 				'compass': true
 			}
 		},
-		
+		uglify: {
+			options: {
+				banner: '/*! <%= pkg.name %> <%= pkg.repository %> <%= pkg.license %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      build: {
+				src: 'js/jquery.flexnav.js',
+        dest: 'js/jquery.flexnav.min.js'
+      }
+		},		
 		coffee: {
 			compile: {
 				files: {
@@ -40,6 +48,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-coffee');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['sass', 'coffee', 'watch']);
+	grunt.registerTask('default', ['sass', 'uglify', 'coffee', 'watch']);
 };
