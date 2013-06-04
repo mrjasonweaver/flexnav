@@ -2,8 +2,7 @@
 	FlexNav.js 0.8
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
-	Released under the WTFPL license
-	http://sam.zoy.org/wtfpl/
+	Released under http://unlicense.org/
 
 //
 ###
