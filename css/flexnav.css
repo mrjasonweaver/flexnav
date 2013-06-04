@@ -1,5 +1,4 @@
 /* Flexnav Base Styles */
-/* line 17, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,54 +17,36 @@ time, mark, audio, video {
   border: 0;
   font: inherit;
   font-size: 100%;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
-/* line 22, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
-  line-height: 1;
-}
+  line-height: 1; }
 
-/* line 24, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
-/* line 26, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
-/* line 28, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-/* line 30, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
 
-/* line 32, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
-  border: none;
-}
+  border: none; }
 
-/* line 116, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
+  display: block; }
 
 /* Globals */
-/* line 26, ../sass/flexnav.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -80,10 +61,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
-/* line 30, ../sass/flexnav.scss */
 .flexnav {
   *zoom: 1;
   -webkit-transition: 0;
@@ -94,99 +73,69 @@ time, mark, audio, video {
   overflow: hidden;
   margin: 0 auto;
   width: 100%;
-  max-height: 0;
-}
-/* line 38, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.flexnav:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 39, ../sass/flexnav.scss */
-.flexnav.show {
-  max-height: 2000px;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-}
-/* line 43, ../sass/flexnav.scss */
-.flexnav.one-page {
-  position: fixed;
-  top: 50px;
-  right: 5%;
-  max-width: 200px;
-}
-/* line 50, ../sass/flexnav.scss */
-.flexnav li {
-  font-size: 100%;
-  position: relative;
-  overflow: hidden;
-}
-/* line 55, ../sass/flexnav.scss */
-.flexnav li a {
-  position: relative;
-  display: block;
-  padding: .96em;
-  z-index: 2;
-  overflow: hidden;
-  color: #222222;
-  background: #a6a6a2;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-/* line 65, ../sass/flexnav.scss */
-.flexnav li ul {
-  width: 100%;
-}
-/* line 68, ../sass/flexnav.scss */
-.flexnav li ul li {
-  font-size: 100%;
-  position: relative;
-  overflow: hidden;
-}
-/* line 76, ../sass/flexnav.scss */
-.flexnav li ul.show li {
-  overflow: visible;
-}
-/* line 81, ../sass/flexnav.scss */
-.flexnav li ul li a {
-  display: block;
-  background: #b2b2af;
-}
-/* line 85, ../sass/flexnav.scss */
-.flexnav ul li ul li a {
-  background: #bfbfbc;
-}
-/* line 88, ../sass/flexnav.scss */
-.flexnav ul li ul li ul li a {
-  background: #cbcbc9;
-}
-/* line 91, ../sass/flexnav.scss */
-.flexnav .touch-button {
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  background: #acaca1;
-  background: rgba(0, 0, 0, 0.075);
-  text-align: center;
-}
-/* line 102, ../sass/flexnav.scss */
-.flexnav .touch-button:hover {
-  cursor: pointer;
-}
-/* line 105, ../sass/flexnav.scss */
-.flexnav .touch-button .navicon {
-  position: relative;
-  top: 1.4em;
-  font-size: 12px;
-  color: #666;
-}
+  max-height: 0; }
+  .flexnav:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .flexnav.show {
+    max-height: 2000px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+  .flexnav.one-page {
+    position: fixed;
+    top: 50px;
+    right: 5%;
+    max-width: 200px; }
+  .flexnav li {
+    font-size: 100%;
+    position: relative;
+    overflow: hidden; }
+  .flexnav li a {
+    position: relative;
+    display: block;
+    padding: .96em;
+    z-index: 2;
+    overflow: hidden;
+    color: #222222;
+    background: #a6a6a2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+  .flexnav li ul {
+    width: 100%; }
+    .flexnav li ul li {
+      font-size: 100%;
+      position: relative;
+      overflow: hidden; }
+  .flexnav li ul.show li {
+    overflow: visible; }
+  .flexnav li ul li a {
+    display: block;
+    background: #b2b2af; }
+  .flexnav ul li ul li a {
+    background: #bfbfbc; }
+  .flexnav ul li ul li ul li a {
+    background: #cbcbc9; }
+  .flexnav .touch-button {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: #acaca1;
+    background: rgba(0, 0, 0, 0.075);
+    text-align: center; }
+    .flexnav .touch-button:hover {
+      cursor: pointer; }
+    .flexnav .touch-button .navicon {
+      position: relative;
+      top: 1.4em;
+      font-size: 12px;
+      color: #666; }
 
-/* line 113, ../sass/flexnav.scss */
 .menu-button {
   position: relative;
   display: block;
@@ -194,191 +143,127 @@ time, mark, audio, video {
   background: #a6a6a2;
   color: #222222;
   cursor: pointer;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-/* line 122, ../sass/flexnav.scss */
-.menu-button.one-page {
-  position: fixed;
-  top: 0;
-  right: 5%;
-  padding-right: 45px;
-}
-/* line 129, ../sass/flexnav.scss */
-.menu-button .touch-button {
-  background: transparent;
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  text-align: center;
-}
-/* line 140, ../sass/flexnav.scss */
-.menu-button .touch-button .navicon {
-  font-size: 16px;
-  position: relative;
-  top: 1em;
-  color: #666;
-}
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  .menu-button.one-page {
+    position: fixed;
+    top: 0;
+    right: 5%;
+    padding-right: 45px; }
+  .menu-button .touch-button {
+    background: transparent;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center; }
+    .menu-button .touch-button .navicon {
+      font-size: 16px;
+      position: relative;
+      top: 1em;
+      color: #666; }
 
 @media all and (min-width: 800px) {
-  /* line 150, ../sass/flexnav.scss */
   body.one-page {
-    padding-top: 70px;
-  }
+    padding-top: 70px; }
 
-  /* line 153, ../sass/flexnav.scss */
   .flexnav {
-    overflow: visible;
-  }
-  /* line 156, ../sass/flexnav.scss */
-  .flexnav.one-page {
+    overflow: visible; }
+    .flexnav.one-page {
+      top: 0;
+      right: auto;
+      max-width: 1080px; }
+    .flexnav li {
+      position: relative;
+      list-style: none;
+      float: left;
+      display: block;
+      background-color: #a6a6a2;
+      width: 20%;
+      overflow: visible; }
+    .flexnav li a {
+      border-left: 1px solid #acaca1;
+      border-bottom: none; }
+    .flexnav li > ul {
+      position: absolute;
+      top: auto;
+      left: 0;
+      display: block; }
+      .flexnav li > ul li {
+        width: 100%; }
+    .flexnav li ul li > ul {
+      margin-left: 100%;
+      top: 0; }
+    .flexnav li ul li a {
+      border-bottom: none; }
+    .flexnav li ul.open {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      z-index: 1; }
+      .flexnav li ul.open li {
+        overflow: visible;
+        max-height: 100px; }
+      .flexnav li ul.open ul.open {
+        margin-left: 100%;
+        top: 0; }
+
+  .menu-button {
+    display: none; } }
+.oldie body.one-page {
+  padding-top: 70px; }
+.oldie .flexnav {
+  overflow: visible; }
+  .oldie .flexnav.one-page {
     top: 0;
     right: auto;
-    max-width: 1080px;
-  }
-  /* line 161, ../sass/flexnav.scss */
-  .flexnav li {
+    max-width: 1080px; }
+  .oldie .flexnav li {
     position: relative;
     list-style: none;
     float: left;
     display: block;
     background-color: #a6a6a2;
     width: 20%;
-    overflow: visible;
-  }
-  /* line 170, ../sass/flexnav.scss */
-  .flexnav li a {
+    min-height: 50px; }
+  .oldie .flexnav li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    display: block;
+    position: absolute; }
+    .oldie .flexnav li:hover > ul li {
+      width: 100%;
+      float: none; }
+  .oldie .flexnav li a {
     border-left: 1px solid #acaca1;
-    border-bottom: none;
-  }
-  /* line 174, ../sass/flexnav.scss */
-  .flexnav li > ul {
+    border-bottom: none; }
+  .oldie .flexnav li > ul {
     position: absolute;
     top: auto;
     left: 0;
-    display: block;
-  }
-  /* line 180, ../sass/flexnav.scss */
-  .flexnav li > ul li {
-    width: 100%;
-  }
-  /* line 184, ../sass/flexnav.scss */
-  .flexnav li ul li > ul {
-    margin-left: 100%;
-    top: 0;
-  }
-  /* line 191, ../sass/flexnav.scss */
-  .flexnav li ul li a {
-    border-bottom: none;
-  }
-  /* line 194, ../sass/flexnav.scss */
-  .flexnav li ul.open {
+    opacity: 0;
+    visibility: hidden;
+    height: 1px;
+    z-index: 1; }
+  .oldie .flexnav li ul li ul {
+    top: 0; }
+  .oldie .flexnav li ul li a {
+    border-bottom: none; }
+  .oldie .flexnav li ul.open {
     display: block;
     opacity: 1;
     visibility: visible;
-    z-index: 1;
-  }
-  /* line 200, ../sass/flexnav.scss */
-  .flexnav li ul.open li {
-    overflow: visible;
-    max-height: 100px;
-  }
-  /* line 204, ../sass/flexnav.scss */
-  .flexnav li ul.open ul.open {
+    height: auto; }
+    .oldie .flexnav li ul.open ul.open {
+      margin-left: 100%;
+      top: 0; }
+  .oldie .flexnav ul li:hover ul {
     margin-left: 100%;
-    top: 0;
-  }
-
-  /* line 210, ../sass/flexnav.scss */
-  .menu-button {
-    display: none;
-  }
-}
-/* line 216, ../sass/flexnav.scss */
-.oldie body.one-page {
-  padding-top: 70px;
-}
-/* line 219, ../sass/flexnav.scss */
-.oldie .flexnav {
-  overflow: visible;
-}
-/* line 222, ../sass/flexnav.scss */
-.oldie .flexnav.one-page {
-  top: 0;
-  right: auto;
-  max-width: 1080px;
-}
-/* line 227, ../sass/flexnav.scss */
-.oldie .flexnav li {
-  position: relative;
-  list-style: none;
-  float: left;
-  display: block;
-  background-color: #a6a6a2;
-  width: 20%;
-  min-height: 50px;
-}
-/* line 236, ../sass/flexnav.scss */
-.oldie .flexnav li:hover > ul {
-  visibility: visible;
-  opacity: 1;
-  height: auto;
-  display: block;
-  position: absolute;
-}
-/* line 243, ../sass/flexnav.scss */
-.oldie .flexnav li:hover > ul li {
-  width: 100%;
-  float: none;
-}
-/* line 248, ../sass/flexnav.scss */
-.oldie .flexnav li a {
-  border-left: 1px solid #acaca1;
-  border-bottom: none;
-}
-/* line 252, ../sass/flexnav.scss */
-.oldie .flexnav li > ul {
-  position: absolute;
-  top: auto;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  height: 1px;
-  z-index: 1;
-}
-/* line 261, ../sass/flexnav.scss */
-.oldie .flexnav li ul li ul {
-  top: 0;
-}
-/* line 264, ../sass/flexnav.scss */
-.oldie .flexnav li ul li a {
-  border-bottom: none;
-}
-/* line 267, ../sass/flexnav.scss */
-.oldie .flexnav li ul.open {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  height: auto;
-}
-/* line 273, ../sass/flexnav.scss */
-.oldie .flexnav li ul.open ul.open {
-  margin-left: 100%;
-  top: 0;
-}
-/* line 278, ../sass/flexnav.scss */
-.oldie .flexnav ul li:hover ul {
-  margin-left: 100%;
-  top: 0;
-}
-/* line 283, ../sass/flexnav.scss */
+    top: 0; }
 .oldie .menu-button {
-  display: none;
-}
-/* line 286, ../sass/flexnav.scss */
+  display: none; }
 .oldie.ie7 .flexnav li {
-  width: 19.9%;
-}
+  width: 19.9%; }

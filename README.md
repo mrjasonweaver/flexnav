@@ -74,6 +74,9 @@ you can change the default speed too
 * * *
 ### Changelog
 
+#### v.0.8 : June 4th, 2013
+* Reverting back to jQuer
+
 #### v.0.7 : April 28th, 2013
 * Reverting back to jQuery animations
 * No longer supporting em units due to miscalculations during testing
