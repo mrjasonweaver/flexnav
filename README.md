@@ -75,7 +75,8 @@ you can change the default speed too
 ### Changelog
 
 #### v.0.8 : June 4th, 2013
-* Reverting back to jQuer
+* Changed license to http://unlicense.org/
+* Using Grunt for tasks now
 
 #### v.0.7 : April 28th, 2013
 * Reverting back to jQuery animations
