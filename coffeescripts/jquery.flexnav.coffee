@@ -62,8 +62,10 @@ $.fn.flexNav = (options) ->
 	).on('touchend mouseup', (e) ->
 		e.preventDefault()
 		e.stopPropagation()
+		bs         = settings['buttonSelector']
+		$btnParent = if ($(@).hasClass(bs)) then $(@) else $(@).parent(bs)
+		$thisNav   = $btnParent.data('navEl')
 		isDragging = false
-		$thisNav   = $(@).data('navEl')
 		if isDragging is false
 			console.log('clicked')
 			if nav_open is false
