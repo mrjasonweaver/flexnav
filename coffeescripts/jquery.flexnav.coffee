@@ -63,7 +63,7 @@ $.fn.flexNav = (options) ->
 		e.preventDefault()
 		e.stopPropagation()
 		bs         = settings['buttonSelector']
-		$btnParent = if ($(@).hasClass(bs)) then $(@) else $(@).parent(bs)
+		$btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
 		$thisNav   = $btnParent.data('navEl')
 		isDragging = false
 		if isDragging is false
