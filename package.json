@@ -5,8 +5,8 @@
 	"license": "http://unlicense.org/",
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-coffee": "~1.2.24",
-    "grunt-contrib-sass": "~1.2.24",
-    "grunt-contrib-watch": "~1.2.24"
+    "grunt-contrib-coffee": "~0.1.3",
+    "grunt-contrib-sass": "~0.1.3",
+    "grunt-contrib-watch": "~0.1.3"
   }
 }

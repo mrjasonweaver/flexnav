@@ -227,39 +227,42 @@ time, mark, audio, video {
     display: block;
     background-color: #a6a6a2;
     width: 20%;
-    min-height: 50px; }
+    min-height: 50px;
+    overflow: visible; }
   .oldie .flexnav li:hover > ul {
-    visibility: visible;
-    opacity: 1;
-    height: auto;
     display: block;
-    position: absolute; }
+    width: 100%;
+    overflow: visible; }
     .oldie .flexnav li:hover > ul li {
       width: 100%;
       float: none; }
   .oldie .flexnav li a {
     border-left: 1px solid #acaca1;
-    border-bottom: none; }
+    border-bottom: none;
+    overflow: visible; }
   .oldie .flexnav li > ul {
     position: absolute;
     top: auto;
     left: 0;
-    opacity: 0;
-    visibility: hidden;
-    height: 1px;
-    z-index: 1; }
+    display: none;
+    z-index: 1;
+    overflow: visible; }
   .oldie .flexnav li ul li ul {
     top: 0; }
   .oldie .flexnav li ul li a {
     border-bottom: none; }
   .oldie .flexnav li ul.open {
     display: block;
-    opacity: 1;
-    visibility: visible;
-    height: auto; }
+    width: 100%;
+    overflow: visible; }
+    .oldie .flexnav li ul.open li {
+      width: 100%; }
     .oldie .flexnav li ul.open ul.open {
       margin-left: 100%;
-      top: 0; }
+      top: 0;
+      display: block;
+      width: 100%;
+      overflow: visible; }
   .oldie .flexnav ul li:hover ul {
     margin-left: 100%;
     top: 0; }

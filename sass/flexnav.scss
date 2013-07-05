@@ -80,7 +80,7 @@ time, mark, audio, video {
 	
 	li ul li a {
 		display: block;
-		background: $second_level;			
+		background: $second_level;
 	}
 	ul li ul li a {
 		background: $third_level;
@@ -232,13 +232,12 @@ time, mark, audio, video {
 			background-color: #a6a6a2;	
 			width: 20%;
 			min-height: 50px;
+      overflow: visible;
 		}
 		li:hover > ul { 
-			visibility: visible;
-			opacity: 1;
-			height: auto;
 			display: block;
-			position: absolute;
+      width: 100%;
+      overflow: visible;
 			
 			li {
 				width: 100%;
@@ -247,16 +246,16 @@ time, mark, audio, video {
 		}
 		li a {
 			border-left: 1px solid #acaca1;
-			border-bottom: none;		
+			border-bottom: none;
+      overflow: visible;	
 		}
 		li > ul {
 			position: absolute; 
 			top: auto;
 			left: 0;
-			opacity: 0;
-			visibility: hidden;
-			height: 1px;
-			z-index: 1;	
+      display: none;
+			z-index: 1;
+      overflow: visible;
 		}
 		li ul li ul { 
 			top: 0;		
@@ -266,13 +265,19 @@ time, mark, audio, video {
 		}
 		li ul.open {
 			display: block;
-			opacity: 1;
-			visibility: visible;
-			height: auto;
+      width: 100%;
+      overflow: visible;
+      
+      li {
+        width: 100%;
+      }
 	
 			ul.open {
 				margin-left: 100%;
 				top: 0;
+  			display: block;
+        width: 100%;
+        overflow: visible;
 			}
 		}
 		ul li:hover ul {
