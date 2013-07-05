@@ -9,7 +9,8 @@
 
 $.fn.flexNav = (options) ->
 	settings = $.extend
-		'animationSpeed': 100
+		'animationSpeed': 100,
+		'buttonSelector': '.menu-button'
 		options
 			
 	$nav = $(@)
@@ -39,12 +40,17 @@ $.fn.flexNav = (options) ->
 			).on('mouseleave', ->
 				$(@).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed)	
 			)
-		
-	# Add in touch buttons	
-	$('.item-with-ul, .menu-button').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
+	
+	# Set navigation element for this instantiation
+	$(settings['buttonSelector']).data('navEl', $nav)
+
+	# Add in touch buttons
+	selector = '.item-with-ul, ' + settings['buttonSelector'];
+	$(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
 
 	# Toggle touch for nav menu
-	$('.menu-button, .menu-button .touch-button').on('touchstart mousedown', (e) ->
+	selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
+	$(selector).on('touchstart mousedown', (e) ->
 		e.preventDefault()
 		e.stopPropagation()
 		console.log(isDragging)
@@ -56,15 +62,17 @@ $.fn.flexNav = (options) ->
 	).on('touchend mouseup', (e) ->
 		e.preventDefault()
 		e.stopPropagation()
+		bs         = settings['buttonSelector']
+		$btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
+		$thisNav   = $btnParent.data('navEl')
 		isDragging = false
-		$parent = $(@).parent()
 		if isDragging is false
-    	console.log('clicked')
+			console.log('clicked')
 			if nav_open is false
-				$nav.addClass('show')
+				$thisNav.addClass('show')
 				nav_open = true
 			else if nav_open is true
-				$nav.removeClass('show')			
+				$thisNav.removeClass('show')
 				nav_open = false
 		)
 			
@@ -92,7 +100,7 @@ $.fn.flexNav = (options) ->
 	)
 	
 	# Sub ul's should have a class of 'open' if an element has focus
-	$('.item-with-ul *').focus ->
+	$nav.find('.item-with-ul *').focus ->
 		# remove class of open from all elements that are not focused
 		$(@).parent('.item-with-ul').parent().find(".open").not(@).removeClass("open").hide()
 		# add class of open to focused ul
