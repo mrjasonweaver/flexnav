@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 0.8
+	FlexNav.js 0.9
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/

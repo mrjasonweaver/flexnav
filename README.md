@@ -74,6 +74,10 @@ you can change the default speed too
 * * *
 ### Changelog
 
+#### v.0.9 : July 4th, 2013
+* Added support for multiple flexnavs on one page
+* Fixed IE8 hover reveal bug
+
 #### v.0.8 : June 4th, 2013
 * Changed license to http://unlicense.org/
 * Using Grunt for tasks now

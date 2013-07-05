@@ -1,5 +1,5 @@
 /*
-	FlexNav.js 0.8
+	FlexNav.js 0.9
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -10,9 +10,10 @@
 
 (function() {
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, isDragging, nav_open, resizer, settings;
+    var $nav, breakpoint, isDragging, nav_open, resizer, selector, settings;
     settings = $.extend({
-      'animationSpeed': 100
+      'animationSpeed': 100,
+      'buttonSelector': '.menu-button'
     }, options);
     $nav = $(this);
     nav_open = false;
@@ -42,8 +43,11 @@
         });
       }
     };
-    $('.item-with-ul, .menu-button').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
-    $('.menu-button, .menu-button .touch-button').on('touchstart mousedown', function(e) {
+    $(settings['buttonSelector']).data('navEl', $nav);
+    selector = '.item-with-ul, ' + settings['buttonSelector'];
+    $(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
+    selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
+    $(selector).on('touchstart mousedown', function(e) {
       e.preventDefault();
       e.stopPropagation();
       console.log(isDragging);
@@ -54,20 +58,22 @@
         return $(window).off("touchmove mousemove");
       });
     }).on('touchend mouseup', function(e) {
-      var $parent;
+      var $btnParent, $thisNav, bs;
       e.preventDefault();
       e.stopPropagation();
+      bs = settings['buttonSelector'];
+      $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
+      $thisNav = $btnParent.data('navEl');
       isDragging = false;
-      $parent = $(this).parent();
       if (isDragging === false) {
         console.log('clicked');
-      }
-      if (nav_open === false) {
-        $nav.addClass('show');
-        return nav_open = true;
-      } else if (nav_open === true) {
-        $nav.removeClass('show');
-        return nav_open = false;
+        if (nav_open === false) {
+          $thisNav.addClass('show');
+          return nav_open = true;
+        } else if (nav_open === true) {
+          $thisNav.removeClass('show');
+          return nav_open = false;
+        }
       }
     });
     $('.touch-button').on('touchstart mousedown', function(e) {
@@ -91,7 +97,7 @@
         return $sub.addClass('show').slideDown(settings.animationSpeed);
       }
     });
-    $('.item-with-ul *').focus(function() {
+    $nav.find('.item-with-ul *').focus(function() {
       $(this).parent('.item-with-ul').parent().find(".open").not(this).removeClass("open").hide();
       return $(this).parent('.item-with-ul').find('>ul').addClass("open").show();
     });
