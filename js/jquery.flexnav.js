@@ -9,6 +9,10 @@
 
 
 (function() {
+  var $;
+
+  $ = jQuery;
+
   $.fn.flexNav = function(options) {
     var $nav, breakpoint, isDragging, nav_open, resizer, selector, settings;
     settings = $.extend({
