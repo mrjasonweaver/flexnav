@@ -5,7 +5,6 @@
     "license": "http://unlicense.org/",
     "devDependencies": {
         "grunt": "~0.4.1",
-        "grunt-contrib-jshint": "~0.6.0",
         "grunt-contrib-coffee": "~0.7.0",
         "grunt-contrib-sass": "~0.4.1",
         "grunt-coffeelint": "0.0.7",

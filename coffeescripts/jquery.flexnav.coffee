@@ -9,7 +9,7 @@
 
 $.fn.flexNav = (options) ->
   settings = $.extend
-    'animationSpeed': 100,
+    'animationSpeed': 150,
     'buttonSelector': '.menu-button'
     options
 			
@@ -22,7 +22,8 @@ $.fn.flexNav = (options) ->
     if $(@).has("ul").length
       $(@).addClass("item-with-ul").find("ul").hide()
 	
-    if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
+  # Get the breakpoint set with data-breakpoint
+  if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
 	
   resizer = ->
     if $(window).width() <= breakpoint

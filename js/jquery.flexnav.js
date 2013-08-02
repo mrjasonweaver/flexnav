@@ -10,23 +10,22 @@
 
 (function() {
   $.fn.flexNav = function(options) {
-    var $nav, isDragging, nav_open, resizer, selector, settings;
+    var $nav, breakpoint, isDragging, nav_open, resizer, selector, settings;
     settings = $.extend({
-      'animationSpeed': 100,
+      'animationSpeed': 150,
       'buttonSelector': '.menu-button'
     }, options);
     $nav = $(this);
     nav_open = false;
     isDragging = false;
     $nav.find("li").each(function() {
-      var breakpoint;
       if ($(this).has("ul").length) {
-        $(this).addClass("item-with-ul").find("ul").hide();
-      }
-      if ($nav.data('breakpoint')) {
-        return breakpoint = $nav.data('breakpoint');
+        return $(this).addClass("item-with-ul").find("ul").hide();
       }
     });
+    if ($nav.data('breakpoint')) {
+      breakpoint = $nav.data('breakpoint');
+    }
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");

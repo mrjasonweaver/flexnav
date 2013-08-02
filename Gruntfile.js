@@ -28,18 +28,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        jshint: {
-            files: ['Gruntfile.js', 'js/*.js'],
-            options: {
-                // options here to override JSHint defaults
-                globals: {
-                    jQuery: true,
-                    console: true,
-                    module: true,
-                    document: true
-                }
-            }
-        },
         coffeelint: {
             files: ['coffeescripts/*.coffee'],
             options: {
@@ -52,29 +40,18 @@ module.exports = function(grunt) {
           }
         },
         watch: {
-            coffeelint: {
-                files: ['coffeescripts/*.coffee'],
-                tasks: 'coffeelint'
-            },           
-            coffee: {
-                files: ['coffeescripts/*'],
-                tasks: 'coffee'
-            },
-            sass: {
-                files: ['sass/*'],
-                tasks: 'sass'
-            }
+            files: ['coffeescripts/*.coffee', 'sass/*.scss', 'js/jquery.flexnav.js'],
+            tasks: ['coffeelint', 'coffee', 'sass', 'uglify']
         }
     });
 
     // Load necessary plugins
     grunt.loadNpmTasks('grunt-coffeelint');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-coffee');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('test', ['jshint']);
-	grunt.registerTask('default', ['sass', 'coffee', 'uglify', 'jshint', 'watch']);
+    grunt.registerTask('test', ['coffeelint']);
+	grunt.registerTask('default', ['sass', 'coffee', 'uglify', 'watch']);
 };

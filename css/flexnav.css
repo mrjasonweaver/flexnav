@@ -14,10 +14,11 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
 
 .flexnav {
-  overflow: hidden;
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
