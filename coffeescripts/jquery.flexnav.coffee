@@ -7,6 +7,9 @@
 //
 ###
 
+# Use local alias for $.noConflict() compatibility
+$ = jQuery
+
 $.fn.flexNav = (options) ->
   settings = $.extend
     'animationSpeed': 150,
