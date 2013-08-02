@@ -10,7 +10,7 @@
 
 (function() {
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, isDragging, nav_open, resizer, selector, settings;
+    var $nav, isDragging, nav_open, resizer, selector, settings;
     settings = $.extend({
       'animationSpeed': 100,
       'buttonSelector': '.menu-button'
@@ -19,13 +19,14 @@
     nav_open = false;
     isDragging = false;
     $nav.find("li").each(function() {
+      var breakpoint;
       if ($(this).has("ul").length) {
-        return $(this).addClass("item-with-ul").find("ul").hide();
+        $(this).addClass("item-with-ul").find("ul").hide();
+      }
+      if ($nav.data('breakpoint')) {
+        return breakpoint = $nav.data('breakpoint');
       }
     });
-    if ($nav.data('breakpoint')) {
-      breakpoint = $nav.data('breakpoint');
-    }
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");

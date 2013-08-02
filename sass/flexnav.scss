@@ -1,9 +1,5 @@
 /* Flexnav Base Styles */
 
-@import "compass/reset";
-@import "compass/utilities";
-@import "compass/css3";
-
 $nav_text: #222;
 $top_level: #a6a6a2;
 $second_level: #b2b2af;
@@ -26,19 +22,28 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
 }
 .flexnav {
-	@include pie-clearfix;
-	@include transition(0);
+	overflow: hidden;
+	-webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
 	-webkit-transform-style: preserve-3d; // stop webkit flicker
 	overflow: hidden;
 	margin: 0 auto;
 	width: 100%;
 	max-height: 0;
+  padding: 0;
 	
 	&.show {
 		max-height: 2000px;
-		@include transition(1s);
+		-webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 	}
 	&.one-page {
 		position: fixed;
