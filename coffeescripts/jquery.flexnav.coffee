@@ -13,9 +13,10 @@ $ = jQuery
 $.fn.flexNav = (options) ->
   settings = $.extend
     'animationSpeed': 150,
-    'buttonSelector': '.menu-button'
+    'buttonSelector': '.menu-button',
+    'flexbox': true
     options
-			
+
   $nav = $(@)
   nav_open = false
 	
@@ -24,6 +25,10 @@ $.fn.flexNav = (options) ->
     if $(@).has("ul").length
       $(@).addClass("item-with-ul").find("ul").hide()
 	
+  
+  
+  if settings.flexbox = true then $nav.addClass('flexbox')
+  
   # Get the breakpoint set with data-breakpoint
   if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
 	
@@ -35,7 +40,7 @@ $.fn.flexNav = (options) ->
         $nav.removeClass('show')
       )
       $('.item-with-ul').off()
-    else
+    else if $(window).width() > breakpoint
       $nav.removeClass("sm-screen").addClass("lg-screen")
       $nav.removeClass('show')
       $('.item-with-ul').on('mouseenter', ->

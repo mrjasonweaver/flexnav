@@ -40,8 +40,14 @@ module.exports = function(grunt) {
           }
         },
         watch: {
-            files: ['coffeescripts/*.coffee', 'sass/*.scss', 'js/jquery.flexnav.js'],
-            tasks: ['coffeelint', 'coffee', 'sass', 'uglify']
+            coffee: {
+              files: ['<%= coffeelint.files %>'],
+              tasks: ['coffeelint', 'coffee']
+            },
+            sass: {
+              files: ['sass/*.scss'],
+              tasks: 'sass'
+            }
         }
     });
 
@@ -51,7 +57,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-coffee');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-
+    
+    grunt.registerTask('build', ['uglify']);
     grunt.registerTask('test', ['coffeelint']);
 	grunt.registerTask('default', ['sass', 'coffee', 'uglify', 'watch']);
 };

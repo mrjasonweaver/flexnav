@@ -17,7 +17,8 @@
     var $nav, breakpoint, nav_open, resizer, selector, settings;
     settings = $.extend({
       'animationSpeed': 150,
-      'buttonSelector': '.menu-button'
+      'buttonSelector': '.menu-button',
+      'flexbox': true
     }, options);
     $nav = $(this);
     nav_open = false;
@@ -26,6 +27,9 @@
         return $(this).addClass("item-with-ul").find("ul").hide();
       }
     });
+    if (settings.flexbox = true) {
+      $nav.addClass('flexbox');
+    }
     if ($nav.data('breakpoint')) {
       breakpoint = $nav.data('breakpoint');
     }
@@ -36,7 +40,7 @@
           return $nav.removeClass('show');
         });
         return $('.item-with-ul').off();
-      } else {
+      } else if ($(window).width() > breakpoint) {
         $nav.removeClass("sm-screen").addClass("lg-screen");
         $nav.removeClass('show');
         return $('.item-with-ul').on('mouseenter', function() {
