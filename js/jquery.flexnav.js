@@ -23,7 +23,6 @@
       'hoverIntentTimeout': 150
     }, options);
     $nav = $(this);
-    $nav.parent().addClass('flexnav-wrap');
     $nav.find("li").each(function() {
       if ($(this).has("ul").length) {
         return $(this).addClass("item-with-ul").find("ul").hide();

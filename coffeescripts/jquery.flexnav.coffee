@@ -22,7 +22,6 @@ $.fn.flexNav = (options) ->
   $nav = $(@)
 	
   # Set some classes in the markup
-  $nav.parent().addClass('flexnav-wrap')
   $nav.find("li").each ->
     if $(@).has("ul").length
       $(@).addClass("item-with-ul").find("ul").hide()
