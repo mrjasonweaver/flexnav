@@ -14,7 +14,7 @@
   $ = jQuery;
 
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, nav_open, resetMenu, resizer, selector, settings, showMenu;
+    var $nav, breakpoint, resetMenu, resizer, selector, settings, showMenu;
     settings = $.extend({
       'animationSpeed': 150,
       'buttonSelector': '.menu-button',
@@ -23,7 +23,6 @@
       'hoverIntentTimeout': 150
     }, options);
     $nav = $(this);
-    nav_open = false;
     $nav.find("li").each(function() {
       if ($(this).has("ul").length) {
         return $(this).addClass("item-with-ul").find("ul").hide();
@@ -67,21 +66,16 @@
       var $btnParent, $thisNav, bs;
       e.preventDefault();
       e.stopPropagation();
+      console.log('clicked');
       bs = settings['buttonSelector'];
       $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
       $thisNav = $btnParent.data('navEl');
-      if (nav_open === false) {
-        $thisNav.addClass('show');
-        return nav_open = true;
-      } else if (nav_open === true) {
-        $thisNav.removeClass('show');
-        return nav_open = false;
-      }
+      return $thisNav.toggleClass('show');
     });
     $('.touch-button').on('touchstart click', function(e) {
       var $sub;
-      e.stopPropagation();
       e.preventDefault();
+      e.stopPropagation();
       $sub = $(this).parent('.item-with-ul').find('>ul');
       if ($nav.hasClass('lg-screen') === true) {
         $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();

@@ -20,7 +20,6 @@ $.fn.flexNav = (options) ->
     options
 
   $nav = $(@)
-  nav_open = false
 	
   # Set some classes in the markup
   $nav.find("li").each ->
@@ -30,12 +29,13 @@ $.fn.flexNav = (options) ->
   # Get the breakpoint set with data-breakpoint
   if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
 	
+  # Functions for hover support
   showMenu = ->
     $(@).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed)
-    
   resetMenu = ->
     $(@).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed)
-    
+   
+  # Changing classes depending on viewport width and adding in hover support
   resizer = ->
     if $(window).width() <= breakpoint
       $nav.removeClass("lg-screen").addClass("sm-screen")
@@ -49,7 +49,7 @@ $.fn.flexNav = (options) ->
       $nav.removeClass('show')
       
       if settings.hoverIntent is true
-        # Requires hoverIntent jquery pluging http://cherne.net/brian/resources/jquery.hoverIntent.html
+        # Requires hoverIntent jquery plugin http://cherne.net/brian/resources/jquery.hoverIntent.html
         $('.item-with-ul').hoverIntent(
           over: showMenu,
           out: resetMenu,
@@ -70,21 +70,17 @@ $.fn.flexNav = (options) ->
   $(selector).on('touchstart click', (e) ->
     e.preventDefault()
     e.stopPropagation()
+    console.log('clicked')
     bs = settings['buttonSelector']
     $btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
-    $thisNav   = $btnParent.data('navEl')
-    if nav_open is false
-      $thisNav.addClass('show')
-      nav_open = true
-    else if nav_open is true
-      $thisNav.removeClass('show')
-      nav_open = false
+    $thisNav = $btnParent.data('navEl')
+    $thisNav.toggleClass('show')
   )
 				
   # Toggle for sub-menus
   $('.touch-button').on('touchstart click', (e) ->
-    e.stopPropagation()
     e.preventDefault()
+    e.stopPropagation()
     $sub = $(@).parent('.item-with-ul').find('>ul')
     # remove class of show from all elements that are not current
     if $nav.hasClass('lg-screen') is true
