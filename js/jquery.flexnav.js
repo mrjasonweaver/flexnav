@@ -23,6 +23,7 @@
       'hoverIntentTimeout': 150
     }, options);
     $nav = $(this);
+    $nav.parent().addClass('flexnav-wrap');
     $nav.find("li").each(function() {
       if ($(this).has("ul").length) {
         return $(this).addClass("item-with-ul").find("ul").hide();
@@ -66,7 +67,6 @@
       var $btnParent, $thisNav, bs;
       e.preventDefault();
       e.stopPropagation();
-      console.log('clicked');
       bs = settings['buttonSelector'];
       $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
       $thisNav = $btnParent.data('navEl');

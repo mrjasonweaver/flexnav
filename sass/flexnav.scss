@@ -6,25 +6,6 @@ $second_level: #b2b2af;
 $third_level: #bfbfbc;
 $fourth_level: #cbcbc9;
 
-/* Globals */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	font: inherit;
-	vertical-align: baseline;
-  margin: 0;
-  padding: 0;
-}
 .flexnav {
 	-webkit-transition: none;
   -moz-transition: none;
@@ -38,10 +19,10 @@ time, mark, audio, video {
 	
 	&.show {
 		max-height: 2000px;
-		-webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+		-webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 	}
 	&.one-page {
 		position: fixed;
