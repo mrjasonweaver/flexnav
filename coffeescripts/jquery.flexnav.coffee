@@ -14,7 +14,9 @@ $.fn.flexNav = (options) ->
   settings = $.extend
     'animationSpeed': 150,
     'buttonSelector': '.menu-button',
-    'flexbox': true
+    'flexbox': true,
+    'hoverIntent': false,
+    'hoverIntentTimeout': 150
     options
 
   $nav = $(@)
@@ -24,14 +26,16 @@ $.fn.flexNav = (options) ->
   $nav.find("li").each ->
     if $(@).has("ul").length
       $(@).addClass("item-with-ul").find("ul").hide()
-	
-  
-  
-  if settings.flexbox = true then $nav.addClass('flexbox')
   
   # Get the breakpoint set with data-breakpoint
   if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
 	
+  showMenu = ->
+    $(@).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed)
+    
+  resetMenu = ->
+    $(@).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed)
+    
   resizer = ->
     if $(window).width() <= breakpoint
       $nav.removeClass("lg-screen").addClass("sm-screen")
@@ -43,11 +47,16 @@ $.fn.flexNav = (options) ->
     else if $(window).width() > breakpoint
       $nav.removeClass("sm-screen").addClass("lg-screen")
       $nav.removeClass('show')
-      $('.item-with-ul').on('mouseenter', ->
-        $(@).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed)
-      ).on('mouseleave', ->
-        $(@).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed)
-      )
+      
+      if settings.hoverIntent is true
+        # Requires hoverIntent jquery pluging http://cherne.net/brian/resources/jquery.hoverIntent.html
+        $('.item-with-ul').hoverIntent(
+          over: showMenu,
+          out: resetMenu,
+          timeout: settings.hoverIntentTimeout
+        )
+      else if settings.hoverIntent is false
+        $('.item-with-ul').on('mouseenter', showMenu).on('mouseleave', resetMenu)
 	
   # Set navigation element for this instantiation
   $(settings['buttonSelector']).data('navEl', $nav)
@@ -58,7 +67,7 @@ $.fn.flexNav = (options) ->
 
   # Toggle touch for nav menu
   selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
-  $(selector).on('touchstart mousedown', (e) ->
+  $(selector).on('touchstart click', (e) ->
     e.preventDefault()
     e.stopPropagation()
     bs = settings['buttonSelector']

@@ -14,11 +14,13 @@
   $ = jQuery;
 
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, nav_open, resizer, selector, settings;
+    var $nav, breakpoint, nav_open, resetMenu, resizer, selector, settings, showMenu;
     settings = $.extend({
       'animationSpeed': 150,
       'buttonSelector': '.menu-button',
-      'flexbox': true
+      'flexbox': true,
+      'hoverIntent': false,
+      'hoverIntentTimeout': 150
     }, options);
     $nav = $(this);
     nav_open = false;
@@ -27,12 +29,15 @@
         return $(this).addClass("item-with-ul").find("ul").hide();
       }
     });
-    if (settings.flexbox = true) {
-      $nav.addClass('flexbox');
-    }
     if ($nav.data('breakpoint')) {
       breakpoint = $nav.data('breakpoint');
     }
+    showMenu = function() {
+      return $(this).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed);
+    };
+    resetMenu = function() {
+      return $(this).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed);
+    };
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
@@ -43,18 +48,22 @@
       } else if ($(window).width() > breakpoint) {
         $nav.removeClass("sm-screen").addClass("lg-screen");
         $nav.removeClass('show');
-        return $('.item-with-ul').on('mouseenter', function() {
-          return $(this).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed);
-        }).on('mouseleave', function() {
-          return $(this).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed);
-        });
+        if (settings.hoverIntent === true) {
+          return $('.item-with-ul').hoverIntent({
+            over: showMenu,
+            out: resetMenu,
+            timeout: settings.hoverIntentTimeout
+          });
+        } else if (settings.hoverIntent === false) {
+          return $('.item-with-ul').on('mouseenter', showMenu).on('mouseleave', resetMenu);
+        }
       }
     };
     $(settings['buttonSelector']).data('navEl', $nav);
     selector = '.item-with-ul, ' + settings['buttonSelector'];
     $(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
     selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
-    $(selector).on('touchstart mousedown', function(e) {
+    $(selector).on('touchstart click', function(e) {
       var $btnParent, $thisNav, bs;
       e.preventDefault();
       e.stopPropagation();
