@@ -66,7 +66,16 @@ you can change the default speed too
 				'animationSpeed' : 'fast'
 			});			
 		</script>	
-		
+
+* * *
+### Contributors
+* [Jason Weaver](http://jasonweaver.name) - (Primary)
+* [James Sinclair](https://github.com/jrsinclair)
+* [Allison Wagner](https://github.com/alliwagner)
+* [Sean Breakerfall](https://github.com/breakerfall)
+* [Robin Cawser](https://github.com/robcaw)
+* [pallandt](https://github.com/pallandt)
+
 * * *		
 ### Todo
 
