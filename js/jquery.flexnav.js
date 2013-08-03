@@ -52,45 +52,24 @@
     $(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
     selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
     $(selector).on('touchstart mousedown', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      console.log(isDragging);
-      return $(this).on('touchmove mousemove', function(e) {
-        var msg;
-        msg = e.pageX;
-        isDragging = true;
-        return $(window).off("touchmove mousemove");
-      });
-    }).on('touchend mouseup', function(e) {
       var $btnParent, $thisNav, bs;
       e.preventDefault();
       e.stopPropagation();
       bs = settings['buttonSelector'];
       $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
       $thisNav = $btnParent.data('navEl');
-      isDragging = false;
-      if (isDragging === false) {
-        console.log('clicked');
-        if (nav_open === false) {
-          $thisNav.addClass('show');
-          return nav_open = true;
-        } else if (nav_open === true) {
-          $thisNav.removeClass('show');
-          return nav_open = false;
-        }
+      if (nav_open === false) {
+        $thisNav.addClass('show');
+        return nav_open = true;
+      } else if (nav_open === true) {
+        $thisNav.removeClass('show');
+        return nav_open = false;
       }
     });
-    $('.touch-button').on('touchstart mousedown', function(e) {
-      e.stopPropagation();
-      e.preventDefault();
-      return $(this).on('touchmove mousemove', function(e) {
-        isDragging = true;
-        return $(window).off("touchmove mousemove");
-      });
-    }).on('touchend mouseup', function(e) {
+    $('.touch-button').on('touchstart click', function(e) {
       var $sub;
-      e.preventDefault();
       e.stopPropagation();
+      e.preventDefault();
       $sub = $(this).parent('.item-with-ul').find('>ul');
       if ($nav.hasClass('lg-screen') === true) {
         $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();

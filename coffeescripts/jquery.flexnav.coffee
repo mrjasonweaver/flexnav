@@ -54,43 +54,24 @@ $.fn.flexNav = (options) ->
 
   # Toggle touch for nav menu
   selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
-  $(selector).on('touchstart mousedown', (e) ->
-    e.preventDefault()
-    e.stopPropagation()
-    console.log(isDragging)
-    $(@).on( 'touchmove mousemove', (e) ->
-      msg = e.pageX
-      isDragging = true
-      $(window).off("touchmove mousemove")
-    )
-  ).on('touchend mouseup', (e) ->
+  $(selector).on('touchstart click', (e) ->
     e.preventDefault()
     e.stopPropagation()
     bs = settings['buttonSelector']
     $btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
     $thisNav   = $btnParent.data('navEl')
-    isDragging = false
-    if isDragging is false
-      console.log('clicked')
-      if nav_open is false
-        $thisNav.addClass('show')
-        nav_open = true
-      else if nav_open is true
-        $thisNav.removeClass('show')
-        nav_open = false
-    )
+    if nav_open is false
+      $thisNav.addClass('show')
+      nav_open = true
+    else if nav_open is true
+      $thisNav.removeClass('show')
+      nav_open = false
+  )
 				
   # Toggle for sub-menus
-  $('.touch-button').on('touchstart mousedown', (e) ->
+  $('.touch-button').on('touchstart click', (e) ->
     e.stopPropagation()
     e.preventDefault()
-    $(@).on( 'touchmove mousemove', (e) ->
-      isDragging = true
-      $(window).off("touchmove mousemove")
-    )
-  ).on('touchend mouseup', (e) ->
-    e.preventDefault()
-    e.stopPropagation()
     $sub = $(@).parent('.item-with-ul').find('>ul')
     # remove class of show from all elements that are not current
     if $nav.hasClass('lg-screen') is true
