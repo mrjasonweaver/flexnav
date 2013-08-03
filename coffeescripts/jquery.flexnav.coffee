@@ -18,7 +18,6 @@ $.fn.flexNav = (options) ->
 			
   $nav = $(@)
   nav_open = false
-  isDragging = false
 	
   # Set some classes in the markup
   $nav.find("li").each ->
@@ -54,7 +53,7 @@ $.fn.flexNav = (options) ->
 
   # Toggle touch for nav menu
   selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
-  $(selector).on('touchstart click', (e) ->
+  $(selector).on('touchstart mousedown', (e) ->
     e.preventDefault()
     e.stopPropagation()
     bs = settings['buttonSelector']

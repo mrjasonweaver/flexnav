@@ -14,14 +14,13 @@
   $ = jQuery;
 
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, isDragging, nav_open, resizer, selector, settings;
+    var $nav, breakpoint, nav_open, resizer, selector, settings;
     settings = $.extend({
       'animationSpeed': 150,
       'buttonSelector': '.menu-button'
     }, options);
     $nav = $(this);
     nav_open = false;
-    isDragging = false;
     $nav.find("li").each(function() {
       if ($(this).has("ul").length) {
         return $(this).addClass("item-with-ul").find("ul").hide();
