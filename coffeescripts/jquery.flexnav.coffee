@@ -70,7 +70,6 @@ $.fn.flexNav = (options) ->
   $(selector).on('touchstart click', (e) ->
     e.preventDefault()
     e.stopPropagation()
-    console.log('clicked')
     bs = settings['buttonSelector']
     $btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
     $thisNav = $btnParent.data('navEl')

@@ -10,7 +10,7 @@
 
 A mobile-first example of using media queries and jQuery to make a decent site menu with drop downs. Special attention is paid to touch screens using touch events and tap targets. This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.
 
-**Note:** FlexNav is still in beta. If you find a bug, please [file an issue](https://github.com/indyplanets/flexnav/issues) and note device and browser versions
+**Note:** If you find a bug, please [file an issue](https://github.com/indyplanets/flexnav/issues) and note device and browser versions
 
 ### Features
 * Multiple nested sub menus
@@ -20,6 +20,7 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Fallback for no JavaScript
 * Fast clicks for touch screens (no 300ms delay)
 * Use class `.one-page` on the `body`, `.menu-button`, and `ul.flexnav` for single page fixed menu
+* Use with hoverIntent jQuery plugin
 
 ### Browser Support
 * IE7-10
@@ -73,6 +74,11 @@ you can change the default speed too
 
 * * *
 ### Changelog
+
+#### v.1.0 : August 5th, 2013
+* Added support for hoverIntent jQuery Plugin
+* Fixed several touch/tap reveal bugs for touch screens
+* Support jQuery noConflict mode
 
 #### v.0.9 : July 4th, 2013
 * Added support for multiple flexnavs on one page
