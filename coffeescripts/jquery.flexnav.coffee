@@ -12,9 +12,9 @@ $ = jQuery
 
 $.fn.flexNav = (options) ->
   settings = $.extend
-    'animationSpeed': 150,
+    'animationSpeed': 250,
+    'transitionOpacity': true,
     'buttonSelector': '.menu-button',
-    'flexbox': true,
     'hoverIntent': false,
     'hoverIntentTimeout': 150
     options
@@ -22,6 +22,8 @@ $.fn.flexNav = (options) ->
   $nav = $(@)
 	
   # Set some classes in the markup
+  if settings.transitionOpacity is true
+    $nav.addClass('opacity')
   $nav.find("li").each ->
     if $(@).has("ul").length
       $(@).addClass("item-with-ul").find("ul").hide()
@@ -31,10 +33,44 @@ $.fn.flexNav = (options) ->
 	
   # Functions for hover support
   showMenu = ->
-    $(@).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed)
+    if $nav.hasClass('lg-screen') is true
+      if settings.transitionOpacity is true
+        $(@).find('>ul')
+          .addClass('show')
+          .stop(true, true)
+          .animate(
+            height: [ "toggle", "swing" ],
+            opacity: "toggle",
+            settings.animationSpeed
+          )
+      else
+        $(@).find('>ul')
+         .addClass('show')
+         .stop(true, true)
+         .animate(
+           height: [ "toggle", "swing" ],
+           settings.animationSpeed
+         )
   resetMenu = ->
-    $(@).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed)
-   
+    if $nav.hasClass('lg-screen') is true
+      if settings.transitionOpacity is true
+        $(@).find('>ul')
+          .removeClass('show')
+          .stop(true, true)
+          .animate(
+            height: [ "toggle", "swing" ],
+            opacity: "toggle",
+            settings.animationSpeed
+          )
+      else
+        $(@).find('>ul')
+          .removeClass('show')
+          .stop(true, true)
+          .animate(
+            height: [ "toggle", "swing" ],
+            settings.animationSpeed
+          )
+
   # Changing classes depending on viewport width and adding in hover support
   resizer = ->
     if $(window).width() <= breakpoint
@@ -43,11 +79,10 @@ $.fn.flexNav = (options) ->
       $('.one-page li a').on( 'click', ->
         $nav.removeClass('show')
       )
-      $('.item-with-ul').off()
     else if $(window).width() > breakpoint
       $nav.removeClass("sm-screen").addClass("lg-screen")
+      # Make sure navigation is closed when going back to large screens
       $nav.removeClass('show')
-      
       if settings.hoverIntent is true
         # Requires hoverIntent jquery plugin http://cherne.net/brian/resources/jquery.hoverIntent.html
         $('.item-with-ul').hoverIntent(

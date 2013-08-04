@@ -16,13 +16,16 @@
   $.fn.flexNav = function(options) {
     var $nav, breakpoint, resetMenu, resizer, selector, settings, showMenu;
     settings = $.extend({
-      'animationSpeed': 150,
+      'animationSpeed': 250,
+      'transitionOpacity': true,
       'buttonSelector': '.menu-button',
-      'flexbox': true,
       'hoverIntent': false,
       'hoverIntentTimeout': 150
     }, options);
     $nav = $(this);
+    if (settings.transitionOpacity === true) {
+      $nav.addClass('opacity');
+    }
     $nav.find("li").each(function() {
       if ($(this).has("ul").length) {
         return $(this).addClass("item-with-ul").find("ul").hide();
@@ -32,18 +35,39 @@
       breakpoint = $nav.data('breakpoint');
     }
     showMenu = function() {
-      return $(this).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed);
+      if ($nav.hasClass('lg-screen') === true) {
+        if (settings.transitionOpacity === true) {
+          return $(this).find('>ul').addClass('show').stop(true, true).animate({
+            height: ["toggle", "swing"],
+            opacity: "toggle"
+          }, settings.animationSpeed);
+        } else {
+          return $(this).find('>ul').addClass('show').stop(true, true).animate({
+            height: ["toggle", "swing"]
+          }, settings.animationSpeed);
+        }
+      }
     };
     resetMenu = function() {
-      return $(this).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed);
+      if ($nav.hasClass('lg-screen') === true) {
+        if (settings.transitionOpacity === true) {
+          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
+            height: ["toggle", "swing"],
+            opacity: "toggle"
+          }, settings.animationSpeed);
+        } else {
+          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
+            height: ["toggle", "swing"]
+          }, settings.animationSpeed);
+        }
+      }
     };
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
-        $('.one-page li a').on('click', function() {
+        return $('.one-page li a').on('click', function() {
           return $nav.removeClass('show');
         });
-        return $('.item-with-ul').off();
       } else if ($(window).width() > breakpoint) {
         $nav.removeClass("sm-screen").addClass("lg-screen");
         $nav.removeClass('show');
