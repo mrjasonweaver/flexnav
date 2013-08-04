@@ -1,44 +1,36 @@
 /* Flexnav Base Styles */
 
-@import "compass/reset";
-@import "compass/utilities";
-@import "compass/css3";
-
 $nav_text: #222;
 $top_level: #a6a6a2;
 $second_level: #b2b2af;
 $third_level: #bfbfbc;
 $fourth_level: #cbcbc9;
 
-/* Globals */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	font: inherit;
-	vertical-align: baseline;
-}
 .flexnav {
-	@include pie-clearfix;
-	@include transition(0);
+	-webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
 	-webkit-transform-style: preserve-3d; // stop webkit flicker
-	overflow: hidden;
+  overflow: hidden;
 	margin: 0 auto;
 	width: 100%;
-	max-height: 0;
+  
+  &.with-js {
+    max-height: 0;
+  }
+  
+  &.opacity {
+    opacity: 0;
+  }
 	
 	&.show {
 		max-height: 2000px;
-		@include transition(1s);
+    opacity: 1;
+		-webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 	}
 	&.one-page {
 		position: fixed;
@@ -63,7 +55,7 @@ time, mark, audio, video {
 		border-bottom: 1px solid rgba(0,0,0,.15);
 	}
 	li ul {
-		width: 100%;
+		width: 100%;   
 		
 		li {
 			font-size: 100%;
@@ -72,7 +64,7 @@ time, mark, audio, video {
 		}
 	}
 	li ul.show {
-		
+    
 		li {
 			overflow: visible;
 		}
@@ -152,7 +144,11 @@ time, mark, audio, video {
 	}
 	.flexnav {
 		overflow: visible;
-				
+    
+    &.opacity {
+      opacity: 1;
+    }
+    	
 		&.one-page {
 			top: 0;
 			right: auto;
@@ -175,7 +171,6 @@ time, mark, audio, video {
 			position: absolute; 
 			top: auto;
 			left: 0;
-			display: block;
 			
 			li {
 				width: 100%;

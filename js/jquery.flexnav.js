@@ -1,5 +1,5 @@
 /*
-	FlexNav.js 0.9
+	FlexNav.js 1.0
 
 	Copyright 2013, Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -9,15 +9,24 @@
 
 
 (function() {
+  var $;
+
+  $ = jQuery;
+
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, isDragging, nav_open, resizer, selector, settings;
+    var $nav, breakpoint, resetMenu, resizer, selector, settings, showMenu;
     settings = $.extend({
-      'animationSpeed': 100,
-      'buttonSelector': '.menu-button'
+      'animationSpeed': 250,
+      'transitionOpacity': true,
+      'buttonSelector': '.menu-button',
+      'hoverIntent': false,
+      'hoverIntentTimeout': 150
     }, options);
     $nav = $(this);
-    nav_open = false;
-    isDragging = false;
+    $nav.addClass('with-js');
+    if (settings.transitionOpacity === true) {
+      $nav.addClass('opacity');
+    }
     $nav.find("li").each(function() {
       if ($(this).has("ul").length) {
         return $(this).addClass("item-with-ul").find("ul").hide();
@@ -26,75 +35,82 @@
     if ($nav.data('breakpoint')) {
       breakpoint = $nav.data('breakpoint');
     }
+    showMenu = function() {
+      if ($nav.hasClass('lg-screen') === true) {
+        if (settings.transitionOpacity === true) {
+          return $(this).find('>ul').addClass('show').stop(true, true).animate({
+            height: ["toggle", "swing"],
+            opacity: "toggle"
+          }, settings.animationSpeed);
+        } else {
+          return $(this).find('>ul').addClass('show').stop(true, true).animate({
+            height: ["toggle", "swing"]
+          }, settings.animationSpeed);
+        }
+      }
+    };
+    resetMenu = function() {
+      if ($nav.hasClass('lg-screen') === true) {
+        if (settings.transitionOpacity === true) {
+          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
+            height: ["toggle", "swing"],
+            opacity: "toggle"
+          }, settings.animationSpeed);
+        } else {
+          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
+            height: ["toggle", "swing"]
+          }, settings.animationSpeed);
+        }
+      }
+    };
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
-        $('.one-page li a').on('click', function() {
+        return $('.one-page li a').on('click', function() {
           return $nav.removeClass('show');
         });
-        return $('.item-with-ul').off();
-      } else {
+      } else if ($(window).width() > breakpoint) {
         $nav.removeClass("sm-screen").addClass("lg-screen");
         $nav.removeClass('show');
-        return $('.item-with-ul').on('mouseenter', function() {
-          return $(this).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed);
-        }).on('mouseleave', function() {
-          return $(this).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed);
-        });
+        if (settings.hoverIntent === true) {
+          return $('.item-with-ul').hoverIntent({
+            over: showMenu,
+            out: resetMenu,
+            timeout: settings.hoverIntentTimeout
+          });
+        } else if (settings.hoverIntent === false) {
+          return $('.item-with-ul').on('mouseenter', showMenu).on('mouseleave', resetMenu);
+        }
       }
     };
     $(settings['buttonSelector']).data('navEl', $nav);
     selector = '.item-with-ul, ' + settings['buttonSelector'];
     $(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
     selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
-    $(selector).on('touchstart mousedown', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      console.log(isDragging);
-      return $(this).on('touchmove mousemove', function(e) {
-        var msg;
-        msg = e.pageX;
-        isDragging = true;
-        return $(window).off("touchmove mousemove");
-      });
-    }).on('touchend mouseup', function(e) {
+    $(selector).on('touchstart click', function(e) {
       var $btnParent, $thisNav, bs;
       e.preventDefault();
       e.stopPropagation();
       bs = settings['buttonSelector'];
       $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
       $thisNav = $btnParent.data('navEl');
-      isDragging = false;
-      if (isDragging === false) {
-        console.log('clicked');
-        if (nav_open === false) {
-          $thisNav.addClass('show');
-          return nav_open = true;
-        } else if (nav_open === true) {
-          $thisNav.removeClass('show');
-          return nav_open = false;
-        }
-      }
+      return $thisNav.toggleClass('show');
     });
-    $('.touch-button').on('touchstart mousedown', function(e) {
-      e.stopPropagation();
-      e.preventDefault();
-      return $(this).on('touchmove mousemove', function(e) {
-        isDragging = true;
-        return $(window).off("touchmove mousemove");
-      });
-    }).on('touchend mouseup', function(e) {
-      var $sub;
+    $('.touch-button').on('touchstart click', function(e) {
+      var $sub, $touchButton;
       e.preventDefault();
       e.stopPropagation();
       $sub = $(this).parent('.item-with-ul').find('>ul');
+      $touchButton = $(this).parent('.item-with-ul').find('>span.touch-button');
       if ($nav.hasClass('lg-screen') === true) {
         $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
       }
       if ($sub.hasClass('show') === true) {
-        return $sub.removeClass('show').slideUp(settings.animationSpeed);
+        $sub.removeClass('show').slideUp(settings.animationSpeed);
+        return $touchButton.removeClass('active');
       } else if ($sub.hasClass('show') === false) {
-        return $sub.addClass('show').slideDown(settings.animationSpeed);
+        $sub.addClass('show').slideDown(settings.animationSpeed);
+        return $touchButton.addClass('active');
       }
     });
     $nav.find('.item-with-ul *').focus(function() {
