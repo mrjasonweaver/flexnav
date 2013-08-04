@@ -117,14 +117,17 @@ $.fn.flexNav = (options) ->
     e.preventDefault()
     e.stopPropagation()
     $sub = $(@).parent('.item-with-ul').find('>ul')
+    $touchButton = $(@).parent('.item-with-ul').find('>span.touch-button')
     # remove class of show from all elements that are not current
     if $nav.hasClass('lg-screen') is true
       $(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide()
     # add class of show to current
     if $sub.hasClass('show') is true
       $sub.removeClass('show').slideUp(settings.animationSpeed)
+      $touchButton.removeClass('active')
     else if $sub.hasClass('show') is false
       $sub.addClass('show').slideDown(settings.animationSpeed)
+      $touchButton.addClass('active')
   )
 	
   # Sub ul's should have a class of 'open' if an element has focus

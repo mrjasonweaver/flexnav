@@ -97,17 +97,20 @@
       return $thisNav.toggleClass('show');
     });
     $('.touch-button').on('touchstart click', function(e) {
-      var $sub;
+      var $sub, $touchButton;
       e.preventDefault();
       e.stopPropagation();
       $sub = $(this).parent('.item-with-ul').find('>ul');
+      $touchButton = $(this).parent('.item-with-ul').find('>span.touch-button');
       if ($nav.hasClass('lg-screen') === true) {
         $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
       }
       if ($sub.hasClass('show') === true) {
-        return $sub.removeClass('show').slideUp(settings.animationSpeed);
+        $sub.removeClass('show').slideUp(settings.animationSpeed);
+        return $touchButton.removeClass('active');
       } else if ($sub.hasClass('show') === false) {
-        return $sub.addClass('show').slideDown(settings.animationSpeed);
+        $sub.addClass('show').slideDown(settings.animationSpeed);
+        return $touchButton.addClass('active');
       }
     });
     $nav.find('.item-with-ul *').focus(function() {
