@@ -15,7 +15,10 @@ $fourth_level: #cbcbc9;
   overflow: hidden;
 	margin: 0 auto;
 	width: 100%;
-	max-height: 0;
+  
+  &.with-js {
+    max-height: 0;
+  }
   
   &.opacity {
     opacity: 0;

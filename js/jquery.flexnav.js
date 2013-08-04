@@ -23,6 +23,7 @@
       'hoverIntentTimeout': 150
     }, options);
     $nav = $(this);
+    $nav.addClass('with-js');
     if (settings.transitionOpacity === true) {
       $nav.addClass('opacity');
     }

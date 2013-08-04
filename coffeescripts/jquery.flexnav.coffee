@@ -22,6 +22,7 @@ $.fn.flexNav = (options) ->
   $nav = $(@)
 	
   # Set some classes in the markup
+  $nav.addClass('with-js')
   if settings.transitionOpacity is true
     $nav.addClass('opacity')
   $nav.find("li").each ->
