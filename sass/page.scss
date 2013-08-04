@@ -138,6 +138,10 @@ code {
 	color: #fff;
 	border-radius: 3px;
 	box-shadow: inset 0 0 10px $accent;
+  
+  span {
+    color: rgba(255,255,255,.4);
+  }
 }
 #site-footer {
 	overflow: hidden;

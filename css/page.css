@@ -122,6 +122,8 @@ code {
   color: #fff;
   border-radius: 3px;
   box-shadow: inset 0 0 10px #3a3261; }
+  code span {
+    color: rgba(255, 255, 255, 0.4); }
 
 #site-footer {
   overflow: hidden;
