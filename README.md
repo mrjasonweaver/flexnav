@@ -83,6 +83,9 @@ Initialize
 * * *
 ### Changelog
 
+#### v.1.0.1 : August 5th, 2013
+* Fixes hover out bug if user clicks arrow on large screens
+
 #### v.1.0 : August 5th, 2013
 * Added support for hoverIntent jQuery Plugin
 * Fixed several touch/tap reveal bugs for touch screens

@@ -53,7 +53,7 @@ $.fn.flexNav = (options) ->
            settings.animationSpeed
          )
   resetMenu = ->
-    if $nav.hasClass('lg-screen') is true
+    if $nav.hasClass('lg-screen') is true and $(@).find('>ul').hasClass('show') is true
       if settings.transitionOpacity is true
         $(@).find('>ul')
           .removeClass('show')

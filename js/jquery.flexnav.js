@@ -50,7 +50,7 @@
       }
     };
     resetMenu = function() {
-      if ($nav.hasClass('lg-screen') === true) {
+      if ($nav.hasClass('lg-screen') === true && $(this).find('>ul').hasClass('show') === true) {
         if (settings.transitionOpacity === true) {
           return $(this).find('>ul').removeClass('show').stop(true, true).animate({
             height: ["toggle", "swing"],
