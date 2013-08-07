@@ -144,11 +144,9 @@ $fourth_level: #cbcbc9;
 	}
 	.flexnav {
 		overflow: visible;
-    
-    &.opacity {
-      opacity: 1;
-    }
-    	
+		&.opacity {
+		  opacity: 1;
+		}
 		&.one-page {
 			top: 0;
 			right: auto;
@@ -191,7 +189,6 @@ $fourth_level: #cbcbc9;
 			opacity: 1;
 			visibility: visible;
 			z-index: 1;
-			
 			li {
 				overflow: visible;
 				max-height: 100px;
@@ -213,7 +210,6 @@ $fourth_level: #cbcbc9;
 	}
 	.flexnav {
 		overflow: visible;
-				
 		&.one-page {
 			top: 0;
 			right: auto;
