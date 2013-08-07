@@ -227,13 +227,12 @@ $fourth_level: #cbcbc9;
 			background-color: #a6a6a2;	
 			width: 20%;
 			min-height: 50px;
-      overflow: visible;
+			overflow: visible;
 		}
 		li:hover > ul { 
 			display: block;
-      width: 100%;
-      overflow: visible;
-			
+			width: 100%;
+			overflow: visible;
 			li {
 				width: 100%;
 				float: none;
@@ -242,15 +241,16 @@ $fourth_level: #cbcbc9;
 		li a {
 			border-left: 1px solid #acaca1;
 			border-bottom: none;
-      overflow: visible;	
+			overflow: visible;	
 		}
 		li > ul {
+			background:#acaca1;
 			position: absolute; 
 			top: auto;
 			left: 0;
-      display: none;
+			display: none;
 			z-index: 1;
-      overflow: visible;
+			overflow: visible;
 		}
 		li ul li ul { 
 			top: 0;		
@@ -260,19 +260,17 @@ $fourth_level: #cbcbc9;
 		}
 		li ul.open {
 			display: block;
-      width: 100%;
-      overflow: visible;
-      
+			width: 100%;
+			overflow: visible;
       li {
         width: 100%;
       }
-	
 			ul.open {
 				margin-left: 100%;
 				top: 0;
-  			display: block;
-        width: 100%;
-        overflow: visible;
+  				display: block;
+				width: 100%;
+				overflow: visible;
 			}
 		}
 		ul li:hover ul {
