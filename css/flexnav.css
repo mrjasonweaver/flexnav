@@ -156,7 +156,7 @@
     top: 0;
     right: auto;
     max-width: 1080px; }
-  .oldie .flexnav li { 
+  .oldie .flexnav li {
     position: relative;
     list-style: none;
     float: left;
@@ -177,7 +177,7 @@
     border-bottom: none;
     overflow: visible; }
   .oldie .flexnav li > ul {
-    background:#acaca1;
+    background: #acaca1;
     position: absolute;
     top: auto;
     left: 0;
@@ -186,9 +186,6 @@
     overflow: visible; }
   .oldie .flexnav li ul li ul {
     top: 0; }
-   .oldie .flexnav li ul li {
-    padding-bottom: 0;
-    margin-bottom: 0;}
   .oldie .flexnav li ul li a {
     border-bottom: none; }
   .oldie .flexnav li ul.open {

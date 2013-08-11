@@ -83,6 +83,9 @@ Initialize
 * * *
 ### Changelog
 
+#### v.1.1 : August 11th, 2013
+* Adds timeout flags to aid in stopping double touch/click events for some Android browsers
+
 #### v.1.0.1 : August 5th, 2013
 * Fixes hover out bug if user clicks arrow on large screens
 

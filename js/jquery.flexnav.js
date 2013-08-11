@@ -1,7 +1,7 @@
 /*
-	FlexNav.js 1.0
+	FlexNav.js 1.1
 
-	Copyright 2013, Jason Weaver http://jasonweaver.name
+	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
 
 //
@@ -14,7 +14,7 @@
   $ = jQuery;
 
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, resetMenu, resizer, selector, settings, showMenu;
+    var $nav, breakpoint, flag, resetMenu, resizer, selector, settings, showMenu;
     settings = $.extend({
       'animationSpeed': 250,
       'transitionOpacity': true,
@@ -23,6 +23,7 @@
       'hoverIntentTimeout': 150
     }, options);
     $nav = $(this);
+    flag = false;
     $nav.addClass('with-js');
     if (settings.transitionOpacity === true) {
       $nav.addClass('opacity');
@@ -94,7 +95,13 @@
       bs = settings['buttonSelector'];
       $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
       $thisNav = $btnParent.data('navEl');
-      return $thisNav.toggleClass('show');
+      if (flag === false) {
+        flag = true;
+        setTimeout(function() {
+          return flag = false;
+        }, 100);
+        return $thisNav.toggleClass('show');
+      }
     });
     $('.touch-button').on('touchstart click', function(e) {
       var $sub, $touchButton;
@@ -102,15 +109,21 @@
       e.stopPropagation();
       $sub = $(this).parent('.item-with-ul').find('>ul');
       $touchButton = $(this).parent('.item-with-ul').find('>span.touch-button');
-      if ($nav.hasClass('lg-screen') === true) {
-        $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
-      }
-      if ($sub.hasClass('show') === true) {
-        $sub.removeClass('show').slideUp(settings.animationSpeed);
-        return $touchButton.removeClass('active');
-      } else if ($sub.hasClass('show') === false) {
-        $sub.addClass('show').slideDown(settings.animationSpeed);
-        return $touchButton.addClass('active');
+      if (flag === false) {
+        flag = true;
+        setTimeout(function() {
+          return flag = false;
+        }, 100);
+        if ($nav.hasClass('lg-screen') === true) {
+          $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
+        }
+        if ($sub.hasClass('show') === true) {
+          $sub.removeClass('show').slideUp(settings.animationSpeed);
+          return $touchButton.removeClass('active');
+        } else if ($sub.hasClass('show') === false) {
+          $sub.addClass('show').slideDown(settings.animationSpeed);
+          return $touchButton.addClass('active');
+        }
       }
     });
     $nav.find('.item-with-ul *').focus(function() {
