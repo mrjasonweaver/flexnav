@@ -1,7 +1,7 @@
 ###
-	FlexNav.js 1.0
+	FlexNav.js 1.1
 
-	Copyright 2013, Jason Weaver http://jasonweaver.name
+	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
 
 //
@@ -20,6 +20,7 @@ $.fn.flexNav = (options) ->
     options
 
   $nav = $(@)
+  flag = false
 	
   # Set some classes in the markup
   $nav.addClass('with-js')
@@ -109,7 +110,11 @@ $.fn.flexNav = (options) ->
     bs = settings['buttonSelector']
     $btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
     $thisNav = $btnParent.data('navEl')
-    $thisNav.toggleClass('show')
+    if flag is false
+      flag = true
+      setTimeout( -> flag = false
+      100)
+      $thisNav.toggleClass('show')
   )
 				
   # Toggle for sub-menus
@@ -118,16 +123,20 @@ $.fn.flexNav = (options) ->
     e.stopPropagation()
     $sub = $(@).parent('.item-with-ul').find('>ul')
     $touchButton = $(@).parent('.item-with-ul').find('>span.touch-button')
-    # remove class of show from all elements that are not current
-    if $nav.hasClass('lg-screen') is true
-      $(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide()
-    # add class of show to current
-    if $sub.hasClass('show') is true
-      $sub.removeClass('show').slideUp(settings.animationSpeed)
-      $touchButton.removeClass('active')
-    else if $sub.hasClass('show') is false
-      $sub.addClass('show').slideDown(settings.animationSpeed)
-      $touchButton.addClass('active')
+    if flag is false
+      flag = true
+      setTimeout( -> flag = false
+      100)
+      # remove class of show from all elements that are not current
+      if $nav.hasClass('lg-screen') is true
+        $(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide()
+      # add class of show to current
+      if $sub.hasClass('show') is true
+        $sub.removeClass('show').slideUp(settings.animationSpeed)
+        $touchButton.removeClass('active')
+      else if $sub.hasClass('show') is false
+        $sub.addClass('show').slideDown(settings.animationSpeed)
+        $touchButton.addClass('active')
   )
 	
   # Sub ul's should have a class of 'open' if an element has focus
