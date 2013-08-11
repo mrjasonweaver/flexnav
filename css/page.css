@@ -50,35 +50,57 @@ p {
   border-radius: 5px;
   color: #fff;
   background: #548fa7;
-  margin-top: 5px;
+  margin-top: 0;
   display: inline-block; }
   .callout:hover {
     background: #437285;
     text-decoration: none; }
 
-.site-title h1 {
-  font-family: "ff-dax-compact-web-pro-1","ff-dax-compact-web-pro-2";
-  font-weight: 100;
-  font-size: 1.3em;
-  margin-top: -1px;
-  margin-bottom: 5px;
-  padding: 5px 20px;
-  background: #3a3261;
+.twitter-share-button {
+  margin: 0;
   display: inline-block;
-  border-radius: 3px;
-  color: #f1f2eb;
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-rendering: optimizeLegibility; }
-  .site-title h1 a {
+  position: absolute;
+  top: 26px;
+  right: -20px; }
+
+.github-buttons-wrap {
+  padding: 7px 7px 2px;
+  background: rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  display: inline-block;
+  float: left; }
+
+.github-watch {
+  margin: 0;
+  display: inline-block; }
+
+.site-title {
+  position: relative; }
+  .site-title h1 {
+    font-family: "ff-dax-compact-web-pro-1","ff-dax-compact-web-pro-2";
+    font-weight: 100;
+    font-size: 1.3em;
+    margin-top: -1px;
+    margin-bottom: 5px;
+    padding: 5px 20px;
+    background: #3a3261;
+    display: inline-block;
+    border-radius: 3px;
     color: #f1f2eb;
     color: rgba(255, 255, 255, 0.5);
-    text-decoration: none; }
-.site-title h2 {
-  font-size: 1em;
-  margin-bottom: 5%;
-  font-weight: 100; }
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-rendering: optimizeLegibility; }
+    .site-title h1 a {
+      color: #f1f2eb;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none; }
+  .site-title h2 {
+    font-size: 1em;
+    margin-bottom: 5%;
+    font-weight: 100; }
 
 .container {
   margin: -1px auto 0;
@@ -111,19 +133,19 @@ p {
 
 code {
   overflow: scroll;
-  background: rgba(55, 47, 91, 0.9);
-  border: 1px solid #3a3261;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 2.5em;
   line-height: 1.5;
   font-size: 16px;
   display: block;
-  color: #fff;
+  color: #3a3261;
   border-radius: 3px;
-  box-shadow: inset 0 0 10px #3a3261; }
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); }
   code span {
-    color: rgba(255, 255, 255, 0.4); }
+    color: #73736f; }
 
 #site-footer {
   overflow: hidden;
@@ -148,11 +170,14 @@ code {
 #section2, #section3, #section4, #section5 {
   padding-top: 80px; }
 
+.clear {
+  clear: both; }
+
 @media all and (min-width: 800px) {
   body {
     font-size: 100%; }
     body.home-page #site-header {
-      background: url("http://jasonweaver.name/img/look.png") no-repeat 90% 30px;
+      background: url("http://jasonweaver.name/img/look.png") no-repeat 82% 30px;
       min-height: 196px; }
 
   .site-title h1 {
@@ -181,7 +206,7 @@ code {
 .oldie body {
   font-size: 100%; }
   .oldie body.home-page #site-header {
-    background: url("http://jasonweaver.name/img/look.png") no-repeat 90% 30px; }
+    background: url("http://jasonweaver.name/img/look.png") no-repeat 82% 30px; }
 .oldie .site-title h1 {
   font-size: 2.25em;
   margin-bottom: 10px; }

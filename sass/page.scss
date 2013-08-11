@@ -54,7 +54,7 @@ p {
 	border-radius: 5px;
 	color: #fff;
 	background: $link;
-	margin-top: 5px;
+	margin-top: 0;
 	display: inline-block;
 	
 	&:hover {
@@ -62,7 +62,28 @@ p {
 		text-decoration: none;
 	}
 }
+.twitter-share-button {
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  right: -20px;
+}
+.github-buttons-wrap {
+  padding: 7px 7px 2px;
+  background: rgba(0,0,0,.09);
+  border-radius: 5px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  display: inline-block;
+  float: left;
+}
+.github-watch {
+  margin: 0;
+  display: inline-block;
+}
 .site-title {
+  position: relative;
 	h1 {
 		font-family: "ff-dax-compact-web-pro-1","ff-dax-compact-web-pro-2";
 		font-weight: 100;
@@ -127,20 +148,20 @@ p {
 }
 code {
 	overflow: scroll;
-	background: rgba(55, 47, 91,.9);
-	border: 1px solid $accent;
+	background: rgba(0,0,0,.1);
+	border: 1px solid rgba(0,0,0,.1);
 	padding: 10px;
 	margin-top: 10px;
 	margin-bottom: 2.5em;
 	line-height: 1.5;
 	font-size: 16px;
 	display: block;
-	color: #fff;
+	color: $accent;
 	border-radius: 3px;
-	box-shadow: inset 0 0 10px $accent;
+	box-shadow: inset 0 0 10px rgba(0,0,0,.1);
   
   span {
-    color: rgba(255,255,255,.4);
+    color: #73736f;
   }
 }
 #site-footer {
@@ -168,13 +189,16 @@ code {
 #section2, #section3, #section4, #section5 {
 	padding-top: 80px;
 }
+.clear {
+  clear: both;
+}
 @media all and (min-width: 800px) {
 	body {
 		font-size: 100%;
 		
 		&.home-page {
 			#site-header {
-				background: url('http://jasonweaver.name/img/look.png') no-repeat 90% 30px;
+				background: url('http://jasonweaver.name/img/look.png') no-repeat 82% 30px;
 				min-height: 196px;
 			}
 		
@@ -223,7 +247,7 @@ code {
 		
 		&.home-page {
 			#site-header {
-				background: url('http://jasonweaver.name/img/look.png') no-repeat 90% 30px;
+				background: url('http://jasonweaver.name/img/look.png') no-repeat 82% 30px;
 			}
 		
 		}
