@@ -19,7 +19,6 @@ time, mark, audio, video {
 
 body {
   background: #eaebe7;
-  border-top: 5px solid #3a3261;
   color: #333;
   font-family: "dejarip-1", "dejarip-2", "Helvetica Neue", Arial, clean, sans-serif;
   background: url("http://jasonweaver.name/img/textured-background2.png") -10% -16px; }
@@ -41,6 +40,39 @@ p {
   line-height: 1.5;
   font-weight: 300; }
 
+.video-wrap {
+  position: relative;
+  padding: 18px 0; }
+
+video {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.controls button {
+  position: absolute;
+  bottom: 38px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: white;
+  border: 2px solid white; }
+  .controls button:hover {
+    cursor: pointer; }
+  .controls button.pause .icon-play {
+    display: none; }
+  .controls button.pause .icon-pause {
+    display: inline-block; }
+  .controls button.play .icon-pause {
+    display: none; }
+  .controls button.play .icon-play {
+    display: inline-block;
+    margin-right: -2px; }
+
 .img-devices {
   max-width: 100%;
   margin-top: 12px; }
@@ -60,7 +92,7 @@ p {
   margin: 0;
   display: inline-block;
   position: absolute;
-  top: 26px;
+  top: 5px;
   right: -20px; }
 
 .github-buttons-wrap {
@@ -79,23 +111,22 @@ p {
 .site-title {
   position: relative; }
   .site-title h1 {
+    border-top: 6px solid #3a3261;
     font-family: "ff-dax-compact-web-pro-1","ff-dax-compact-web-pro-2";
     font-weight: 100;
-    font-size: 1.3em;
-    margin-top: -1px;
-    margin-bottom: 5px;
-    padding: 5px 20px;
-    background: #3a3261;
+    font-size: 1.7em;
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-weight: 900;
+    padding: 7px 0 0;
+    background: none;
     display: inline-block;
-    border-radius: 3px;
-    color: #f1f2eb;
-    color: rgba(255, 255, 255, 0.5);
+    color: #3a3261;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-rendering: optimizeLegibility; }
     .site-title h1 a {
-      color: #f1f2eb;
-      color: rgba(255, 255, 255, 0.5);
+      color: #3a3261;
       text-decoration: none; }
   .site-title h2 {
     font-size: 1em;
@@ -125,7 +156,13 @@ p {
     font-weight: 300; }
 
 .block {
-  margin-bottom: 3em; }
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 2px dashed #bbb; }
+  .block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0; }
 
 .article-wrap {
   padding: 0;
@@ -162,7 +199,12 @@ code {
   list-style: none;
   margin: 1em 0;
   display: block;
-  float: left; }
+  float: left;
+  padding: 5px 0; }
+  #site-footer li.push {
+    display: block;
+    padding: 0;
+    margin-left: 10px; }
 
 #site-footer li a {
   padding: 0 .5em; }
@@ -180,19 +222,31 @@ code {
       background: url("http://jasonweaver.name/img/look.png") no-repeat 82% 30px;
       min-height: 196px; }
 
+  .twitter-share-button {
+    top: 27px; }
+
   .site-title h1 {
-    font-size: 2.25em;
-    margin-bottom: 10px; }
+    font-size: 2.75em; }
   .site-title h2 {
     font-size: 1.2em;
     margin-bottom: 50px; }
 
   #content article:first-child {
-    width: 56%;
-    margin-right: 10%; }
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 60%;
+    border-right: 2px dashed #bbb; }
+    #content article:first-child .block {
+      padding-right: 6%; }
   #content article:nth-child(2) {
-    width: 34%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 40%;
     margin-right: 0; }
+    #content article:nth-child(2) .block {
+      padding-left: 5%; }
   #content p {
     font-size: 1.1em; }
   #content h2 {

@@ -113,7 +113,7 @@ $.fn.flexNav = (options) ->
     if flag is false
       flag = true
       setTimeout( -> flag = false
-      100)
+      301)
       $thisNav.toggleClass('show')
   )
 				
@@ -126,7 +126,7 @@ $.fn.flexNav = (options) ->
     if flag is false
       flag = true
       setTimeout( -> flag = false
-      100)
+      301)
       # remove class of show from all elements that are not current
       if $nav.hasClass('lg-screen') is true
         $(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide()

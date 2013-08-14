@@ -23,7 +23,6 @@ time, mark, audio, video {
 }
 body {
 	background: #eaebe7;
-	border-top: 5px solid $accent;
 	color: #333;
 	font-family: $font-family;
 	background: url('http://jasonweaver.name/img/textured-background2.png') -10% -16px;
@@ -44,6 +43,49 @@ p {
 	margin-bottom: 1em; 
 	line-height: 1.5;
 	font-weight: 300;
+}
+.video-wrap {
+  position: relative;
+  padding: 18px 0;
+}
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.controls button {
+  position: absolute;
+  bottom: 38px;
+  left: 20px; 
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: white;
+  border: 2px solid white;
+  
+  &:hover {
+    cursor: pointer;
+  }
+  &.pause {
+    .icon-play {
+      display: none;
+    }
+    .icon-pause {
+      display: inline-block;
+    }
+  }
+  &.play {
+    .icon-pause {
+      display: none;
+    }
+    .icon-play {
+      display: inline-block;
+      margin-right: -2px;
+    }
+  }
 }
 .img-devices {
 	max-width: 100%;
@@ -66,7 +108,7 @@ p {
   margin: 0;
   display: inline-block;
   position: absolute;
-  top: 26px;
+  top: 5px;
   right: -20px;
 }
 .github-buttons-wrap {
@@ -85,24 +127,23 @@ p {
 .site-title {
   position: relative;
 	h1 {
+    border-top: 6px solid $accent;
 		font-family: "ff-dax-compact-web-pro-1","ff-dax-compact-web-pro-2";
 		font-weight: 100;
-		font-size: 1.3em;
-		margin-top: -1px;
-		margin-bottom: 5px;
-		padding: 5px 20px;
-		background: $accent;
+		font-size: 1.7em;
+		margin-top: 0;
+		margin-bottom: 0px;
+    font-weight: 900;
+		padding: 7px 0 0;
+		background: none;
 		display: inline-block;
-		border-radius: 3px;
-		color: #f1f2eb;
-		color: rgba(255,255,255,.5);
+		color: $accent;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		text-rendering: optimizeLegibility;
 		
 		a {
-			color: #f1f2eb;
-			color: rgba(255,255,255,.5);
+			color: $accent;
 			text-decoration: none;		
 		}
 	}
@@ -140,7 +181,15 @@ p {
 	}
 }
 .block {
-	margin-bottom: 3em;
+	margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 2px dashed #bbb;
+  
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 .article-wrap {
 	padding: 0;
@@ -182,6 +231,13 @@ code {
 	margin: 1em 0;
 	display: block;
 	float: left;
+  padding: 5px 0;
+  
+  &.push {
+    display: block;
+    padding: 0;
+    margin-left: 10px;
+  }
 }
 #site-footer li a {
 	padding: 0 .5em;
@@ -204,10 +260,12 @@ code {
 		
 		}
 	}
+  .twitter-share-button {
+    top: 27px;
+  }
 	.site-title {
 		h1 {
-			font-size: 2.25em;
-			margin-bottom: 10px;
+			font-size: 2.75em;
 		}
 		h2 {
 			font-size: 1.2em;
@@ -216,12 +274,26 @@ code {
 	}
 	#content {
 		article:first-child {
-			width: 56%;
-			margin-right: 10%;			
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+			width: 60%;
+      border-right: 2px dashed #bbb;
+      
+      .block {
+        padding-right: 6%;
+      }
 		}
 		article:nth-child(2) {
-			width: 34%;
-			margin-right: 0;			
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+			width: 40%;
+			margin-right: 0;
+      
+      .block {
+        padding-left: 5%;
+      }		
 		}		
 		p {
 			font-size: 1.1em;

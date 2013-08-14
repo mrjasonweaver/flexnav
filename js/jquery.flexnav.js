@@ -99,7 +99,7 @@
         flag = true;
         setTimeout(function() {
           return flag = false;
-        }, 100);
+        }, 301);
         return $thisNav.toggleClass('show');
       }
     });
@@ -113,7 +113,7 @@
         flag = true;
         setTimeout(function() {
           return flag = false;
-        }, 100);
+        }, 301);
         if ($nav.hasClass('lg-screen') === true) {
           $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
         }
