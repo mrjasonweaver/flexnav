@@ -83,7 +83,7 @@ Initialize
 * * *
 ### Changelog
 
-#### v.1.2 : August 19th, 2013
+#### v.1.2 : October 6th, 2013
 * Removed touchstart for fast clicks—possible cause of problems in some Android browsers.
 
 #### v.1.1.1 : August 19th, 2013
