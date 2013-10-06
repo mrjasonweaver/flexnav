@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 1.1
+	FlexNav.js 1.2
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -20,7 +20,6 @@ $.fn.flexNav = (options) ->
     options
 
   $nav = $(@)
-  flag = false
 	
   # Set some classes in the markup
   $nav.addClass('with-js')
@@ -104,39 +103,29 @@ $.fn.flexNav = (options) ->
 
   # Toggle touch for nav menu
   selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
-  $(selector).on('touchstart click', (e) ->
+  $(selector).on('click', (e) ->
     e.preventDefault()
     e.stopPropagation()
     bs = settings['buttonSelector']
     $btnParent = if ($(@).is(bs)) then $(@) else $(@).parent(bs)
     $thisNav = $btnParent.data('navEl')
-    if flag is false
-      flag = true
-      setTimeout( -> flag = false
-      301)
-      $thisNav.toggleClass('show')
+    $thisNav.toggleClass('show')
   )
 				
   # Toggle for sub-menus
-  $('.touch-button').on('touchstart click', (e) ->
-    e.preventDefault()
-    e.stopPropagation()
+  $('.touch-button').on('click', (e) ->
     $sub = $(@).parent('.item-with-ul').find('>ul')
     $touchButton = $(@).parent('.item-with-ul').find('>span.touch-button')
-    if flag is false
-      flag = true
-      setTimeout( -> flag = false
-      301)
-      # remove class of show from all elements that are not current
-      if $nav.hasClass('lg-screen') is true
-        $(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide()
-      # add class of show to current
-      if $sub.hasClass('show') is true
-        $sub.removeClass('show').slideUp(settings.animationSpeed)
-        $touchButton.removeClass('active')
-      else if $sub.hasClass('show') is false
-        $sub.addClass('show').slideDown(settings.animationSpeed)
-        $touchButton.addClass('active')
+    # remove class of show from all elements that are not current
+    if $nav.hasClass('lg-screen') is true
+      $(@).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide()
+    # add class of show to current
+    if $sub.hasClass('show') is true
+      $sub.removeClass('show').slideUp(settings.animationSpeed)
+      $touchButton.removeClass('active')
+    else if $sub.hasClass('show') is false
+      $sub.addClass('show').slideDown(settings.animationSpeed)
+      $touchButton.addClass('active')
   )
 	
   # Sub ul's should have a class of 'open' if an element has focus

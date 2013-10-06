@@ -1,5 +1,5 @@
 /*
-	FlexNav.js 1.1
+	FlexNav.js 1.2
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -14,7 +14,7 @@
   $ = jQuery;
 
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, flag, resetMenu, resizer, selector, settings, showMenu;
+    var $nav, breakpoint, resetMenu, resizer, selector, settings, showMenu;
     settings = $.extend({
       'animationSpeed': 250,
       'transitionOpacity': true,
@@ -23,7 +23,6 @@
       'hoverIntentTimeout': 150
     }, options);
     $nav = $(this);
-    flag = false;
     $nav.addClass('with-js');
     if (settings.transitionOpacity === true) {
       $nav.addClass('opacity');
@@ -88,42 +87,28 @@
     selector = '.item-with-ul, ' + settings['buttonSelector'];
     $(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
     selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
-    $(selector).on('touchstart click', function(e) {
+    $(selector).on('click', function(e) {
       var $btnParent, $thisNav, bs;
       e.preventDefault();
       e.stopPropagation();
       bs = settings['buttonSelector'];
       $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
       $thisNav = $btnParent.data('navEl');
-      if (flag === false) {
-        flag = true;
-        setTimeout(function() {
-          return flag = false;
-        }, 301);
-        return $thisNav.toggleClass('show');
-      }
+      return $thisNav.toggleClass('show');
     });
-    $('.touch-button').on('touchstart click', function(e) {
+    $('.touch-button').on('click', function(e) {
       var $sub, $touchButton;
-      e.preventDefault();
-      e.stopPropagation();
       $sub = $(this).parent('.item-with-ul').find('>ul');
       $touchButton = $(this).parent('.item-with-ul').find('>span.touch-button');
-      if (flag === false) {
-        flag = true;
-        setTimeout(function() {
-          return flag = false;
-        }, 301);
-        if ($nav.hasClass('lg-screen') === true) {
-          $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
-        }
-        if ($sub.hasClass('show') === true) {
-          $sub.removeClass('show').slideUp(settings.animationSpeed);
-          return $touchButton.removeClass('active');
-        } else if ($sub.hasClass('show') === false) {
-          $sub.addClass('show').slideDown(settings.animationSpeed);
-          return $touchButton.addClass('active');
-        }
+      if ($nav.hasClass('lg-screen') === true) {
+        $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
+      }
+      if ($sub.hasClass('show') === true) {
+        $sub.removeClass('show').slideUp(settings.animationSpeed);
+        return $touchButton.removeClass('active');
+      } else if ($sub.hasClass('show') === false) {
+        $sub.addClass('show').slideDown(settings.animationSpeed);
+        return $touchButton.addClass('active');
       }
     });
     $nav.find('.item-with-ul *').focus(function() {
