@@ -17,7 +17,6 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Tap targets to reveal sub menus for touch screens
 * Hover reveal for desktop
 * Keyboard tab input accessibility
-* Fast clicks for touch screens (no 300ms delay)
 * Use class `.one-page` on the `body`, `.menu-button`, and `ul.flexnav` for single page fixed menu
 * Use with hoverIntent jQuery plugin
 
@@ -83,6 +82,9 @@ Initialize
 
 * * *
 ### Changelog
+
+#### v.1.2 : August 19th, 2013
+* Removed touchstart for fast clicks—possible cause of problems in some Android browsers.
 
 #### v.1.1.1 : August 19th, 2013
 * Changed css to not show menu by default. This will hide the menu if users don't have js. Need to work on better fix but for now devs are wanting this.
