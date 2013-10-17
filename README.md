@@ -58,7 +58,7 @@ Initialize
 		</script>		
 
 ### Options
-	'animationSpeed' : '250', // default for drop down animation speed
+	'animationSpeed' : 250, // default for drop down animation speed
 	'transitionOpacity': true, // default for opacity animation
 	'buttonSelector': '.menu-button', // default menu button class name
 	'hoverIntent': false, // Change to true for use with hoverIntent plugin
