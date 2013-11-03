@@ -1,0 +1,22 @@
+{
+  "name": "flexnav",
+  "version": "1.1",
+  "homepage": "http://jasonweaver.name/lab/flexiblenavigation/",
+  "description": "A jQuery plugin for responsive menus",
+  "keywords": [
+    "jquery",
+    "responsive navigation",
+    "flexnav"
+  ],
+  "authors": [
+    "Jason Weaver"
+  ],
+  "license": "Unlicense",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
