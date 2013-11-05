@@ -36,7 +36,6 @@
     count = $top_nav_items.length;
     nav_width = 100 / count;
     nav_percent = nav_width + "%";
-    $top_nav_items.css('width', nav_percent);
     if ($nav.data('breakpoint')) {
       breakpoint = $nav.data('breakpoint');
     }
@@ -71,11 +70,13 @@
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
+        $top_nav_items.css('width', '100%');
         return $('.one-page li a').on('click', function() {
           return $nav.removeClass('show');
         });
       } else if ($(window).width() > breakpoint) {
         $nav.removeClass("sm-screen").addClass("lg-screen");
+        $top_nav_items.css('width', nav_percent);
         $nav.removeClass('show');
         if (settings.hoverIntent === true) {
           return $('.item-with-ul').hoverIntent({

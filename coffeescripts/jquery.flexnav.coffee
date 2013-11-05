@@ -34,7 +34,6 @@ $.fn.flexNav = (options) ->
   count = $top_nav_items.length
   nav_width = 100 / count
   nav_percent = nav_width+"%"
-  $top_nav_items.css('width',nav_percent)
   
   # Get the breakpoint set with data-breakpoint
   if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
@@ -83,12 +82,14 @@ $.fn.flexNav = (options) ->
   resizer = ->
     if $(window).width() <= breakpoint
       $nav.removeClass("lg-screen").addClass("sm-screen")
+      $top_nav_items.css('width','100%')
       # Toggle nav menu closed for one pager after anchor clicked
       $('.one-page li a').on( 'click', ->
         $nav.removeClass('show')
       )
     else if $(window).width() > breakpoint
       $nav.removeClass("sm-screen").addClass("lg-screen")
+      $top_nav_items.css('width',nav_percent)
       # Make sure navigation is closed when going back to large screens
       $nav.removeClass('show')
       if settings.hoverIntent is true
