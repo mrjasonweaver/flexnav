@@ -1,5 +1,5 @@
 /*
-	FlexNav.js 1.2
+	FlexNav.js 1.2.1
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -14,7 +14,7 @@
   $ = jQuery;
 
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, resetMenu, resizer, selector, settings, showMenu;
+    var $nav, $top_nav_items, breakpoint, count, nav_percent, nav_width, resetMenu, resizer, selector, settings, showMenu;
     settings = $.extend({
       'animationSpeed': 250,
       'transitionOpacity': true,
@@ -32,6 +32,11 @@
         return $(this).addClass("item-with-ul").find("ul").hide();
       }
     });
+    $top_nav_items = $nav.find('>li');
+    count = $top_nav_items.length;
+    nav_width = 100 / count;
+    nav_percent = nav_width + "%";
+    $top_nav_items.css('width', nav_percent);
     if ($nav.data('breakpoint')) {
       breakpoint = $nav.data('breakpoint');
     }

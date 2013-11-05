@@ -18,7 +18,7 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Hover reveal for desktop
 * Keyboard tab input accessibility
 * Use class `.one-page` on the `body`, `.menu-button`, and `ul.flexnav` for single page fixed menu
-* Use with hoverIntent jQuery plugin
+* Use with [hoverIntent jQuery plugin](http://cherne.net/brian/resources/jquery.hoverIntent.html) (not included)
 
 ### Browser Support
 * IE7-10
@@ -82,6 +82,9 @@ Initialize
 
 * * *
 ### Changelog
+
+#### v.1.2 : November 4th, 2013
+* [Calculate number of top level nav items with js](https://github.com/indyplanets/flexnav/issues/91)
 
 #### v.1.2 : October 6th, 2013
 * Removed touchstart for fast clicks—possible cause of problems in some Android browsers.

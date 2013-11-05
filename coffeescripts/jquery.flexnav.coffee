@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 1.2
+	FlexNav.js 1.2.1
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -28,6 +28,13 @@ $.fn.flexNav = (options) ->
   $nav.find("li").each ->
     if $(@).has("ul").length
       $(@).addClass("item-with-ul").find("ul").hide()
+
+  # Find the number of top level nav items and set widths
+  $top_nav_items = $nav.find('>li')
+  count = $top_nav_items.length
+  nav_width = 100 / count
+  nav_percent = nav_width+"%"
+  $top_nav_items.css('width',nav_percent)
   
   # Get the breakpoint set with data-breakpoint
   if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
