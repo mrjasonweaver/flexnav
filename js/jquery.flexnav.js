@@ -1,5 +1,5 @@
 /*
-	FlexNav.js 1.2.1
+	FlexNav.js 1.2.2
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -14,7 +14,7 @@
   $ = jQuery;
 
   $.fn.flexNav = function(options) {
-    var $nav, $top_nav_items, breakpoint, count, nav_percent, nav_width, resetMenu, resizer, selector, settings, showMenu;
+    var $nav, $top_nav_items, breakpoint, count, nav_percent, nav_width, resetMenu, resizer, settings, showMenu, toggle_selector, touch_selector;
     settings = $.extend({
       'animationSpeed': 250,
       'transitionOpacity': true,
@@ -68,9 +68,12 @@
       }
     };
     resizer = function() {
+      var selector;
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
         $top_nav_items.css('width', '100%');
+        selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
+        $(selector).removeClass('active');
         return $('.one-page li a').on('click', function() {
           return $nav.removeClass('show');
         });
@@ -90,11 +93,12 @@
       }
     };
     $(settings['buttonSelector']).data('navEl', $nav);
-    selector = '.item-with-ul, ' + settings['buttonSelector'];
-    $(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
-    selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
-    $(selector).on('click', function(e) {
+    touch_selector = '.item-with-ul, ' + settings['buttonSelector'];
+    $(touch_selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
+    toggle_selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
+    $(toggle_selector).on('click', function(e) {
       var $btnParent, $thisNav, bs;
+      $(toggle_selector).toggleClass('active');
       e.preventDefault();
       e.stopPropagation();
       bs = settings['buttonSelector'];

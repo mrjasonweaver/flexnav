@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 1.2.1
+	FlexNav.js 1.2.2
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -20,7 +20,7 @@ $.fn.flexNav = (options) ->
     options
 
   $nav = $(@)
-	
+
   # Set some classes in the markup
   $nav.addClass('with-js')
   if settings.transitionOpacity is true
@@ -83,6 +83,8 @@ $.fn.flexNav = (options) ->
     if $(window).width() <= breakpoint
       $nav.removeClass("lg-screen").addClass("sm-screen")
       $top_nav_items.css('width','100%')
+      selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
+      $(selector).removeClass('active')
       # Toggle nav menu closed for one pager after anchor clicked
       $('.one-page li a').on( 'click', ->
         $nav.removeClass('show')
@@ -106,12 +108,13 @@ $.fn.flexNav = (options) ->
   $(settings['buttonSelector']).data('navEl', $nav)
 
   # Add in touch buttons
-  selector = '.item-with-ul, ' + settings['buttonSelector']
-  $(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
+  touch_selector = '.item-with-ul, ' + settings['buttonSelector']
+  $(touch_selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>')
 
   # Toggle touch for nav menu
-  selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
-  $(selector).on('click', (e) ->
+  toggle_selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
+  $(toggle_selector).on('click', (e) ->
+    $(toggle_selector).toggleClass('active')
     e.preventDefault()
     e.stopPropagation()
     bs = settings['buttonSelector']

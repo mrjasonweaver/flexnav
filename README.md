@@ -83,6 +83,9 @@ Initialize
 * * *
 ### Changelog
 
+#### v.1.2.2 : November 5th, 2013
+* [Adding active classes to main menu button and touch-icon](https://github.com/indyplanets/flexnav/issues/67)
+
 #### v.1.2.1 : November 4th, 2013
 * [Calculate number of top level nav items with js](https://github.com/indyplanets/flexnav/issues/91)
 
