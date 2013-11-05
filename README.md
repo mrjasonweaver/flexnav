@@ -83,7 +83,7 @@ Initialize
 * * *
 ### Changelog
 
-#### v.1.2 : November 4th, 2013
+#### v.1.2.1 : November 4th, 2013
 * [Calculate number of top level nav items with js](https://github.com/indyplanets/flexnav/issues/91)
 
 #### v.1.2 : October 6th, 2013
