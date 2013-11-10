@@ -40,6 +40,9 @@ p {
   line-height: 1.5;
   font-weight: 300; }
 
+strong {
+  font-weight: 700; }
+
 .video-wrap {
   position: relative;
   padding: 18px 0; }

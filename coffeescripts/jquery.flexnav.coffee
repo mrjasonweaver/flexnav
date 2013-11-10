@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 1.2.2
+	FlexNav.js 1.2.3
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -16,7 +16,8 @@ $.fn.flexNav = (options) ->
     'transitionOpacity': true,
     'buttonSelector': '.menu-button',
     'hoverIntent': false,
-    'hoverIntentTimeout': 150
+    'hoverIntentTimeout': 150,
+    'calcItemWidths': false
     options
 
   $nav = $(@)
@@ -30,10 +31,11 @@ $.fn.flexNav = (options) ->
       $(@).addClass("item-with-ul").find("ul").hide()
 
   # Find the number of top level nav items and set widths
-  $top_nav_items = $nav.find('>li')
-  count = $top_nav_items.length
-  nav_width = 100 / count
-  nav_percent = nav_width+"%"
+  if settings.calcItemWidths is true
+    $top_nav_items = $nav.find('>li')
+    count = $top_nav_items.length
+    nav_width = 100 / count
+    nav_percent = nav_width+"%"
   
   # Get the breakpoint set with data-breakpoint
   if $nav.data('breakpoint') then breakpoint = $nav.data('breakpoint')
@@ -82,7 +84,8 @@ $.fn.flexNav = (options) ->
   resizer = ->
     if $(window).width() <= breakpoint
       $nav.removeClass("lg-screen").addClass("sm-screen")
-      $top_nav_items.css('width','100%')
+      if settings.calcItemWidths is true
+        $top_nav_items.css('width','100%')
       selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
       $(selector).removeClass('active')
       # Toggle nav menu closed for one pager after anchor clicked
@@ -91,7 +94,8 @@ $.fn.flexNav = (options) ->
       )
     else if $(window).width() > breakpoint
       $nav.removeClass("sm-screen").addClass("lg-screen")
-      $top_nav_items.css('width',nav_percent)
+      if settings.calcItemWidths is true
+        $top_nav_items.css('width',nav_percent)
       # Make sure navigation is closed when going back to large screens
       $nav.removeClass('show')
       if settings.hoverIntent is true

@@ -1,5 +1,5 @@
 /*
-	FlexNav.js 1.2.2
+	FlexNav.js 1.2.3
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -20,7 +20,8 @@
       'transitionOpacity': true,
       'buttonSelector': '.menu-button',
       'hoverIntent': false,
-      'hoverIntentTimeout': 150
+      'hoverIntentTimeout': 150,
+      'calcItemWidths': false
     }, options);
     $nav = $(this);
     $nav.addClass('with-js');
@@ -32,10 +33,12 @@
         return $(this).addClass("item-with-ul").find("ul").hide();
       }
     });
-    $top_nav_items = $nav.find('>li');
-    count = $top_nav_items.length;
-    nav_width = 100 / count;
-    nav_percent = nav_width + "%";
+    if (settings.calcItemWidths === true) {
+      $top_nav_items = $nav.find('>li');
+      count = $top_nav_items.length;
+      nav_width = 100 / count;
+      nav_percent = nav_width + "%";
+    }
     if ($nav.data('breakpoint')) {
       breakpoint = $nav.data('breakpoint');
     }
@@ -71,7 +74,9 @@
       var selector;
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
-        $top_nav_items.css('width', '100%');
+        if (settings.calcItemWidths === true) {
+          $top_nav_items.css('width', '100%');
+        }
         selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
         $(selector).removeClass('active');
         return $('.one-page li a').on('click', function() {
@@ -79,7 +84,9 @@
         });
       } else if ($(window).width() > breakpoint) {
         $nav.removeClass("sm-screen").addClass("lg-screen");
-        $top_nav_items.css('width', nav_percent);
+        if (settings.calcItemWidths === true) {
+          $top_nav_items.css('width', nav_percent);
+        }
         $nav.removeClass('show');
         if (settings.hoverIntent === true) {
           return $('.item-with-ul').hoverIntent({

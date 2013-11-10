@@ -62,7 +62,8 @@ Initialize
 	'transitionOpacity': true, // default for opacity animation
 	'buttonSelector': '.menu-button', // default menu button class name
 	'hoverIntent': false, // Change to true for use with hoverIntent plugin
-	'hoverIntentTimeout': 150 // hoverIntent default timeout		
+	'hoverIntentTimeout': 150, // hoverIntent default timeout
+  'calcItemWidths': false // dynamically calcs top level nav item widths	
 
 * * *
 ### Contributors
@@ -82,6 +83,9 @@ Initialize
 
 * * *
 ### Changelog
+
+#### v.1.2.3 : November 10th, 2013
+* Adding option for [Calculating number of top level nav items with js](https://github.com/indyplanets/flexnav/issues/91) - defaults to false
 
 #### v.1.2.2 : November 5th, 2013
 * [Adding active classes to main menu button and touch-icon](https://github.com/indyplanets/flexnav/issues/67)

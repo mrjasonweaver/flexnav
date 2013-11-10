@@ -117,7 +117,8 @@
       float: left;
       display: block;
       background-color: #a6a6a2;
-      overflow: visible; }
+      overflow: visible;
+      width: 20%; }
     .flexnav li a {
       border-left: 1px solid #acaca1;
       border-bottom: none; }

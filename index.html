@@ -20,8 +20,11 @@
         <hgroup class="site-title">
           <h1>FlexNav</h1>
           <h2 class="site-title-sub">A jQuery Plugin for Responsive Menus</h2>
-		  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jasonweaver.name/lab/flexiblenavigation" data-via="mrJasonWeaver" data-size="large">Tweet</a>
-		  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      
+      
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="mrJasonWeaver" data-url="http://jasonweaver.name/lab/flexiblenavigation" data-size="large">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      
         </hgroup>
         <div class="menu-button">Menu</div>
         <nav>
@@ -87,7 +90,9 @@
           <div class="article-wrap">
             <div class="block">
               <h2>A Device-Agnostic Approach to Complex Site Navigation</h2>
-              <p>The mock navigation you see above is a mobile-first example of using media queries and javascript to make a decent site menu with drop downs. Special attention is paid to touch screens using touch events with tap targets (the key feature of FlexNav). This is something I use to test different navigation techniques and may change as I iterate over different solutions to the problem. Basically I want a simple model to build upon when working on sites from scratch.</p>
+              <p>FlexNav is a mobile-first example of using media queries and javascript to make a decent multi-level menu with support for touch, hover reveal, and keyboard tab input accessibility. Special attention is paid to touch screens using tap targets (the key feature of FlexNav).
+                
+                <p><strong>Note:</strong> If you find a bug, please <a href="https://github.com/indyplanets/flexnav/issues">file an issue</a> and note device and browser versions.</p>
   			 <p>
 				 <div class="github-buttons-wrap">
 						<iframe src="http://ghbtns.com/github-btn.html?user=indyplanets&repo=flexnav&type=watch&count=true&size=large"
@@ -122,11 +127,12 @@
 		  <div class="block">
 			  <h2>Options</h2>
 				<p><code>
-				'animationSpeed' : '250', <span> // default drop animation speed</span> <br>
-	  		    'transitionOpacity': true, <span> // default opacity animation</span> <br>
-	  		    'buttonSelector': '.menu-button', <span> // default menu button class</span> <br>
-	  		    'hoverIntent': false, <span> // Use with hoverIntent plugin</span> <br>
-	  		    'hoverIntentTimeout': 150 <span> // hoverIntent default timeout</span> <br>
+				'animationSpeed' : 250, <span> // default drop animation speed</span> <br>
+		    'transitionOpacity': true, <span> // default opacity animation</span> <br>
+		    'buttonSelector': '.menu-button', <span> // default menu button class</span> <br>
+		    'hoverIntent': false, <span> // use with hoverIntent plugin</span> <br>
+		    'hoverIntentTimeout': 150, <span> // hoverIntent default timeout</span> <br>
+        'calcItemWidths': false <span> // dynamically calcs top level nav item widths</span> <br>
 				</code></p>	
             </div>
           </div>
@@ -169,7 +175,7 @@
       <div class="container">
         <ul>
           <li>Code by <a href="http://jasonweaver.name">Jason Weaver</a></li>
-          <li><a href="mailto:indyplanets@gmail.com">Contact Me</a></li>
+          <li><a href="https://github.com/indyplanets/flexnav/issues">File a bug</a></li>
 		  <li class="push"><iframe src="http://ghbtns.com/github-btn.html?user=indyplanets&type=follow&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="250" height="30"></iframe></li>
         </ul>
