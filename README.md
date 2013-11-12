@@ -32,41 +32,42 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 ### Usage
 
 Start with a simple unordered list, adding in the class and data attributes:
-
-	<ul class="flexnav" data-breakpoint="800"> <li>...</li> </ul>
-
+```xhtml
+<ul class="flexnav" data-breakpoint="800"> <li>...</li> </ul>
+```
 Add the small screen menu button somewhere outside your navigation markup:
-
-	<div class="menu-button">Menu</div>
-		
+```xhtml
+<div class="menu-button">Menu</div>
+```		
 For a single page site with id anchors, add `.one-page` class to `<body>`, `.menu-button`, and FlexNav `<ul>`:
-
-	<ul class="flexnav one-page" data-breakpoint="800"> <li>...</li> </ul>	
-								
+```xhtml
+<ul class="flexnav one-page" data-breakpoint="800"> <li>...</li> </ul>	
+```								
 Add flexnav.css to the head of your document
-		
-		<link href="css/flexnav.css" rel="stylesheet" type="text/css" / >
-		
+```xhtml		
+<link href="css/flexnav.css" rel="stylesheet" type="text/css" / >
+```		
 Add jquery.flexnav.min.js before closing body tag and after jQuery
-		
-		<script type="text/javascript" src="js/jquery.flexnav.min.js"></script>
-		
+```xhtml		
+<script type="text/javascript" src="js/jquery.flexnav.min.js"></script>
+```		
 Initialize
-
-		<script>
-			$(".flexnav").flexNav();
-		</script>		
+```xhtml
+<script>
+	$(".flexnav").flexNav();
+</script>
+```
 
 ### Options
-```
-  	$(".flexnav").flexNav({
-      'animationSpeed' : 250, // default for drop down animation speed
-      'transitionOpacity': true, // default for opacity animation
-      'buttonSelector': '.menu-button', // default menu button class name
-      'hoverIntent': false, // Change to true for use with hoverIntent plugin
-      'hoverIntentTimeout': 150, // hoverIntent default timeout
-      'calcItemWidths': false // dynamically calcs top level nav item widths  	  
-  	});
+```js
+$(".flexnav").flexNav({
+  'animationSpeed' : 250, // default for drop down animation speed
+  'transitionOpacity': true, // default for opacity animation
+  'buttonSelector': '.menu-button', // default menu button class name
+  'hoverIntent': false, // Change to true for use with hoverIntent plugin
+  'hoverIntentTimeout': 150, // hoverIntent default timeout
+  'calcItemWidths': false // dynamically calcs top level nav item widths  	  
+});
 ```	
 
 * * *
