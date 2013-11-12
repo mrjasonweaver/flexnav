@@ -83,9 +83,9 @@ $(".flexnav").flexNav({
 * * *		
 ### Todo
 
-- [] Make several demo themes
-- [] Kill bug documented in [issue 62](https://github.com/indyplanets/flexnav/issues/62) 
-- [] Figure out a better fallback for users without js
+- [ ] Kill bug documented in [issue 62](https://github.com/indyplanets/flexnav/issues/62) 
+- [ ] Figure out a better fallback for users without js
+- [ ] Make several demo themes
 
 * * *
 ### Changelog
