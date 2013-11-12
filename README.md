@@ -58,12 +58,16 @@ Initialize
 		</script>		
 
 ### Options
-	'animationSpeed' : 250, // default for drop down animation speed
-	'transitionOpacity': true, // default for opacity animation
-	'buttonSelector': '.menu-button', // default menu button class name
-	'hoverIntent': false, // Change to true for use with hoverIntent plugin
-	'hoverIntentTimeout': 150, // hoverIntent default timeout
-  'calcItemWidths': false // dynamically calcs top level nav item widths	
+```
+  	$(".flexnav").flexNav({
+    	'animationSpeed' : 250, // default for drop down animation speed
+    	'transitionOpacity': true, // default for opacity animation
+    	'buttonSelector': '.menu-button', // default menu button class name
+    	'hoverIntent': false, // Change to true for use with hoverIntent plugin
+    	'hoverIntentTimeout': 150, // hoverIntent default timeout
+      'calcItemWidths': false // dynamically calcs top level nav item widths  	  
+  	});
+```	
 
 * * *
 ### Contributors
