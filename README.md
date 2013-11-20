@@ -29,7 +29,7 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 * Mobile Safari
 
 ### License
-FlexNav is free and unencumbered software released into the public domain. [Set Your Code Free](http://unlicense.org/)
+FlexNav is unlicensed. Do whatever you want with it. :) [Set Your Code Free](http://unlicense.org/)
 
 * * *
 ### Usage
