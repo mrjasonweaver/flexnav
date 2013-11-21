@@ -14,6 +14,7 @@ A mobile-first example of using media queries and jQuery to make a decent site m
 
 ### Resources
 * [Theming a Multi-level Responsive Menu in Drupal 7](http://highrockmedia.com/blog/theming-multi-level-responsive-menu-drupal-7)
+* [Gratis Drupal 7 Responsive Theme](http://gratis.themehuis.com/)
 * [Dreamweaver support forum](http://forums.adobe.com/message/5811244)
 * [Using FlexNav with WordPress](http://wordpress.stackexchange.com/questions/101021/using-flexnav-with-wordpress)
 * [FlexNav with WordPress Genesis 2.0 demo](http://bradpotter.com/themes/genesis20flex/)
