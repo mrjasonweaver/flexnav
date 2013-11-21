@@ -11,7 +11,7 @@
   max-height: 0; }
   .flexnav.opacity {
     opacity: 0; }
-  .flexnav.show {
+  .flexnav.flexnav-show {
     max-height: 2000px;
     opacity: 1;
     -webkit-transition: all .5s ease-in-out;
@@ -42,7 +42,7 @@
       font-size: 100%;
       position: relative;
       overflow: hidden; }
-  .flexnav li ul.show li {
+  .flexnav li ul.flexnav-show li {
     overflow: visible; }
   .flexnav li ul li a {
     display: block;

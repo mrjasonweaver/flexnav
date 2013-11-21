@@ -21,7 +21,7 @@ $fourth_level: #cbcbc9;
     opacity: 0;
   }
 	
-	&.show {
+	&.flexnav-show {
 		max-height: 2000px;
     opacity: 1;
 		-webkit-transition: all .5s ease-in-out;
@@ -60,7 +60,7 @@ $fourth_level: #cbcbc9;
 			overflow: hidden;		
 		}
 	}
-	li ul.show {
+	li ul.flexnav-show {
     
 		li {
 			overflow: visible;
@@ -176,7 +176,7 @@ $fourth_level: #cbcbc9;
 			top: 0;
 		}
 		li ul li:hover > ul,
-		li ul li > ul.show {
+		li ul li > ul.flexnav-show {
 		}		
 		li ul li a {
 			border-bottom: none;

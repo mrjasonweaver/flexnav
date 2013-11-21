@@ -1,5 +1,5 @@
 /*
-	FlexNav.js 1.2.3
+	FlexNav.js 1.3
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -45,26 +45,26 @@
     showMenu = function() {
       if ($nav.hasClass('lg-screen') === true) {
         if (settings.transitionOpacity === true) {
-          return $(this).find('>ul').addClass('show').stop(true, true).animate({
+          return $(this).find('>ul').addClass('flexnav-show').stop(true, true).animate({
             height: ["toggle", "swing"],
             opacity: "toggle"
           }, settings.animationSpeed);
         } else {
-          return $(this).find('>ul').addClass('show').stop(true, true).animate({
+          return $(this).find('>ul').addClass('flexnav-show').stop(true, true).animate({
             height: ["toggle", "swing"]
           }, settings.animationSpeed);
         }
       }
     };
     resetMenu = function() {
-      if ($nav.hasClass('lg-screen') === true && $(this).find('>ul').hasClass('show') === true) {
+      if ($nav.hasClass('lg-screen') === true && $(this).find('>ul').hasClass('flexnav-show') === true) {
         if (settings.transitionOpacity === true) {
-          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
+          return $(this).find('>ul').removeClass('flexnav-show').stop(true, true).animate({
             height: ["toggle", "swing"],
             opacity: "toggle"
           }, settings.animationSpeed);
         } else {
-          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
+          return $(this).find('>ul').removeClass('flexnav-show').stop(true, true).animate({
             height: ["toggle", "swing"]
           }, settings.animationSpeed);
         }
@@ -79,15 +79,18 @@
         }
         selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
         $(selector).removeClass('active');
+        $('.item-with-ul').off();
         return $('.one-page li a').on('click', function() {
-          return $nav.removeClass('show');
+          return $nav.removeClass('flexnav-show');
         });
       } else if ($(window).width() > breakpoint) {
         $nav.removeClass("sm-screen").addClass("lg-screen");
         if (settings.calcItemWidths === true) {
           $top_nav_items.css('width', nav_percent);
         }
-        $nav.removeClass('show');
+        $nav.removeClass('flexnav-show').find('.item-with-ul').on();
+        $('.item-with-ul').find('ul').removeClass('flexnav-show').hide();
+        resetMenu();
         if (settings.hoverIntent === true) {
           return $('.item-with-ul').hoverIntent({
             over: showMenu,
@@ -111,20 +114,20 @@
       bs = settings['buttonSelector'];
       $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
       $thisNav = $btnParent.data('navEl');
-      return $thisNav.toggleClass('show');
+      return $thisNav.toggleClass('flexnav-show');
     });
     $('.touch-button').on('click', function(e) {
       var $sub, $touchButton;
       $sub = $(this).parent('.item-with-ul').find('>ul');
       $touchButton = $(this).parent('.item-with-ul').find('>span.touch-button');
       if ($nav.hasClass('lg-screen') === true) {
-        $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
+        $(this).parent('.item-with-ul').siblings().find('ul.flexnav-show').removeClass('flexnav-show').hide();
       }
-      if ($sub.hasClass('show') === true) {
-        $sub.removeClass('show').slideUp(settings.animationSpeed);
+      if ($sub.hasClass('flexnav-show') === true) {
+        $sub.removeClass('flexnav-show').slideUp(settings.animationSpeed);
         return $touchButton.removeClass('active');
-      } else if ($sub.hasClass('show') === false) {
-        $sub.addClass('show').slideDown(settings.animationSpeed);
+      } else if ($sub.hasClass('flexnav-show') === false) {
+        $sub.addClass('flexnav-show').slideDown(settings.animationSpeed);
         return $touchButton.addClass('active');
       }
     });
