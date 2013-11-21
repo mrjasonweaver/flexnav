@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 1.3
+	FlexNav.js 1.3.1
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
