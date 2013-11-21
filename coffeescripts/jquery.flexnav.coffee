@@ -88,7 +88,6 @@ $.fn.flexNav = (options) ->
         $top_nav_items.css('width','100%')
       selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button'
       $(selector).removeClass('active')
-      $('.item-with-ul').off()
       # Toggle nav menu closed for one pager after anchor clicked
       $('.one-page li a').on( 'click', ->
         $nav.removeClass('flexnav-show')
@@ -99,7 +98,7 @@ $.fn.flexNav = (options) ->
         $top_nav_items.css('width',nav_percent)
       # Make sure navigation is closed when going back to large screens
       $nav.removeClass('flexnav-show').find('.item-with-ul').on()
-      $('.item-with-ul').find('ul').removeClass('flexnav-show').hide()
+      $('.item-with-ul').find('ul').removeClass('flexnav-show')
       resetMenu()
       if settings.hoverIntent is true
         # Requires hoverIntent jquery plugin http://cherne.net/brian/resources/jquery.hoverIntent.html

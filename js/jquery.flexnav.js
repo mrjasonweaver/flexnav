@@ -79,7 +79,6 @@
         }
         selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
         $(selector).removeClass('active');
-        $('.item-with-ul').off();
         return $('.one-page li a').on('click', function() {
           return $nav.removeClass('flexnav-show');
         });
@@ -89,7 +88,7 @@
           $top_nav_items.css('width', nav_percent);
         }
         $nav.removeClass('flexnav-show').find('.item-with-ul').on();
-        $('.item-with-ul').find('ul').removeClass('flexnav-show').hide();
+        $('.item-with-ul').find('ul').removeClass('flexnav-show');
         resetMenu();
         if (settings.hoverIntent === true) {
           return $('.item-with-ul').hoverIntent({
