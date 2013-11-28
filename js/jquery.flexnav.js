@@ -1,5 +1,5 @@
 /*
-	FlexNav.js 1.3.1
+	FlexNav.js 1.3.2
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -21,7 +21,8 @@
       'buttonSelector': '.menu-button',
       'hoverIntent': false,
       'hoverIntentTimeout': 150,
-      'calcItemWidths': false
+      'calcItemWidths': false,
+      'hover': true
     }, options);
     $nav = $(this);
     $nav.addClass('with-js');
@@ -43,7 +44,7 @@
       breakpoint = $nav.data('breakpoint');
     }
     showMenu = function() {
-      if ($nav.hasClass('lg-screen') === true) {
+      if ($nav.hasClass('lg-screen') === true && settings.hover === true) {
         if (settings.transitionOpacity === true) {
           return $(this).find('>ul').addClass('flexnav-show').stop(true, true).animate({
             height: ["toggle", "swing"],
@@ -57,7 +58,7 @@
       }
     };
     resetMenu = function() {
-      if ($nav.hasClass('lg-screen') === true && $(this).find('>ul').hasClass('flexnav-show') === true) {
+      if ($nav.hasClass('lg-screen') === true && $(this).find('>ul').hasClass('flexnav-show') === true && settings.hover === true) {
         if (settings.transitionOpacity === true) {
           return $(this).find('>ul').removeClass('flexnav-show').stop(true, true).animate({
             height: ["toggle", "swing"],

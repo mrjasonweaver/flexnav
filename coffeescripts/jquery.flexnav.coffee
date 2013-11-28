@@ -1,5 +1,5 @@
 ###
-	FlexNav.js 1.3.1
+	FlexNav.js 1.3.2
 
 	Created by Jason Weaver http://jasonweaver.name
 	Released under http://unlicense.org/
@@ -17,7 +17,8 @@ $.fn.flexNav = (options) ->
     'buttonSelector': '.menu-button',
     'hoverIntent': false,
     'hoverIntentTimeout': 150,
-    'calcItemWidths': false
+    'calcItemWidths': false,
+    'hover': true
     options
 
   $nav = $(@)
@@ -42,7 +43,7 @@ $.fn.flexNav = (options) ->
 	
   # Functions for hover support
   showMenu = ->
-    if $nav.hasClass('lg-screen') is true
+    if $nav.hasClass('lg-screen') is true and settings.hover is true
       if settings.transitionOpacity is true
         $(@).find('>ul')
           .addClass('flexnav-show')
@@ -61,7 +62,7 @@ $.fn.flexNav = (options) ->
            settings.animationSpeed
          )
   resetMenu = ->
-    if $nav.hasClass('lg-screen') is true and $(@).find('>ul').hasClass('flexnav-show') is true
+    if $nav.hasClass('lg-screen') is true and $(@).find('>ul').hasClass('flexnav-show') is true and settings.hover is true
       if settings.transitionOpacity is true
         $(@).find('>ul')
           .removeClass('flexnav-show')
